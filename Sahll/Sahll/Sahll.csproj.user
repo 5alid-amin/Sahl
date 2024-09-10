@@ -4,8 +4,20 @@
     <_LastSelectedProfileId>D:\Sahl\Sahll\Sahll\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="Form1.cs">
+    <Compile Update="Main.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KhControles\KhButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="KhControles\KhCompoBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="KhControles\KhDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="KhControles\KhPanel.cs">
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
 </Project>

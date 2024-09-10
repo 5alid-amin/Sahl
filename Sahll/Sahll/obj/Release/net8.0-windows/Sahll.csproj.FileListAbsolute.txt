@@ -3,7 +3,6 @@ D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\Sahll.deps.json
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\Sahll.runtimeconfig.json
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\Sahll.dll
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\Sahll.pdb
-D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.Form1.resources
 D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.csproj.GenerateResource.cache
 D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.GeneratedMSBuildEditorConfig.editorconfig
 D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.AssemblyInfoInputs.cache
@@ -15,6 +14,8 @@ D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\refint\Sahll.dll
 D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.pdb
 D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.genruntimeconfig.cache
 D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\ref\Sahll.dll
+D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.Main.resources
+D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.Properties.Resources.resources
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\Sahll.dll.manifest
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\Sahll.application
 D:\Sahl\Sahll\Sahll\obj\Release\net8.0-windows\Sahll.dll.manifest
