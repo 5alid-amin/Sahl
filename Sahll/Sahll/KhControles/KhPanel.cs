@@ -9,8 +9,7 @@ namespace customs
 {
     internal class KhPanel : Panel
     {
-       
-         // Fields
+        // Fields
         private int borderRadius = 30;
         private float gradientAngle = 90F;
         private Color gradientTopColor = Color.DodgerBlue;
@@ -23,7 +22,7 @@ namespace customs
             this.ForeColor = Color.Black;
             this.Size = new Size(350, 200);
         }
-        
+
         // Properties
         public int BorderRadius
         {
@@ -58,9 +57,8 @@ namespace customs
             graphicsPath.CloseFigure();
             return graphicsPath;
         }
-        
 
-        //Overridden Method
+        // Overridden OnPaint method
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
@@ -85,6 +83,13 @@ namespace customs
                 }
             }
             else this.Region = new Region(rectangleF);
+        }
+
+        // Overridden OnResize method
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            this.Invalidate(); // تعيد رسم البانيل بناءً على الحجم الجديد
         }
     }
 }

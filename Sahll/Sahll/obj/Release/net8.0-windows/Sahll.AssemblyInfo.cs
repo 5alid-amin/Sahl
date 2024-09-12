@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Sahll")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba3cc43b17034af2c2095a036ee1598bb37805a1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b4358445911f64f392d935a40d9c4a9e105411e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sahll")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sahll")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

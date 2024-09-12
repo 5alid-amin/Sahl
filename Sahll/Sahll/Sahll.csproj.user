@@ -4,6 +4,51 @@
     <_LastSelectedProfileId>D:\Sahl\Sahll\Sahll\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Update="JUI\Car\CarsProductsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\CarsCashFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\CarsOptionsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\CarsRecordsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\CarsSoldProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\CarsInventoryFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\CarsStaffFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\InfoForms\CarsInfoCashFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\InfoForms\CarsInfoPro_Enven_RecorFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\SubForms\CarsAddEditProductsEnventoryFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\SubForms\CarsAddEditCashFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\SubForms\CarsReturnProductsEnventoryFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\PL\DialogFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="KhControles\CustomComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="KhControles\KhPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -14,9 +59,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="KhControles\KhDatePicker.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Update="KhControles\KhPanel.cs">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

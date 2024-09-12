@@ -42,11 +42,13 @@ namespace customs.KhControles
             cmbList.BackColor = listBackColor;
             cmbList.Font = new Font(this.Font.Name, 10F);
             cmbList.ForeColor = listTextColor;
+            cmbList.DropDownHeight = 200; // Set dropdown height to 200px
             cmbList.SelectedIndexChanged += new EventHandler(ComboBox_SelectedIndexChanged);//Default event
             cmbList.TextChanged += new EventHandler(ComboBox_TextChanged);//Refresh text
+            cmbList.DropDownStyle = ComboBoxStyle.DropDown; // تعديل الـ DropDownStyle للسماح بإدخال النص وبالتالي عرض الـ IBeam
 
             //Button: Icon
-            btnIcon.Dock = DockStyle.Right;
+            btnIcon.Dock = DockStyle.Left;
             btnIcon.FlatStyle = FlatStyle.Flat;
             btnIcon.FlatAppearance.BorderSize = 0;
             btnIcon.BackColor = backColor;
@@ -79,8 +81,32 @@ namespace customs.KhControles
             base.BackColor = borderColor; //Border Color
             this.ResumeLayout();
             AdjustComboBoxDimensions();
+
+            // إعداد خصائص الرسم المخصص لـ ComboBox
+            cmbList.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbList.DrawItem += new DrawItemEventHandler(ComboBox_DrawItem);
         }
+
         //Private methods
+        private void ComboBox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0)
+                return;
+
+            ComboBox comboBox = (ComboBox)sender;
+            string itemText = comboBox.Items[e.Index].ToString();
+
+            // تحديد الخلفية للنص المحدد
+            e.DrawBackground();
+            Brush textBrush = e.State.HasFlag(DrawItemState.Selected) ? Brushes.White : new SolidBrush(listTextColor);
+            Brush backgroundBrush = e.State.HasFlag(DrawItemState.Selected) ? Brushes.MediumSlateBlue : new SolidBrush(listBackColor);
+
+            e.Graphics.FillRectangle(backgroundBrush, e.Bounds);
+            e.Graphics.DrawString(itemText, e.Font, textBrush, e.Bounds);
+
+            e.DrawFocusRectangle();
+        }
+
         private void AdjustComboBoxDimensions()
         {
             cmbList.Width = lblText.Width;
@@ -92,7 +118,6 @@ namespace customs.KhControles
         }
 
         //Event methods
-
         //-> Default event
         private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -101,6 +126,7 @@ namespace customs.KhControles
             //Refresh text
             lblText.Text = cmbList.Text;
         }
+
         //-> Items actions
         private void Icon_Click(object sender, EventArgs e)
         {
@@ -108,6 +134,7 @@ namespace customs.KhControles
             cmbList.Select();
             cmbList.DroppedDown = true;
         }
+
         private void Surface_Click(object sender, EventArgs e)
         {
             //Attach label click to user control click
@@ -117,6 +144,7 @@ namespace customs.KhControles
             if (cmbList.DropDownStyle == ComboBoxStyle.DropDownList)
                 cmbList.DroppedDown = true;//Open dropdown list
         }
+
         private void ComboBox_TextChanged(object sender, EventArgs e)
         {
             //Refresh text
@@ -142,6 +170,7 @@ namespace customs.KhControles
                 graph.DrawPath(pen, path);
             }
         }
+
         //Properties
         //-> Appearance
         [Category("RJ Code - Appearance")]
@@ -241,7 +270,6 @@ namespace customs.KhControles
             get { return lblText.Text; }
             set { lblText.Text = value; }
         }
-
         [Category("RJ Code - Appearance")]
         public ComboBoxStyle DropDownStyle
         {
@@ -289,6 +317,7 @@ namespace customs.KhControles
         [Browsable(true)]
         [DefaultValue(AutoCompleteSource.None)]
         [EditorBrowsable(EditorBrowsableState.Always)]
+
         public AutoCompleteSource AutoCompleteSource
         {
             get { return cmbList.AutoCompleteSource; }

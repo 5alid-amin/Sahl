@@ -13,8 +13,7 @@ namespace customs.KhControles
         // Fields
         private int borderSize = 0;
         private int borderRadius = 40;
-        private Color borderColor = Color.PaleVioletRed;
-
+        private Color borderColor = Color.FromArgb(63, 36, 114);
         public int BorderSize
         {
             get
@@ -112,8 +111,8 @@ namespace customs.KhControles
                     penBorder.Alignment = PenAlignment.Inset; // Button surface
                     this.Region = new Region(pathSurface);
                     // Draw surface border for HD result
-                    pevent.Graphics.DrawPath(penSurface, pathSurface);
-
+                    //pevent.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(63, 36, 114)), rectSurface);
+                    pevent.Graphics.DrawPath(new Pen(this.Parent.BackColor, 2), pathSurface);
                     // Button border
                     if (borderSize >= 1)
                     {

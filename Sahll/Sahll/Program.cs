@@ -1,3 +1,8 @@
+﻿using Sahll.JUI.Car;
+using Sahll.JUI.Car.InfoForms;
+using Sahll.JUI.Car.SubForms;
+using Sahll.JUI.PL;
+
 namespace Sahll
 {
     internal static class Program
@@ -12,6 +17,7 @@ namespace Sahll
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Main());
+            //Application.Run(new CarProductFRM());
         }
     }
 }

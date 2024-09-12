@@ -16,3 +16,17 @@ D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.genruntimeconfig.cache
 D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\ref\Sahll.dll
 D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.Properties.Resources.resources
 D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.Main.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.CarsOptionsFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\customs.KhControles.KhCompoBox.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.carscashFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.carsrecordsFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.CarsInventoryFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.CarsProductsFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.CarsSoldProducts.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.CarsStaffFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.InfoForms.CarsInfoCashFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.InfoForms.CarsInfoPro_Enven_RecorFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.SubForms.CarsAddEditCashFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.SubForms.CarsAddEditProductsEnventoryFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.Car.SubForms.CarsReturnProductsEnventoryFRM.resources
+D:\Sahl\Sahll\Sahll\obj\Debug\net8.0-windows\Sahll.JUI.PL.DialogFRM.resources

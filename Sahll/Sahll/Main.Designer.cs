@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             pnlTop = new Panel();
+            btngoback = new customs.KhControles.KhButton();
             lbltoptitle = new Label();
             btncollapes = new customs.KhControles.KhButton();
             btnminimize = new customs.KhControles.KhButton();
@@ -61,6 +62,7 @@
             // pnlTop
             // 
             pnlTop.BackColor = Color.FromArgb(255, 251, 245);
+            pnlTop.Controls.Add(btngoback);
             pnlTop.Controls.Add(lbltoptitle);
             pnlTop.Controls.Add(btncollapes);
             pnlTop.Controls.Add(btnminimize);
@@ -69,17 +71,41 @@
             pnlTop.Dock = DockStyle.Top;
             pnlTop.Location = new Point(0, 0);
             pnlTop.Name = "pnlTop";
-            pnlTop.Size = new Size(1115, 50);
+            pnlTop.Size = new Size(1115, 40);
             pnlTop.TabIndex = 0;
+            // 
+            // btngoback
+            // 
+            btngoback.Anchor = AnchorStyles.Right;
+            btngoback.BackColor = Color.Transparent;
+            btngoback.BackgroundColor = Color.Transparent;
+            btngoback.BorderColor = Color.PaleVioletRed;
+            btngoback.BorderRadius = 10;
+            btngoback.BorderSize = 0;
+            btngoback.Cursor = Cursors.Hand;
+            btngoback.FlatAppearance.BorderSize = 0;
+            btngoback.FlatStyle = FlatStyle.Flat;
+            btngoback.ForeColor = Color.White;
+            btngoback.Image = Properties.Resources.go_backl;
+            btngoback.Location = new Point(948, -2);
+            btngoback.Name = "btngoback";
+            btngoback.Size = new Size(37, 36);
+            btngoback.TabIndex = 6;
+            btngoback.TextColor = Color.White;
+            btngoback.UseVisualStyleBackColor = false;
+            btngoback.Visible = false;
+            btngoback.Click += btngoback_Click;
+            btngoback.MouseEnter += btngoback_MouseEnter;
+            btngoback.MouseLeave += btngoback_MouseLeave;
             // 
             // lbltoptitle
             // 
-            lbltoptitle.AutoSize = true;
+            lbltoptitle.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lbltoptitle.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbltoptitle.ForeColor = Color.FromArgb(63, 36, 114);
-            lbltoptitle.Location = new Point(557, 0);
+            lbltoptitle.Location = new Point(212, -5);
             lbltoptitle.Name = "lbltoptitle";
-            lbltoptitle.Size = new Size(0, 50);
+            lbltoptitle.Size = new Size(690, 50);
             lbltoptitle.TabIndex = 8;
             lbltoptitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -96,10 +122,9 @@
             btncollapes.FlatStyle = FlatStyle.Flat;
             btncollapes.ForeColor = Color.White;
             btncollapes.Image = Properties.Resources.menu;
-            btncollapes.ImageAlign = ContentAlignment.MiddleRight;
-            btncollapes.Location = new Point(1073, 13);
+            btncollapes.Location = new Point(1077, 4);
             btncollapes.Name = "btncollapes";
-            btncollapes.Size = new Size(39, 30);
+            btncollapes.Size = new Size(35, 35);
             btncollapes.TabIndex = 5;
             btncollapes.TextColor = Color.White;
             btncollapes.UseVisualStyleBackColor = false;
@@ -137,7 +162,7 @@
             btnmax.FlatStyle = FlatStyle.Flat;
             btnmax.ForeColor = Color.White;
             btnmax.Image = Properties.Resources.maximize;
-            btnmax.Location = new Point(30, -2);
+            btnmax.Location = new Point(31, -2);
             btnmax.Name = "btnmax";
             btnmax.Size = new Size(33, 33);
             btnmax.TabIndex = 6;
@@ -170,7 +195,7 @@
             picnavbig.Anchor = AnchorStyles.Right;
             picnavbig.BackColor = Color.FromArgb(255, 251, 245);
             picnavbig.Image = Properties.Resources.navbig;
-            picnavbig.Location = new Point(0, 4);
+            picnavbig.Location = new Point(0, 9);
             picnavbig.Name = "picnavbig";
             picnavbig.Size = new Size(130, 60);
             picnavbig.SizeMode = PictureBoxSizeMode.Zoom;
@@ -182,7 +207,7 @@
             picnavsmall.Anchor = AnchorStyles.Right;
             picnavsmall.BackColor = Color.FromArgb(255, 251, 245);
             picnavsmall.Image = Properties.Resources.navsmall;
-            picnavsmall.Location = new Point(70, 6);
+            picnavsmall.Location = new Point(70, 11);
             picnavsmall.Name = "picnavsmall";
             picnavsmall.Size = new Size(60, 53);
             picnavsmall.SizeMode = PictureBoxSizeMode.Zoom;
@@ -193,9 +218,10 @@
             // 
             pnlContainer.BackColor = Color.FromArgb(255, 251, 245);
             pnlContainer.Dock = DockStyle.Fill;
-            pnlContainer.Location = new Point(0, 50);
+            pnlContainer.Location = new Point(0, 40);
             pnlContainer.Name = "pnlContainer";
-            pnlContainer.Size = new Size(985, 740);
+            pnlContainer.Padding = new Padding(15, 0, 15, 0);
+            pnlContainer.Size = new Size(985, 750);
             pnlContainer.TabIndex = 2;
             // 
             // picpointer
@@ -223,9 +249,9 @@
             pnlnavbar.Controls.Add(picnavbig);
             pnlnavbar.Controls.Add(picnavsmall);
             pnlnavbar.Dock = DockStyle.Right;
-            pnlnavbar.Location = new Point(985, 50);
+            pnlnavbar.Location = new Point(985, 40);
             pnlnavbar.Name = "pnlnavbar";
-            pnlnavbar.Size = new Size(130, 740);
+            pnlnavbar.Size = new Size(130, 750);
             pnlnavbar.TabIndex = 3;
             // 
             // khPanel1
@@ -248,9 +274,9 @@
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(82, 46, 150);
             khPanel1.GradientTopColor = Color.FromArgb(107, 60, 200);
-            khPanel1.Location = new Point(0, 55);
+            khPanel1.Location = new Point(0, 60);
             khPanel1.Name = "khPanel1";
-            khPanel1.Size = new Size(130, 685);
+            khPanel1.Size = new Size(130, 688);
             khPanel1.TabIndex = 2;
             // 
             // btnsettings
@@ -482,11 +508,11 @@
             Controls.Add(pnlnavbar);
             Controls.Add(pnlTop);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             pnlTop.ResumeLayout(false);
-            pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picnavbig).EndInit();
             ((System.ComponentModel.ISupportInitialize)picnavsmall).EndInit();
             pnlnavbar.ResumeLayout(false);
@@ -497,7 +523,6 @@
         #endregion
 
         private Panel pnlTop;
-        private Panel pnlContainer;
         private PictureBox picnavbig;
         private PictureBox picnavsmall;
         private Panel pnlnavbar;
@@ -517,6 +542,8 @@
         private Button btnproducts;
         private Button btnstaff;
         private Button btntreasury;
-        private Label lbltoptitle;
+        private customs.KhControles.KhButton btngoback;
+        public Panel pnlContainer;
+        public Label lbltoptitle;
     }
 }
