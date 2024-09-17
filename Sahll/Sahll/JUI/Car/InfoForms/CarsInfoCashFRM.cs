@@ -16,5 +16,15 @@ namespace Sahll.JUI.Car.InfoForms
         {
             InitializeComponent();
         }
+
+        private void khPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

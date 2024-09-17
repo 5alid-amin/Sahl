@@ -6,9 +6,122 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\sahlicon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Resources\sahlicon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="JUI\Staff\StaffAccount\StaffAccountInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Staff\StaffAccount\StaffAddEditRivalFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Staff\StaffAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Staff\StaffAccount\StaffAccountFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Staff\StaffFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Staff\StaffAccount\StaffAddEditBounsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\AminHome\AminHAddEditDespositFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\AminHome\AminHAddEditWithdrawFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerAddition\CustomerAddEditStaffFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerAddition\CustomerAddEditNotStaffFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\AminHome\AminHomeAddEditOptionsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomersOptionsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomersCash\CustomerCashFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomersCash\CustomerCashAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerProduct\CustomerProductFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerProduct\CustomerProductInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerAddition\CustomerAdditionOptionsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\AminHome\AminHomeInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Receipt\ReceiptsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Expense\ExpensesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Expense\ExpensesAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Receipt\ReceiptsAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\Manufacturing\ManufacturingInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\Manufacturing\ManufacturingAddRowMaterialFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\Manufacturing\ManufacturingAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\JustProduct\JustProductAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\Category\CategoryFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\ProudctsOptionsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\JustProduct\JustProductFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\Manufacturing\ManufacturingFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Expense\ExpensesFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Receipt\ReceiptsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Store\StoreInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Store\StoreFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\AminHome\AminHomeFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

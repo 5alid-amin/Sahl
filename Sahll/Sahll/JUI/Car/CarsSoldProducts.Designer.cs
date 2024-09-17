@@ -81,6 +81,7 @@
             pnlcarsoldproduct.Name = "pnlcarsoldproduct";
             pnlcarsoldproduct.Size = new Size(945, 750);
             pnlcarsoldproduct.TabIndex = 0;
+            pnlcarsoldproduct.Resize += pnlcarsoldproduct_Resize;
             // 
             // DpToSoldProduct
             // 
@@ -144,10 +145,10 @@
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel1.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel1.Location = new Point(7, 124);
+            khPanel1.Location = new Point(7, 135);
             khPanel1.Name = "khPanel1";
             khPanel1.Padding = new Padding(5, 8, 5, 15);
-            khPanel1.Size = new Size(936, 541);
+            khPanel1.Size = new Size(930, 509);
             khPanel1.TabIndex = 61;
             // 
             // dgvcarsoldproduct
@@ -190,7 +191,7 @@
             dgvcarsoldproduct.RowTemplate.DividerHeight = 1;
             dgvcarsoldproduct.RowTemplate.Height = 28;
             dgvcarsoldproduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvcarsoldproduct.Size = new Size(926, 518);
+            dgvcarsoldproduct.Size = new Size(920, 486);
             dgvcarsoldproduct.TabIndex = 1;
             dgvcarsoldproduct.CellClick += dgvcarsoldproduct_CellClick;
             dgvcarsoldproduct.CellMouseEnter += dgvcarsoldproduct_CellMouseEnter;

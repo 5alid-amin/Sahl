@@ -56,6 +56,12 @@
             lbltotal = new customs.KhControles.KhButton();
             label7 = new Label();
             btnclose = new customs.KhControles.KhButton();
+            khPanel6 = new customs.KhPanel();
+            khPanel7 = new customs.KhPanel();
+            khButton1 = new customs.KhControles.KhButton();
+            khButton2 = new customs.KhControles.KhButton();
+            khButton3 = new customs.KhControles.KhButton();
+            khButton4 = new customs.KhControles.KhButton();
             khPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvexpenses).BeginInit();
             SuspendLayout();
@@ -65,7 +71,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Hacen Egypt", 38.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(173, 109, 209);
-            label1.Location = new Point(525, 41);
+            label1.Location = new Point(511, 41);
             label1.Name = "label1";
             label1.Size = new Size(145, 105);
             label1.TabIndex = 3;
@@ -89,12 +95,12 @@
             // khPanel1
             // 
             khPanel1.BackColor = Color.White;
-            khPanel1.BorderRadius = 2;
+            khPanel1.BorderRadius = 0;
             khPanel1.ForeColor = Color.Black;
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(195, 172, 208);
             khPanel1.GradientTopColor = Color.FromArgb(173, 109, 209);
-            khPanel1.Location = new Point(329, 135);
+            khPanel1.Location = new Point(325, 135);
             khPanel1.Name = "khPanel1";
             khPanel1.Size = new Size(180, 3);
             khPanel1.TabIndex = 9;
@@ -104,7 +110,7 @@
             txtcash.BorderStyle = BorderStyle.None;
             txtcash.Font = new Font("Hacen Egypt", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtcash.ForeColor = Color.FromArgb(63, 36, 114);
-            txtcash.Location = new Point(329, 56);
+            txtcash.Location = new Point(325, 56);
             txtcash.Name = "txtcash";
             txtcash.Size = new Size(180, 82);
             txtcash.TabIndex = 8;
@@ -166,9 +172,9 @@
             khPanel3.GradientAngle = 90F;
             khPanel3.GradientBottomColor = Color.FromArgb(195, 172, 208);
             khPanel3.GradientTopColor = Color.FromArgb(173, 109, 209);
-            khPanel3.Location = new Point(682, 225);
+            khPanel3.Location = new Point(676, 223);
             khPanel3.Name = "khPanel3";
-            khPanel3.Size = new Size(129, 3);
+            khPanel3.Size = new Size(140, 3);
             khPanel3.TabIndex = 24;
             // 
             // txtdriver
@@ -187,7 +193,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Hacen Egypt", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(173, 109, 209);
-            label4.Location = new Point(806, 170);
+            label4.Location = new Point(817, 154);
             label4.Name = "label4";
             label4.Size = new Size(138, 66);
             label4.TabIndex = 22;
@@ -200,7 +206,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Hacen Egypt", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(173, 109, 209);
-            label3.Location = new Point(133, 170);
+            label3.Location = new Point(143, 158);
             label3.Name = "label3";
             label3.Size = new Size(172, 66);
             label3.TabIndex = 22;
@@ -213,7 +219,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Hacen Egypt", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(173, 109, 209);
-            label5.Location = new Point(491, 170);
+            label5.Location = new Point(503, 162);
             label5.Name = "label5";
             label5.Size = new Size(151, 66);
             label5.TabIndex = 25;
@@ -226,7 +232,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(63, 36, 114);
-            label6.Location = new Point(396, 238);
+            label6.Location = new Point(396, 232);
             label6.Name = "label6";
             label6.Size = new Size(165, 42);
             label6.TabIndex = 26;
@@ -244,7 +250,7 @@
             khPanel5.GradientAngle = 90F;
             khPanel5.GradientBottomColor = Color.White;
             khPanel5.GradientTopColor = Color.FromArgb(173, 109, 209);
-            khPanel5.Location = new Point(44, 283);
+            khPanel5.Location = new Point(44, 277);
             khPanel5.Name = "khPanel5";
             khPanel5.Padding = new Padding(5, 8, 5, 0);
             khPanel5.Size = new Size(869, 388);
@@ -342,7 +348,7 @@
             btnaddexpense.FlatStyle = FlatStyle.Flat;
             btnaddexpense.ForeColor = Color.White;
             btnaddexpense.Image = Properties.Resources.plus;
-            btnaddexpense.Location = new Point(458, 652);
+            btnaddexpense.Location = new Point(458, 646);
             btnaddexpense.Name = "btnaddexpense";
             btnaddexpense.Size = new Size(40, 47);
             btnaddexpense.TabIndex = 35;
@@ -362,11 +368,11 @@
             btn_add_cash.FlatStyle = FlatStyle.Flat;
             btn_add_cash.Font = new Font("Hacen Egypt", 24.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_add_cash.ForeColor = Color.White;
-            btn_add_cash.Location = new Point(379, 705);
+            btn_add_cash.Location = new Point(379, 692);
             btn_add_cash.Name = "btn_add_cash";
             btn_add_cash.Size = new Size(192, 71);
             btn_add_cash.TabIndex = 36;
-            btn_add_cash.Text = "إضافه";
+            btn_add_cash.Text = "حفظ";
             btn_add_cash.TextColor = Color.White;
             btn_add_cash.UseVisualStyleBackColor = false;
             // 
@@ -384,7 +390,7 @@
             lbltotal.Font = new Font("Hacen Egypt", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbltotal.ForeColor = Color.FromArgb(119, 67, 219);
             lbltotal.ImageAlign = ContentAlignment.BottomRight;
-            lbltotal.Location = new Point(44, 719);
+            lbltotal.Location = new Point(44, 706);
             lbltotal.Margin = new Padding(0);
             lbltotal.Name = "lbltotal";
             lbltotal.Size = new Size(173, 57);
@@ -400,7 +406,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Hacen Egypt", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.FromArgb(63, 36, 114);
-            label7.Location = new Point(219, 704);
+            label7.Location = new Point(219, 691);
             label7.Name = "label7";
             label7.Size = new Size(144, 83);
             label7.TabIndex = 66;
@@ -424,6 +430,107 @@
             btnclose.TabIndex = 68;
             btnclose.TextColor = Color.White;
             btnclose.UseVisualStyleBackColor = false;
+            btnclose.Click += btnclose_Click;
+            // 
+            // khPanel6
+            // 
+            khPanel6.BackColor = Color.White;
+            khPanel6.BorderRadius = 0;
+            khPanel6.Dock = DockStyle.Right;
+            khPanel6.ForeColor = Color.Black;
+            khPanel6.GradientAngle = 90F;
+            khPanel6.GradientBottomColor = Color.FromArgb(83, 4, 128);
+            khPanel6.GradientTopColor = Color.FromArgb(173, 109, 209);
+            khPanel6.Location = new Point(955, 0);
+            khPanel6.Name = "khPanel6";
+            khPanel6.Size = new Size(2, 785);
+            khPanel6.TabIndex = 69;
+            // 
+            // khPanel7
+            // 
+            khPanel7.BackColor = Color.White;
+            khPanel7.BorderRadius = 0;
+            khPanel7.Dock = DockStyle.Left;
+            khPanel7.ForeColor = Color.Black;
+            khPanel7.GradientAngle = 90F;
+            khPanel7.GradientBottomColor = Color.FromArgb(83, 4, 128);
+            khPanel7.GradientTopColor = Color.FromArgb(173, 109, 209);
+            khPanel7.Location = new Point(0, 0);
+            khPanel7.Name = "khPanel7";
+            khPanel7.Size = new Size(2, 785);
+            khPanel7.TabIndex = 70;
+            // 
+            // khButton1
+            // 
+            khButton1.BackColor = Color.White;
+            khButton1.BackgroundColor = Color.White;
+            khButton1.BorderColor = Color.FromArgb(63, 36, 114);
+            khButton1.BorderRadius = 40;
+            khButton1.BorderSize = 0;
+            khButton1.FlatAppearance.BorderSize = 0;
+            khButton1.FlatStyle = FlatStyle.Flat;
+            khButton1.ForeColor = Color.White;
+            khButton1.Location = new Point(316, 42);
+            khButton1.Name = "khButton1";
+            khButton1.Size = new Size(200, 96);
+            khButton1.TabIndex = 71;
+            khButton1.Text = "khButton1";
+            khButton1.TextColor = Color.White;
+            khButton1.UseVisualStyleBackColor = false;
+            // 
+            // khButton2
+            // 
+            khButton2.BackColor = Color.White;
+            khButton2.BackgroundColor = Color.White;
+            khButton2.BorderColor = Color.FromArgb(63, 36, 114);
+            khButton2.BorderRadius = 40;
+            khButton2.BorderSize = 0;
+            khButton2.FlatAppearance.BorderSize = 0;
+            khButton2.FlatStyle = FlatStyle.Flat;
+            khButton2.ForeColor = Color.White;
+            khButton2.Location = new Point(672, 147);
+            khButton2.Name = "khButton2";
+            khButton2.Size = new Size(147, 82);
+            khButton2.TabIndex = 72;
+            khButton2.Text = "khButton2";
+            khButton2.TextColor = Color.White;
+            khButton2.UseVisualStyleBackColor = false;
+            // 
+            // khButton3
+            // 
+            khButton3.BackColor = Color.White;
+            khButton3.BackgroundColor = Color.White;
+            khButton3.BorderColor = Color.FromArgb(63, 36, 114);
+            khButton3.BorderRadius = 40;
+            khButton3.BorderSize = 0;
+            khButton3.FlatAppearance.BorderSize = 0;
+            khButton3.FlatStyle = FlatStyle.Flat;
+            khButton3.ForeColor = Color.White;
+            khButton3.Location = new Point(358, 146);
+            khButton3.Name = "khButton3";
+            khButton3.Size = new Size(147, 82);
+            khButton3.TabIndex = 73;
+            khButton3.Text = "khButton3";
+            khButton3.TextColor = Color.White;
+            khButton3.UseVisualStyleBackColor = false;
+            // 
+            // khButton4
+            // 
+            khButton4.BackColor = Color.White;
+            khButton4.BackgroundColor = Color.White;
+            khButton4.BorderColor = Color.FromArgb(63, 36, 114);
+            khButton4.BorderRadius = 40;
+            khButton4.BorderSize = 0;
+            khButton4.FlatAppearance.BorderSize = 0;
+            khButton4.FlatStyle = FlatStyle.Flat;
+            khButton4.ForeColor = Color.White;
+            khButton4.Location = new Point(2, 146);
+            khButton4.Name = "khButton4";
+            khButton4.Size = new Size(147, 82);
+            khButton4.TabIndex = 74;
+            khButton4.Text = "khButton4";
+            khButton4.TextColor = Color.White;
+            khButton4.UseVisualStyleBackColor = false;
             // 
             // CarsAddEditCashFRM
             // 
@@ -431,6 +538,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 251, 245);
             ClientSize = new Size(957, 785);
+            Controls.Add(khPanel7);
+            Controls.Add(khPanel6);
             Controls.Add(btnclose);
             Controls.Add(lbltotal);
             Controls.Add(btn_add_cash);
@@ -439,7 +548,6 @@
             Controls.Add(label6);
             Controls.Add(khPanel3);
             Controls.Add(txtdriver);
-            Controls.Add(label4);
             Controls.Add(khPanel2);
             Controls.Add(txtdelegator);
             Controls.Add(khPanel4);
@@ -447,9 +555,14 @@
             Controls.Add(khPanel1);
             Controls.Add(txtcash);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(label7);
+            Controls.Add(khButton1);
+            Controls.Add(label1);
+            Controls.Add(khButton2);
+            Controls.Add(label4);
+            Controls.Add(khButton3);
             Controls.Add(label5);
+            Controls.Add(khButton4);
             Controls.Add(label3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CarsAddEditCashFRM";
@@ -489,5 +602,11 @@
         private customs.KhControles.KhButton lbltotal;
         private Label label7;
         private customs.KhControles.KhButton btnclose;
+        private customs.KhPanel khPanel6;
+        private customs.KhPanel khPanel7;
+        private customs.KhControles.KhButton khButton1;
+        private customs.KhControles.KhButton khButton2;
+        private customs.KhControles.KhButton khButton3;
+        private customs.KhControles.KhButton khButton4;
     }
 }

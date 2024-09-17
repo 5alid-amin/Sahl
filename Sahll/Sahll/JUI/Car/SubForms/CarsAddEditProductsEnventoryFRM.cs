@@ -16,5 +16,18 @@ namespace Sahll.JUI.Car.SubForms
         {
             InitializeComponent();
         }
+
+        private void btnclose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_add_edit_Click_1(object sender, EventArgs e)
+        {
+
+
+            //JUI
+            this.Close();
+        }
     }
 }

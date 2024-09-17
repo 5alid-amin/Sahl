@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Sahll.JUI.Car.InfoForms;
+using Sahll.JUI.Car.SubForms;
+using Sahll.JUI.PL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,17 +60,29 @@ namespace Sahll.JUI.Car
                 {
                     case "delete":
 
+                        DialogFRM fRM = new DialogFRM("هل انت متأكد من حذف هذا الصنف المورد؟", Color.FromArgb(64, 0, 0));
+                        fRM.Show();
                         break;
 
                     case "edit":
 
+
+                        //JUI
+                        CarsAddEditProductsEnventoryFRM frm = new CarsAddEditProductsEnventoryFRM();
+                        frm.Show();
                         break;
                     case "returnd":
 
-                        break;
 
+                        //JUI
+                        CarReturnedProduct rFRM = new CarReturnedProduct();
+                        rFRM.Show();
+                        break;
                     case "info":
 
+                        //JUI
+                        InfoForms.CarInfoProduct IFRM = new InfoForms.CarInfoProduct();
+                        IFRM.Show();
                         break;
                 }
             }
@@ -94,7 +109,7 @@ namespace Sahll.JUI.Car
             clickedButton.ForeColor = Color.White;
 
         }
-      
+
         private void dgvcarproduct_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvcarproduct.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -146,8 +161,33 @@ namespace Sahll.JUI.Car
                 }
             }
         }
-#endregion
+        #endregion
 
-      
+
+        private void btnaddinventory_Click(object sender, EventArgs e)
+        {
+
+
+            //JUI
+            CarsAddEditProductsEnventoryFRM FRM = new CarsAddEditProductsEnventoryFRM();
+            FRM.Show();
+        }
+
+        private void pnlcarproduct_Resize(object sender, EventArgs e)
+        {
+            int buttonWidth = (pnlcarproduct.Size.Width) / 5;
+            btncar5.Size = new Size(buttonWidth, 41);
+            btncar4.Size = new Size(buttonWidth, 40);
+            btncar3.Size = new Size(buttonWidth, 40);
+            btncar2.Size = new Size(buttonWidth, 40);
+            btncar1.Size = new Size(buttonWidth, 41);
+
+
+            btncar5.Location = new Point(15, 73);
+            btncar4.Location = new Point(btncar5.Width - 8, 74);
+            btncar3.Location = new Point(btncar5.Width * 2 - 9, 74);
+            btncar2.Location = new Point(btncar5.Width * 3 - 10, 74);
+            btncar1.Location = new Point(btncar5.Width * 4 - 18, 73);
+        }
     }
 }

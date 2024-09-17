@@ -1,4 +1,7 @@
 ﻿using Sahll.JUI.Car;
+using Sahll.JUI.Selling;
+using Sahll.JUI.Treasury;
+using System.Windows.Forms;
 namespace Sahll
 {
     public partial class Main : Form
@@ -6,10 +9,21 @@ namespace Sahll
         //feild
         bool IsCollapsed = false;
         bool IsMaxmized = false;
-        bool GoToCars = false;
-        Button PreviousButton;
-        CarsOptionsFRM FRM;
 
+        bool GoToCars = false;
+        bool GoToProduct = false;
+        bool GoToTreasury = false;
+        bool GoToCustomer = false;
+        bool GoToCusOptions = false;
+        bool GoToStaff = false;
+
+        Button PreviousButton;
+
+        CarsOptionsFRM carsOptionsFRM;
+        ProudctsOptionsFRM proudctsOptionsFRM;
+        TreasuryFRM TreasuryFRM;
+        CustomerFrm customerFrm;
+        StaffFRM staffFRM;
 
         public Main()
         {
@@ -17,40 +31,56 @@ namespace Sahll
             navbar_transparent_button_on_hover();
             navbar_transparent_button_on_click();
             btncar_Click_1(null, EventArgs.Empty);
-            FRM = new CarsOptionsFRM(this);
+            IsMaxmized = true;
+
+
+            carsOptionsFRM = new CarsOptionsFRM(this);
+            proudctsOptionsFRM = new ProudctsOptionsFRM(this);
+            TreasuryFRM = new TreasuryFRM(this);
+            customerFrm = new CustomerFrm(this);
+            staffFRM = new StaffFRM(this);
         }
 
         #region ButtonsMethods
-
-        private void btnstore_Click_1(object sender, EventArgs e)
-        {
-            //JUI
-            pointer(btnstore);
-            toptitle(btnstore);
-
-            //Functions
-        }
-
-
         private void btncar_Click_1(object sender, EventArgs e)
         {
+            //Functions
+
+
             //JUI
             pointer(btncar);
             toptitle(btncar);
-
-            //Functions
             pnlContainer.Controls.Clear();
-            FRM = new CarsOptionsFRM(this);
-            pnlContainer.Controls.Add(FRM.pnlcarsoptions);
+            carsOptionsFRM = new CarsOptionsFRM(this);
+            pnlContainer.Controls.Add(carsOptionsFRM.pnlcarsoptions);
+            btngoback.Visible = false;
         }
+
+        private void btnstore_Click_1(object sender, EventArgs e)
+        {
+            StoreFRM frm = new StoreFRM();
+            //Functions
+
+            //JUI
+            pointer(btnstore);
+            toptitle(btnstore);
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlstore);
+            btngoback.Visible = false;
+        }
+
 
         private void btnsell_Click_1(object sender, EventArgs e)
         {
+            SellingFRM frm = new SellingFRM();
+            //Functions
+
             //JUI
             pointer(btnsell);
             toptitle(btnsell);
-
-            //Functions
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlselling);
+            btngoback.Visible = false;
         }
 
         private void btnproducts_Click_1(object sender, EventArgs e)
@@ -60,6 +90,11 @@ namespace Sahll
             toptitle(btnproducts);
 
             //Functions
+            pnlContainer.Controls.Clear();
+            proudctsOptionsFRM = new ProudctsOptionsFRM(this);
+            pnlContainer.Controls.Add(proudctsOptionsFRM.pnlcarsoptions);
+            lbltoptitle.Text = "المنتجات";
+            btngoback.Visible = false;
         }
 
         private void btntreasury_Click_1(object sender, EventArgs e)
@@ -69,15 +104,25 @@ namespace Sahll
             toptitle(btntreasury);
 
             //Functions
+            pnlContainer.Controls.Clear();
+            TreasuryFRM = new TreasuryFRM(this);
+            pnlContainer.Controls.Add(TreasuryFRM.pnltreasury);
+            lbltoptitle.Text = "الخزينه";
+            btngoback.Visible = false;
         }
 
         private void btnstaff_Click_1(object sender, EventArgs e)
         {
+            //Functions
+
             //JUI
             pointer(btnstaff);
             toptitle(btnstaff);
-
-            //Functions
+            pnlContainer.Controls.Clear();
+            staffFRM = new StaffFRM(this);
+            pnlContainer.Controls.Add(staffFRM.pnlselling);
+            btngoback.Visible = false;
+            lbltoptitle.Text = "العمال";
         }
 
         private void btnsuppliers_Click_1(object sender, EventArgs e)
@@ -85,17 +130,23 @@ namespace Sahll
             //JUI
             pointer(btnsuppliers);
             toptitle(btnsuppliers);
+            btngoback.Visible = false;
 
             //Functions
         }
 
         private void btncustomers_Click_1(object sender, EventArgs e)
         {
+            //Functions
+
             //JUI
             pointer(btncustomers);
             toptitle(btncustomers);
-
-            //Functions
+            pnlContainer.Controls.Clear();
+            customerFrm = new CustomerFrm(this);
+            pnlContainer.Controls.Add(customerFrm.pnlselling);
+            lbltoptitle.Text = "العملاء";
+            btngoback.Visible = false;
         }
 
         private void btnusers_Click_1(object sender, EventArgs e)
@@ -103,6 +154,7 @@ namespace Sahll
             //JUI
             pointer(btnusers);
             toptitle(btnusers);
+            btngoback.Visible = false;
 
             //Functions
         }
@@ -112,11 +164,73 @@ namespace Sahll
             //JUI
             pointer(btnsettings);
             toptitle(btnsettings);
+            btngoback.Visible = false;
 
             //Functions
         }
 
+        private void btngoback_Click(object sender, EventArgs e)
+        {
+            if (GoToCars)
+            {
+                pnlContainer.Controls.Clear();
+                carsOptionsFRM = new CarsOptionsFRM(this);
+                pnlContainer.Controls.Add(carsOptionsFRM.pnlcarsoptions);
 
+                btngoback.Visible = false;
+                GoToCars = false;
+                lbltoptitle.Text = "السيارات";
+            }
+            else if (GoToProduct)
+            {
+                pnlContainer.Controls.Clear();
+                proudctsOptionsFRM = new ProudctsOptionsFRM(this);
+                pnlContainer.Controls.Add(proudctsOptionsFRM.pnlcarsoptions);
+
+                btngoback.Visible = false;
+                GoToProduct = false;
+                lbltoptitle.Text = "المنتجات";
+            }
+            else if (GoToTreasury) 
+            {
+                pnlContainer.Controls.Clear();
+                TreasuryFRM = new TreasuryFRM(this);
+                pnlContainer.Controls.Add(TreasuryFRM.pnltreasury);
+
+                btngoback.Visible = false;
+                GoToTreasury = false;
+                lbltoptitle.Text = "الخزينه";
+            }
+            else if (GoToCustomer)
+            {
+                pnlContainer.Controls.Clear();
+                customerFrm = new CustomerFrm(this);
+                pnlContainer.Controls.Add(customerFrm.pnlselling);
+
+                btngoback.Visible = false;
+                GoToCustomer = false;
+                lbltoptitle.Text = "العملاء";
+            }
+            else if (GoToCusOptions)
+            {
+                SHowCustomerOptions();
+
+                btngoback.Visible = false;
+                GoToCusOptions = false;
+                lbltoptitle.Text = "العملاء";
+            }
+            else if (GoToStaff)
+            {
+                pnlContainer.Controls.Clear();
+                staffFRM = new StaffFRM(this);
+                pnlContainer.Controls.Add(staffFRM.pnlselling);
+
+                btngoback.Visible = false;
+                GoToStaff = false;
+                lbltoptitle.Text = "العمال";
+            }
+
+        }
 
         //controle buttons
         private void btnclose_Click(object sender, EventArgs e)
@@ -399,6 +513,7 @@ namespace Sahll
         }
         #endregion
 
+        //Transitions
 
         #region CarTransitions
         public void ShowProducts()
@@ -481,17 +596,149 @@ namespace Sahll
         }
         #endregion
 
-        private void btngoback_Click(object sender, EventArgs e)
+        #region ProductsTransactions
+        public void ShowJustProduct()
         {
-            if (GoToCars) 
-            {
-                pnlContainer.Controls.Clear();
-                FRM = new CarsOptionsFRM(this);
-                pnlContainer.Controls.Add(FRM.pnlcarsoptions);
+            JustProductFRM frm = new JustProductFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlstore);
 
-                btngoback.Visible = false;
-                lbltoptitle.Text = "السيارات";
-            }
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToProduct = true;
+
+            //tit
+            lbltoptitle.Text = "الأصناف";
         }
+        public void ShowCategoreis()
+        {
+            CategoryFRM frm = new CategoryFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlstore);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToProduct = true;
+
+            //tit
+            lbltoptitle.Text = "التصنيفات";
+        }
+        public void ShowManufacturing()
+        {
+            ManufacturingFRM manufacturingFRM = new ManufacturingFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(manufacturingFRM.pnlstore);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToProduct = true;
+
+            //tit
+            lbltoptitle.Text = "التصنيع";
+        }
+        #endregion
+
+        #region TresuryTransactions
+        public void ShowReceipts()
+        {
+            ReceiptsFRM frm = new ReceiptsFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlselling);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToTreasury = true;
+
+            //tit
+            lbltoptitle.Text = "المقبوضات";
+        } 
+        public void ShowExpenses()
+        {
+            ExpensesFRM frm = new ExpensesFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlselling);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToTreasury = true;
+
+            //tit
+            lbltoptitle.Text = "المصروفات";
+        }
+        public void ShowAminHome()
+        {
+            AminHomeFRM frm = new AminHomeFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlaminhome);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToTreasury = true;
+
+            //tit
+            lbltoptitle.Text = "أمين منزل";
+        }
+        #endregion
+
+        #region CustomerTransformation
+        public void SHowCustomerOptions()
+        {
+            CustomersOptionsFRM frm = new CustomersOptionsFRM(this);
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlcarsoptions);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToCustomer = true;
+
+            //tit
+            lbltoptitle.Text = "العملاء(صافي الحساب)";
+        }
+        public void ShowCustomerProduct()
+        {
+            CustomerProductFRM frm = new CustomerProductFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlselling);
+
+            //GoBackButton
+            GoToCustomer = false;
+            btngoback.Visible = true;
+            GoToCusOptions = true;
+
+            //tit
+            lbltoptitle.Text = "الاصناف المورده للعميل";
+        }
+        public void ShowCustomerCash()
+        {
+            CustomerCashFRM frm = new CustomerCashFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlstore);
+
+            //GoBackButton
+            GoToCustomer = false;
+            btngoback.Visible = true;
+            GoToCusOptions = true;
+
+            //tit
+            lbltoptitle.Text = "النقديه المحصله من العميل";
+        }
+        #endregion
+
+        #region StaffTransitions
+
+        public void ShowStaffAccounts()
+        {
+            StaffAccountFRM frm = new StaffAccountFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlselling);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToStaff = true;
+
+            //tit
+            lbltoptitle.Text = "حسابات العمال";
+        }
+        #endregion
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sahll.JUI.Car.InfoForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -57,6 +58,9 @@ namespace Sahll.JUI.Car
                 switch (columnName)
                 {
                     case "info":
+                        //JUI
+                        InfoForms.CarInfoProduct IFRM = new InfoForms.CarInfoProduct();
+                        IFRM.Show();
                         break;
                 }
             }
@@ -113,5 +117,22 @@ namespace Sahll.JUI.Car
 
         }
         #endregion
+
+        private void pnlcarsoldproduct_Resize(object sender, EventArgs e)
+        {
+            int buttonWidth = (pnlcarsoldproduct.Size.Width) / 5;
+            btncar5.Size = new Size(buttonWidth, 41);
+            btncar4.Size = new Size(buttonWidth, 40);
+            btncar3.Size = new Size(buttonWidth, 40);
+            btncar2.Size = new Size(buttonWidth, 40);
+            btncar1.Size = new Size(buttonWidth, 41);
+
+
+            btncar5.Location = new Point(15, 73);
+            btncar4.Location = new Point(btncar5.Width - 8, 74);
+            btncar3.Location = new Point(btncar5.Width * 2 - 9, 74);
+            btncar2.Location = new Point(btncar5.Width * 3 - 10, 74);
+            btncar1.Location = new Point(btncar5.Width * 4 - 18, 73);
+        }
     }
 }

@@ -83,6 +83,7 @@
             pnlcarproduct.Name = "pnlcarproduct";
             pnlcarproduct.Size = new Size(945, 750);
             pnlcarproduct.TabIndex = 0;
+            pnlcarproduct.Resize += pnlcarproduct_Resize;
             // 
             // btnaddinventory
             // 
@@ -104,6 +105,7 @@
             btnaddinventory.Text = "إضافه";
             btnaddinventory.TextColor = Color.White;
             btnaddinventory.UseVisualStyleBackColor = false;
+            btnaddinventory.Click += btnaddinventory_Click;
             // 
             // DpToProduct
             // 
@@ -211,10 +213,10 @@
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel1.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel1.Location = new Point(6, 122);
+            khPanel1.Location = new Point(3, 133);
             khPanel1.Name = "khPanel1";
             khPanel1.Padding = new Padding(5, 8, 5, 15);
-            khPanel1.Size = new Size(936, 543);
+            khPanel1.Size = new Size(940, 532);
             khPanel1.TabIndex = 33;
             // 
             // dgvcarproduct
@@ -257,7 +259,7 @@
             dgvcarproduct.RowTemplate.DividerHeight = 1;
             dgvcarproduct.RowTemplate.Height = 28;
             dgvcarproduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvcarproduct.Size = new Size(926, 520);
+            dgvcarproduct.Size = new Size(930, 509);
             dgvcarproduct.TabIndex = 1;
             dgvcarproduct.CellClick += dgvcarproduct_CellClick;
             dgvcarproduct.CellMouseEnter += dgvcarproduct_CellMouseEnter;

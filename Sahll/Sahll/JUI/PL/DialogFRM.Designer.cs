@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             khPanel1 = new customs.KhPanel();
+            btnclose = new customs.KhControles.KhButton();
             btnconferm = new PictureBox();
             btncancel = new PictureBox();
             txtdialog = new Label();
+            timer1 = new System.Windows.Forms.Timer(components);
             khPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnconferm).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btncancel).BeginInit();
@@ -41,6 +44,7 @@
             // 
             khPanel1.BackColor = Color.White;
             khPanel1.BorderRadius = 0;
+            khPanel1.Controls.Add(btnclose);
             khPanel1.Controls.Add(btnconferm);
             khPanel1.Controls.Add(btncancel);
             khPanel1.Controls.Add(txtdialog);
@@ -53,6 +57,26 @@
             khPanel1.Name = "khPanel1";
             khPanel1.Size = new Size(1115, 790);
             khPanel1.TabIndex = 0;
+            // 
+            // btnclose
+            // 
+            btnclose.BackColor = Color.Transparent;
+            btnclose.BackgroundColor = Color.Transparent;
+            btnclose.BorderColor = Color.Crimson;
+            btnclose.BorderRadius = 0;
+            btnclose.BorderSize = 0;
+            btnclose.Cursor = Cursors.Hand;
+            btnclose.FlatAppearance.BorderSize = 0;
+            btnclose.FlatStyle = FlatStyle.Flat;
+            btnclose.ForeColor = Color.White;
+            btnclose.Image = Properties.Resources.closed;
+            btnclose.Location = new Point(-1, -1);
+            btnclose.Name = "btnclose";
+            btnclose.Size = new Size(33, 33);
+            btnclose.TabIndex = 62;
+            btnclose.TextColor = Color.White;
+            btnclose.UseVisualStyleBackColor = false;
+            btnclose.Click += btnclose_Click;
             // 
             // btnconferm
             // 
@@ -96,8 +120,12 @@
             txtdialog.Name = "txtdialog";
             txtdialog.Size = new Size(1115, 375);
             txtdialog.TabIndex = 60;
-            txtdialog.Text = "انا اسمي عمي احماد";
             txtdialog.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // timer1
+            // 
+            timer1.Interval = 2000;
+            timer1.Tick += timer1_Tick;
             // 
             // DialogFRM
             // 
@@ -122,7 +150,9 @@
 
         private customs.KhPanel khPanel1;
         private Label txtdialog;
-        private PictureBox btncancel;
-        private PictureBox btnconferm;
+        public PictureBox btncancel;
+        public PictureBox btnconferm;
+        public System.Windows.Forms.Timer timer1;
+        private customs.KhControles.KhButton btnclose;
     }
 }

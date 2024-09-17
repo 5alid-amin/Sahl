@@ -19,12 +19,18 @@ namespace Sahll.JUI.Car.SubForms
 
         private void btnadddriver_Click(object sender, EventArgs e)
         {
-
+            CarAddExpenseFRM frm = new CarAddExpenseFRM();
+            frm.Show();
         }
 
         private void add_edit__cash_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

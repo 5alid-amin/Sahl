@@ -1,0 +1,604 @@
+﻿namespace Sahll.JUI.Selling
+{
+    partial class SellingAddEditFRM
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            khPanel1 = new customs.KhPanel();
+            dgvAddSellingProces = new DataGridView();
+            product = new DataGridViewTextBoxColumn();
+            price = new DataGridViewTextBoxColumn();
+            quantity = new DataGridViewTextBoxColumn();
+            total = new DataGridViewTextBoxColumn();
+            delete = new DataGridViewImageColumn();
+            label2 = new Label();
+            label1 = new Label();
+            label3 = new Label();
+            khPanel3 = new customs.KhPanel();
+            txtbarcode = new TextBox();
+            khButton2 = new customs.KhControles.KhButton();
+            cmbproduct = new ComboBox();
+            khButton4 = new customs.KhControles.KhButton();
+            label4 = new Label();
+            khPanel2 = new customs.KhPanel();
+            txtquantity = new TextBox();
+            khButton3 = new customs.KhControles.KhButton();
+            label5 = new Label();
+            btn_add = new customs.KhControles.KhButton();
+            khButton1 = new customs.KhControles.KhButton();
+            khButton5 = new customs.KhControles.KhButton();
+            label6 = new Label();
+            label7 = new Label();
+            lblsellingprice = new Label();
+            lblstorequantity = new Label();
+            btnclose = new customs.KhControles.KhButton();
+            btnminimize = new customs.KhControles.KhButton();
+            panel1 = new Panel();
+            khPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAddSellingProces).BeginInit();
+            SuspendLayout();
+            // 
+            // khPanel1
+            // 
+            khPanel1.Anchor = AnchorStyles.Right;
+            khPanel1.BackColor = Color.White;
+            khPanel1.BorderRadius = 30;
+            khPanel1.Controls.Add(dgvAddSellingProces);
+            khPanel1.Controls.Add(label2);
+            khPanel1.Controls.Add(label1);
+            khPanel1.ForeColor = Color.Black;
+            khPanel1.GradientAngle = 90F;
+            khPanel1.GradientBottomColor = Color.FromArgb(203, 150, 233);
+            khPanel1.GradientTopColor = Color.FromArgb(203, 150, 233);
+            khPanel1.Location = new Point(338, 39);
+            khPanel1.Name = "khPanel1";
+            khPanel1.Padding = new Padding(5, 8, 5, 15);
+            khPanel1.Size = new Size(771, 738);
+            khPanel1.TabIndex = 62;
+            // 
+            // dgvAddSellingProces
+            // 
+            dgvAddSellingProces.AllowUserToAddRows = false;
+            dgvAddSellingProces.AllowUserToDeleteRows = false;
+            dgvAddSellingProces.AllowUserToResizeColumns = false;
+            dgvAddSellingProces.AllowUserToResizeRows = false;
+            dgvAddSellingProces.BackgroundColor = Color.White;
+            dgvAddSellingProces.BorderStyle = BorderStyle.None;
+            dgvAddSellingProces.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvAddSellingProces.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(203, 150, 233);
+            dataGridViewCellStyle4.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvAddSellingProces.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvAddSellingProces.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAddSellingProces.Columns.AddRange(new DataGridViewColumn[] { product, price, quantity, total, delete });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle6.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvAddSellingProces.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvAddSellingProces.Dock = DockStyle.Top;
+            dgvAddSellingProces.EnableHeadersVisualStyles = false;
+            dgvAddSellingProces.GridColor = Color.White;
+            dgvAddSellingProces.Location = new Point(5, 8);
+            dgvAddSellingProces.Name = "dgvAddSellingProces";
+            dgvAddSellingProces.ReadOnly = true;
+            dgvAddSellingProces.RightToLeft = RightToLeft.Yes;
+            dgvAddSellingProces.RowHeadersVisible = false;
+            dgvAddSellingProces.RowHeadersWidth = 25;
+            dgvAddSellingProces.RowTemplate.DividerHeight = 1;
+            dgvAddSellingProces.RowTemplate.Height = 28;
+            dgvAddSellingProces.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAddSellingProces.Size = new Size(761, 686);
+            dgvAddSellingProces.TabIndex = 1;
+            dgvAddSellingProces.CellClick += dgvcarcash_CellClick;
+            dgvAddSellingProces.CellMouseEnter += dgvcarcash_CellMouseEnter;
+            dgvAddSellingProces.CellMouseLeave += dgvcarcash_CellMouseLeave;
+            // 
+            // product
+            // 
+            product.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            product.FillWeight = 144.4988F;
+            product.HeaderText = "الصنف";
+            product.Name = "product";
+            product.ReadOnly = true;
+            // 
+            // price
+            // 
+            price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            price.DefaultCellStyle = dataGridViewCellStyle5;
+            price.FillWeight = 51.1084938F;
+            price.HeaderText = "السعر";
+            price.Name = "price";
+            price.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            quantity.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            quantity.FillWeight = 47.3107262F;
+            quantity.HeaderText = "الكميه";
+            quantity.Name = "quantity";
+            quantity.ReadOnly = true;
+            // 
+            // total
+            // 
+            total.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            total.FillWeight = 53.59442F;
+            total.HeaderText = "الإجمالي";
+            total.Name = "total";
+            total.ReadOnly = true;
+            // 
+            // delete
+            // 
+            delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            delete.FillWeight = 14.1613407F;
+            delete.HeaderText = "";
+            delete.Image = Properties.Resources.deletel1;
+            delete.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            delete.Name = "delete";
+            delete.ReadOnly = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Hacen Egypt", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(63, 36, 114);
+            label2.Location = new Point(320, 682);
+            label2.Name = "label2";
+            label2.Size = new Size(116, 72);
+            label2.TabIndex = 2;
+            label2.Text = "52318";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Hacen Egypt", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(526, 679);
+            label1.Name = "label1";
+            label1.Size = new Size(125, 72);
+            label1.TabIndex = 2;
+            label1.Text = "الإجمالي";
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label3.BackColor = Color.FromArgb(255, 247, 244);
+            label3.Font = new Font("LBC", 27.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(203, 150, 233);
+            label3.Location = new Point(114, 41);
+            label3.Name = "label3";
+            label3.Size = new Size(113, 47);
+            label3.TabIndex = 2;
+            label3.Text = "الصنف";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // khPanel3
+            // 
+            khPanel3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            khPanel3.BackColor = Color.White;
+            khPanel3.BorderRadius = 2;
+            khPanel3.ForeColor = Color.Black;
+            khPanel3.GradientAngle = 90F;
+            khPanel3.GradientBottomColor = Color.FromArgb(195, 172, 208);
+            khPanel3.GradientTopColor = Color.FromArgb(173, 109, 209);
+            khPanel3.Location = new Point(24, 335);
+            khPanel3.Name = "khPanel3";
+            khPanel3.Size = new Size(285, 3);
+            khPanel3.TabIndex = 74;
+            // 
+            // txtbarcode
+            // 
+            txtbarcode.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            txtbarcode.BorderStyle = BorderStyle.None;
+            txtbarcode.Font = new Font("Hacen Egypt", 33.75F);
+            txtbarcode.ForeColor = Color.FromArgb(63, 36, 114);
+            txtbarcode.Location = new Point(26, 244);
+            txtbarcode.Multiline = true;
+            txtbarcode.Name = "txtbarcode";
+            txtbarcode.Size = new Size(282, 94);
+            txtbarcode.TabIndex = 73;
+            txtbarcode.TextAlign = HorizontalAlignment.Center;
+            // 
+            // khButton2
+            // 
+            khButton2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            khButton2.BackColor = Color.White;
+            khButton2.BackgroundColor = Color.White;
+            khButton2.BorderColor = Color.FromArgb(63, 36, 114);
+            khButton2.BorderRadius = 40;
+            khButton2.BorderSize = 0;
+            khButton2.FlatAppearance.BorderSize = 0;
+            khButton2.FlatStyle = FlatStyle.Flat;
+            khButton2.ForeColor = Color.White;
+            khButton2.Location = new Point(17, 238);
+            khButton2.Name = "khButton2";
+            khButton2.Size = new Size(300, 100);
+            khButton2.TabIndex = 75;
+            khButton2.Text = "khButton2";
+            khButton2.TextColor = Color.White;
+            khButton2.UseVisualStyleBackColor = false;
+            // 
+            // cmbproduct
+            // 
+            cmbproduct.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbproduct.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbproduct.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbproduct.BackColor = Color.White;
+            cmbproduct.DropDownHeight = 150;
+            cmbproduct.Font = new Font("Hacen Egypt", 33.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbproduct.ForeColor = Color.FromArgb(63, 36, 114);
+            cmbproduct.FormattingEnabled = true;
+            cmbproduct.IntegralHeight = false;
+            cmbproduct.Location = new Point(30, 87);
+            cmbproduct.Name = "cmbproduct";
+            cmbproduct.Size = new Size(282, 101);
+            cmbproduct.TabIndex = 78;
+            // 
+            // khButton4
+            // 
+            khButton4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            khButton4.BackColor = Color.FromArgb(203, 150, 233);
+            khButton4.BackgroundColor = Color.FromArgb(203, 150, 233);
+            khButton4.BorderColor = Color.FromArgb(203, 150, 233);
+            khButton4.BorderRadius = 30;
+            khButton4.BorderSize = 1;
+            khButton4.Enabled = false;
+            khButton4.FlatAppearance.BorderSize = 0;
+            khButton4.FlatStyle = FlatStyle.Flat;
+            khButton4.ForeColor = SystemColors.Window;
+            khButton4.Location = new Point(15, 85);
+            khButton4.Name = "khButton4";
+            khButton4.Size = new Size(311, 104);
+            khButton4.TabIndex = 77;
+            khButton4.Text = "khButton1";
+            khButton4.TextColor = SystemColors.Window;
+            khButton4.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label4.BackColor = Color.FromArgb(255, 247, 244);
+            label4.Font = new Font("LBC", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(203, 150, 233);
+            label4.Location = new Point(115, 189);
+            label4.Name = "label4";
+            label4.Size = new Size(126, 45);
+            label4.TabIndex = 2;
+            label4.Text = "الباركود";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // khPanel2
+            // 
+            khPanel2.Anchor = AnchorStyles.None;
+            khPanel2.BackColor = Color.White;
+            khPanel2.BorderRadius = 2;
+            khPanel2.ForeColor = Color.Black;
+            khPanel2.GradientAngle = 90F;
+            khPanel2.GradientBottomColor = Color.FromArgb(195, 172, 208);
+            khPanel2.GradientTopColor = Color.FromArgb(173, 109, 209);
+            khPanel2.Location = new Point(28, 490);
+            khPanel2.Name = "khPanel2";
+            khPanel2.Size = new Size(285, 3);
+            khPanel2.TabIndex = 81;
+            // 
+            // txtquantity
+            // 
+            txtquantity.Anchor = AnchorStyles.None;
+            txtquantity.BorderStyle = BorderStyle.None;
+            txtquantity.Font = new Font("Hacen Egypt", 33.75F);
+            txtquantity.ForeColor = Color.FromArgb(63, 36, 114);
+            txtquantity.Location = new Point(30, 399);
+            txtquantity.Multiline = true;
+            txtquantity.Name = "txtquantity";
+            txtquantity.Size = new Size(282, 94);
+            txtquantity.TabIndex = 80;
+            txtquantity.TextAlign = HorizontalAlignment.Center;
+            // 
+            // khButton3
+            // 
+            khButton3.Anchor = AnchorStyles.None;
+            khButton3.BackColor = Color.White;
+            khButton3.BackgroundColor = Color.White;
+            khButton3.BorderColor = Color.FromArgb(63, 36, 114);
+            khButton3.BorderRadius = 40;
+            khButton3.BorderSize = 0;
+            khButton3.FlatAppearance.BorderSize = 0;
+            khButton3.FlatStyle = FlatStyle.Flat;
+            khButton3.ForeColor = Color.White;
+            khButton3.Location = new Point(21, 393);
+            khButton3.Name = "khButton3";
+            khButton3.Size = new Size(300, 100);
+            khButton3.TabIndex = 82;
+            khButton3.Text = "khButton3";
+            khButton3.TextColor = Color.White;
+            khButton3.UseVisualStyleBackColor = false;
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label5.BackColor = Color.FromArgb(255, 247, 244);
+            label5.Font = new Font("LBC", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(203, 150, 233);
+            label5.Location = new Point(119, 345);
+            label5.Name = "label5";
+            label5.Size = new Size(126, 45);
+            label5.TabIndex = 79;
+            label5.Text = "الكميه";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btn_add
+            // 
+            btn_add.Anchor = AnchorStyles.None;
+            btn_add.BackColor = Color.FromArgb(173, 109, 209);
+            btn_add.BackgroundColor = Color.FromArgb(173, 109, 209);
+            btn_add.BorderColor = Color.FromArgb(63, 36, 114);
+            btn_add.BorderRadius = 40;
+            btn_add.BorderSize = 0;
+            btn_add.Cursor = Cursors.Hand;
+            btn_add.FlatAppearance.BorderSize = 0;
+            btn_add.FlatStyle = FlatStyle.Flat;
+            btn_add.Font = new Font("Hacen Egypt", 18.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_add.ForeColor = Color.White;
+            btn_add.Location = new Point(93, 505);
+            btn_add.Name = "btn_add";
+            btn_add.Size = new Size(163, 56);
+            btn_add.TabIndex = 83;
+            btn_add.Text = "إضافه";
+            btn_add.TextColor = Color.White;
+            btn_add.UseVisualStyleBackColor = false;
+            // 
+            // khButton1
+            // 
+            khButton1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            khButton1.BackColor = Color.FromArgb(255, 247, 244);
+            khButton1.BackgroundColor = Color.FromArgb(255, 247, 244);
+            khButton1.BorderColor = Color.FromArgb(138, 4, 214);
+            khButton1.BorderRadius = 40;
+            khButton1.BorderSize = 1;
+            khButton1.Enabled = false;
+            khButton1.FlatAppearance.BorderSize = 0;
+            khButton1.FlatStyle = FlatStyle.Flat;
+            khButton1.ForeColor = SystemColors.Window;
+            khButton1.Location = new Point(7, 39);
+            khButton1.Margin = new Padding(3, 3, 2, 3);
+            khButton1.Name = "khButton1";
+            khButton1.Size = new Size(326, 526);
+            khButton1.TabIndex = 63;
+            khButton1.Text = "khButton1";
+            khButton1.TextColor = SystemColors.Window;
+            khButton1.UseVisualStyleBackColor = false;
+            // 
+            // khButton5
+            // 
+            khButton5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            khButton5.BackColor = Color.FromArgb(255, 247, 244);
+            khButton5.BackgroundColor = Color.FromArgb(255, 247, 244);
+            khButton5.BorderColor = Color.FromArgb(138, 4, 214);
+            khButton5.BorderRadius = 40;
+            khButton5.BorderSize = 1;
+            khButton5.Enabled = false;
+            khButton5.FlatAppearance.BorderSize = 0;
+            khButton5.FlatStyle = FlatStyle.Flat;
+            khButton5.ForeColor = SystemColors.Window;
+            khButton5.Location = new Point(7, 567);
+            khButton5.Margin = new Padding(3, 3, 2, 3);
+            khButton5.Name = "khButton5";
+            khButton5.Size = new Size(326, 210);
+            khButton5.TabIndex = 84;
+            khButton5.TextColor = SystemColors.Window;
+            khButton5.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label6.BackColor = Color.FromArgb(255, 247, 244);
+            label6.Font = new Font("LBC", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(203, 150, 233);
+            label6.Location = new Point(93, 569);
+            label6.Name = "label6";
+            label6.Size = new Size(153, 45);
+            label6.TabIndex = 85;
+            label6.Text = "سعر البيع";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label7.BackColor = Color.FromArgb(255, 247, 244);
+            label7.Font = new Font("LBC", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(203, 150, 233);
+            label7.Location = new Point(57, 676);
+            label7.Name = "label7";
+            label7.Size = new Size(225, 45);
+            label7.TabIndex = 86;
+            label7.Text = "الكميه بالمخزن";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblsellingprice
+            // 
+            lblsellingprice.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lblsellingprice.BackColor = Color.FromArgb(255, 247, 244);
+            lblsellingprice.Font = new Font("Hacen Egypt", 27.75F);
+            lblsellingprice.ForeColor = Color.FromArgb(138, 4, 214);
+            lblsellingprice.Location = new Point(115, 610);
+            lblsellingprice.Name = "lblsellingprice";
+            lblsellingprice.Size = new Size(109, 57);
+            lblsellingprice.TabIndex = 85;
+            lblsellingprice.Text = "2153";
+            lblsellingprice.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblstorequantity
+            // 
+            lblstorequantity.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lblstorequantity.BackColor = Color.FromArgb(255, 247, 244);
+            lblstorequantity.Font = new Font("Hacen Egypt", 27.75F);
+            lblstorequantity.ForeColor = Color.FromArgb(138, 4, 214);
+            lblstorequantity.Location = new Point(115, 721);
+            lblstorequantity.Name = "lblstorequantity";
+            lblstorequantity.Size = new Size(109, 55);
+            lblstorequantity.TabIndex = 85;
+            lblstorequantity.Text = "2153";
+            lblstorequantity.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnclose
+            // 
+            btnclose.BackColor = Color.Transparent;
+            btnclose.BackgroundColor = Color.Transparent;
+            btnclose.BorderColor = Color.Crimson;
+            btnclose.BorderRadius = 10;
+            btnclose.BorderSize = 0;
+            btnclose.Cursor = Cursors.Hand;
+            btnclose.FlatAppearance.BorderSize = 0;
+            btnclose.FlatStyle = FlatStyle.Flat;
+            btnclose.ForeColor = Color.White;
+            btnclose.Image = Properties.Resources.close;
+            btnclose.Location = new Point(-2, -2);
+            btnclose.Name = "btnclose";
+            btnclose.Size = new Size(33, 33);
+            btnclose.TabIndex = 87;
+            btnclose.TextColor = Color.White;
+            btnclose.UseVisualStyleBackColor = false;
+            btnclose.Click += btnclose_Click;
+            // 
+            // btnminimize
+            // 
+            btnminimize.BackColor = Color.Transparent;
+            btnminimize.BackgroundColor = Color.Transparent;
+            btnminimize.BorderColor = Color.Crimson;
+            btnminimize.BorderRadius = 10;
+            btnminimize.BorderSize = 0;
+            btnminimize.Cursor = Cursors.Hand;
+            btnminimize.FlatAppearance.BorderSize = 0;
+            btnminimize.FlatStyle = FlatStyle.Flat;
+            btnminimize.ForeColor = Color.White;
+            btnminimize.Image = Properties.Resources.minimize;
+            btnminimize.Location = new Point(30, -2);
+            btnminimize.Name = "btnminimize";
+            btnminimize.Size = new Size(33, 33);
+            btnminimize.TabIndex = 88;
+            btnminimize.TextColor = Color.White;
+            btnminimize.UseVisualStyleBackColor = false;
+            btnminimize.Click += btnminimize_Click;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.FromArgb(173, 109, 209);
+            panel1.Location = new Point(81, 25);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1023, 2);
+            panel1.TabIndex = 89;
+            // 
+            // SellingAddEditFRM
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(255, 251, 245);
+            ClientSize = new Size(1115, 790);
+            Controls.Add(panel1);
+            Controls.Add(khPanel1);
+            Controls.Add(label7);
+            Controls.Add(lblstorequantity);
+            Controls.Add(lblsellingprice);
+            Controls.Add(label6);
+            Controls.Add(khButton5);
+            Controls.Add(btn_add);
+            Controls.Add(khPanel2);
+            Controls.Add(txtquantity);
+            Controls.Add(khButton3);
+            Controls.Add(label5);
+            Controls.Add(cmbproduct);
+            Controls.Add(khButton4);
+            Controls.Add(khPanel3);
+            Controls.Add(txtbarcode);
+            Controls.Add(khButton2);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(khButton1);
+            Controls.Add(btnclose);
+            Controls.Add(btnminimize);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "SellingAddEditFRM";
+            Padding = new Padding(5, 20, 3, 10);
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "AddSellingProcessFRM";
+            WindowState = FormWindowState.Maximized;
+            khPanel1.ResumeLayout(false);
+            khPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAddSellingProces).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private customs.KhPanel khPanel1;
+        private DataGridView dgvAddSellingProces;
+        private DataGridViewTextBoxColumn product;
+        private DataGridViewTextBoxColumn price;
+        private DataGridViewTextBoxColumn quantity;
+        private DataGridViewTextBoxColumn total;
+        private DataGridViewImageColumn delete;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private customs.KhPanel khPanel3;
+        private TextBox txtbarcode;
+        private customs.KhControles.KhButton khButton2;
+        private ComboBox cmbproduct;
+        private customs.KhControles.KhButton khButton4;
+        private Label label4;
+        private customs.KhPanel khPanel2;
+        private TextBox txtquantity;
+        private customs.KhControles.KhButton khButton3;
+        private Label label5;
+        private customs.KhControles.KhButton btn_add;
+        private customs.KhControles.KhButton khButton1;
+        private customs.KhControles.KhButton khButton5;
+        private Label label6;
+        private Label label7;
+        private Label lblsellingprice;
+        private Label lblstorequantity;
+        private customs.KhControles.KhButton btnclose;
+        private customs.KhControles.KhButton btnminimize;
+        private Panel panel1;
+    }
+}

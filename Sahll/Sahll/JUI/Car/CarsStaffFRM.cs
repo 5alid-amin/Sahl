@@ -21,8 +21,8 @@ namespace Sahll.JUI.Car
             {
                 list.Add(x);
             }
-            comboBox2.DataSource = list;
-            comboBox2.SelectedIndex = -1;
+            cmbdriver.DataSource = list;
+            cmbdriver.SelectedIndex = -1;
         }
 
         #region ButtonsMethods
@@ -53,6 +53,23 @@ namespace Sahll.JUI.Car
         #endregion
 
         #region JUI
+        private void pnlcar_staff_Resize(object sender, EventArgs e)
+        {
+            int buttonWidth = (pnlcar_staff.Size.Width) / 5;
+            btncar5.Size = new Size(buttonWidth, 41);
+            btncar4.Size = new Size(buttonWidth, 40); 
+            btncar3.Size = new Size(buttonWidth, 40);
+            btncar2.Size = new Size(buttonWidth, 40);
+            btncar1.Size = new Size(buttonWidth, 41); 
+
+
+            btncar5.Location = new Point(0, 17);
+            btncar4.Location = new Point(btncar5.Width-8, 18);
+            btncar3.Location = new Point(btncar5.Width * 2-9, 18);
+            btncar2.Location = new Point(btncar5.Width * 3-10, 18);
+            btncar1.Location = new Point(btncar5.Width * 4-18, 17);
+
+        }
         private void SetButtonActive(Button clickedButton)
         {
             btncar1.BackColor = Color.Transparent;
@@ -71,6 +88,8 @@ namespace Sahll.JUI.Car
             clickedButton.ForeColor = Color.White;
         }
         #endregion
+
+    
     }
 
 }

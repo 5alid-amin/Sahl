@@ -30,11 +30,11 @@
         {
             pnlcar_staff = new Panel();
             btnsave = new customs.KhControles.KhButton();
-            comboBox3 = new ComboBox();
+            cmbreserve = new ComboBox();
             khButton2 = new customs.KhControles.KhButton();
-            comboBox1 = new ComboBox();
+            cmbdelegator = new ComboBox();
             khButton1 = new customs.KhControles.KhButton();
-            comboBox2 = new ComboBox();
+            cmbdriver = new ComboBox();
             khButton3 = new customs.KhControles.KhButton();
             btnaddreserve = new customs.KhControles.KhButton();
             btnadddelegator = new customs.KhControles.KhButton();
@@ -53,11 +53,11 @@
             // pnlcar_staff
             // 
             pnlcar_staff.Controls.Add(btnsave);
-            pnlcar_staff.Controls.Add(comboBox3);
+            pnlcar_staff.Controls.Add(cmbreserve);
             pnlcar_staff.Controls.Add(khButton2);
-            pnlcar_staff.Controls.Add(comboBox1);
+            pnlcar_staff.Controls.Add(cmbdelegator);
             pnlcar_staff.Controls.Add(khButton1);
-            pnlcar_staff.Controls.Add(comboBox2);
+            pnlcar_staff.Controls.Add(cmbdriver);
             pnlcar_staff.Controls.Add(khButton3);
             pnlcar_staff.Controls.Add(btnaddreserve);
             pnlcar_staff.Controls.Add(btnadddelegator);
@@ -76,6 +76,7 @@
             pnlcar_staff.Name = "pnlcar_staff";
             pnlcar_staff.Size = new Size(945, 750);
             pnlcar_staff.TabIndex = 0;
+            pnlcar_staff.Resize += pnlcar_staff_Resize;
             // 
             // btnsave
             // 
@@ -92,27 +93,27 @@
             btnsave.ForeColor = Color.White;
             btnsave.Location = new Point(334, 621);
             btnsave.Name = "btnsave";
-            btnsave.Size = new Size(277, 98);
+            btnsave.Size = new Size(277, 105);
             btnsave.TabIndex = 69;
-            btnsave.Text = "إضافه";
+            btnsave.Text = "حفظ";
             btnsave.TextColor = Color.White;
             btnsave.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
+            // cmbreserve
             // 
-            comboBox3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            comboBox3.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox3.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox3.BackColor = Color.White;
-            comboBox3.DropDownHeight = 150;
-            comboBox3.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.ForeColor = Color.FromArgb(63, 36, 114);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.IntegralHeight = false;
-            comboBox3.Location = new Point(154, 501);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(532, 85);
-            comboBox3.TabIndex = 40;
+            cmbreserve.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbreserve.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbreserve.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbreserve.BackColor = Color.White;
+            cmbreserve.DropDownHeight = 150;
+            cmbreserve.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbreserve.ForeColor = Color.FromArgb(63, 36, 114);
+            cmbreserve.FormattingEnabled = true;
+            cmbreserve.IntegralHeight = false;
+            cmbreserve.Location = new Point(154, 501);
+            cmbreserve.Name = "cmbreserve";
+            cmbreserve.Size = new Size(532, 85);
+            cmbreserve.TabIndex = 40;
             // 
             // khButton2
             // 
@@ -134,21 +135,21 @@
             khButton2.TextColor = SystemColors.Window;
             khButton2.UseVisualStyleBackColor = false;
             // 
-            // comboBox1
+            // cmbdelegator
             // 
-            comboBox1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox1.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox1.BackColor = Color.White;
-            comboBox1.DropDownHeight = 150;
-            comboBox1.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.ForeColor = Color.FromArgb(63, 36, 114);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.IntegralHeight = false;
-            comboBox1.Location = new Point(154, 314);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(532, 85);
-            comboBox1.TabIndex = 38;
+            cmbdelegator.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbdelegator.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbdelegator.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbdelegator.BackColor = Color.White;
+            cmbdelegator.DropDownHeight = 150;
+            cmbdelegator.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbdelegator.ForeColor = Color.FromArgb(63, 36, 114);
+            cmbdelegator.FormattingEnabled = true;
+            cmbdelegator.IntegralHeight = false;
+            cmbdelegator.Location = new Point(154, 314);
+            cmbdelegator.Name = "cmbdelegator";
+            cmbdelegator.Size = new Size(532, 85);
+            cmbdelegator.TabIndex = 38;
             // 
             // khButton1
             // 
@@ -170,21 +171,21 @@
             khButton1.TextColor = SystemColors.Window;
             khButton1.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // cmbdriver
             // 
-            comboBox2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            comboBox2.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            comboBox2.AutoCompleteSource = AutoCompleteSource.ListItems;
-            comboBox2.BackColor = Color.White;
-            comboBox2.DropDownHeight = 150;
-            comboBox2.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox2.ForeColor = Color.FromArgb(63, 36, 114);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.IntegralHeight = false;
-            comboBox2.Location = new Point(154, 138);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(532, 85);
-            comboBox2.TabIndex = 38;
+            cmbdriver.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cmbdriver.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cmbdriver.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cmbdriver.BackColor = Color.White;
+            cmbdriver.DropDownHeight = 150;
+            cmbdriver.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbdriver.ForeColor = Color.FromArgb(63, 36, 114);
+            cmbdriver.FormattingEnabled = true;
+            cmbdriver.IntegralHeight = false;
+            cmbdriver.Location = new Point(154, 138);
+            cmbdriver.Name = "cmbdriver";
+            cmbdriver.Size = new Size(532, 85);
+            cmbdriver.TabIndex = 38;
             // 
             // khButton3
             // 
@@ -337,7 +338,7 @@
             // 
             // btncar1
             // 
-            btncar1.Anchor = AnchorStyles.None;
+            btncar1.Anchor = AnchorStyles.Right;
             btncar1.BackColor = Color.FromArgb(255, 251, 245);
             btncar1.BackgroundColor = Color.FromArgb(255, 251, 245);
             btncar1.BorderColor = Color.FromArgb(119, 67, 219);
@@ -374,7 +375,7 @@
             // 
             // btncar5
             // 
-            btncar5.Anchor = AnchorStyles.None;
+            btncar5.Anchor = AnchorStyles.Left;
             btncar5.BackColor = Color.FromArgb(255, 251, 245);
             btncar5.BackgroundColor = Color.FromArgb(255, 251, 245);
             btncar5.BorderColor = Color.FromArgb(119, 67, 219);
@@ -450,10 +451,10 @@
         private customs.KhControles.KhButton khButton3;
         private Label label3;
         private Label label2;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cmbdriver;
+        private ComboBox cmbdelegator;
         private customs.KhControles.KhButton khButton1;
-        private ComboBox comboBox3;
+        private ComboBox cmbreserve;
         private customs.KhControles.KhButton khButton2;
         public Panel pnlcar_staff;
         private customs.KhControles.KhButton btnsave;

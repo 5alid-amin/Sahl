@@ -12,22 +12,17 @@ namespace Sahll.JUI.PL
 {
     public partial class DialogFRM : Form
     {
-        public DialogFRM(string txt)
+        public DialogFRM(string txt, Color seccolor)
         {
             InitializeComponent();
             this.txtdialog.Text = txt;
+            this.khPanel1.GradientTopColor = seccolor;
+            //this.khPanel1.GradientBottomColor = Color.FromArgb(83, 4, 128);
+            Color move = Color.FromArgb(83, 4, 128);
+            Color red = Color.FromArgb(64, 0, 0);
 
             //button_on_hover();
         }
-
-        //private void button_on_hover()
-        //{
-
-        //    btnCancel.FlatAppearance.MouseOverBackColor = 
-        //    btnConferm.FlatAppearance.MouseOverBackColor = 
-
-        //    Color.Transparent;
-        //}
 
 
 
@@ -61,6 +56,17 @@ namespace Sahll.JUI.PL
         private void btncancel_MouseLeave(object sender, EventArgs e)
         {
             btncancel.Image = Properties.Resources.cancell1;
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

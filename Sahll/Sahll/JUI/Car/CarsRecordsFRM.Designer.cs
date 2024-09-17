@@ -105,6 +105,8 @@
             pnlcarrecords.Name = "pnlcarrecords";
             pnlcarrecords.Size = new Size(945, 750);
             pnlcarrecords.TabIndex = 0;
+            pnlcarrecords.Scroll += pnlcarrecords_Scroll;
+            pnlcarrecords.Resize += pnlcarrecords_Resize;
             // 
             // DpToRecords
             // 
@@ -168,10 +170,10 @@
             khPanel4.GradientAngle = 90F;
             khPanel4.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel4.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel4.Location = new Point(3, 125);
+            khPanel4.Location = new Point(3, 129);
             khPanel4.Name = "khPanel4";
             khPanel4.Padding = new Padding(5, 8, 5, 15);
-            khPanel4.Size = new Size(236, 543);
+            khPanel4.Size = new Size(236, 535);
             khPanel4.TabIndex = 61;
             // 
             // dgvcashtotal
@@ -214,7 +216,7 @@
             dgvcashtotal.RowTemplate.DividerHeight = 1;
             dgvcashtotal.RowTemplate.Height = 28;
             dgvcashtotal.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvcashtotal.Size = new Size(226, 520);
+            dgvcashtotal.Size = new Size(226, 512);
             dgvcashtotal.TabIndex = 1;
             dgvcashtotal.CellClick += dgvcashtotal_CellClick;
             dgvcashtotal.CellMouseEnter += dgvcashtotal_CellMouseEnter;
@@ -267,10 +269,10 @@
             khPanel3.GradientAngle = 90F;
             khPanel3.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel3.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel3.Location = new Point(237, 125);
+            khPanel3.Location = new Point(237, 129);
             khPanel3.Name = "khPanel3";
             khPanel3.Padding = new Padding(5, 8, 5, 15);
-            khPanel3.Size = new Size(236, 543);
+            khPanel3.Size = new Size(236, 535);
             khPanel3.TabIndex = 60;
             // 
             // dgvinventory
@@ -313,7 +315,7 @@
             dgvinventory.RowTemplate.DividerHeight = 1;
             dgvinventory.RowTemplate.Height = 28;
             dgvinventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvinventory.Size = new Size(226, 520);
+            dgvinventory.Size = new Size(226, 512);
             dgvinventory.TabIndex = 1;
             dgvinventory.CellClick += dgvinventory_CellClick;
             dgvinventory.CellMouseEnter += dgvinventory_CellMouseEnter;
@@ -374,10 +376,10 @@
             khPanel2.GradientAngle = 90F;
             khPanel2.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel2.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel2.Location = new Point(471, 125);
+            khPanel2.Location = new Point(471, 129);
             khPanel2.Name = "khPanel2";
             khPanel2.Padding = new Padding(5, 8, 5, 15);
-            khPanel2.Size = new Size(236, 543);
+            khPanel2.Size = new Size(236, 535);
             khPanel2.TabIndex = 59;
             // 
             // dgvDispatchedpro
@@ -420,7 +422,7 @@
             dgvDispatchedpro.RowTemplate.DividerHeight = 1;
             dgvDispatchedpro.RowTemplate.Height = 28;
             dgvDispatchedpro.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDispatchedpro.Size = new Size(226, 520);
+            dgvDispatchedpro.Size = new Size(226, 512);
             dgvDispatchedpro.TabIndex = 1;
             dgvDispatchedpro.CellClick += dgvDispatchedpro_CellClick;
             dgvDispatchedpro.CellMouseEnter += dgvDispatchedpro_CellMouseEnter;
@@ -473,10 +475,10 @@
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel1.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel1.Location = new Point(705, 125);
+            khPanel1.Location = new Point(705, 129);
             khPanel1.Name = "khPanel1";
             khPanel1.Padding = new Padding(5, 8, 5, 15);
-            khPanel1.Size = new Size(240, 543);
+            khPanel1.Size = new Size(240, 535);
             khPanel1.TabIndex = 58;
             // 
             // dgvsoldproducts
@@ -519,7 +521,7 @@
             dgvsoldproducts.RowTemplate.DividerHeight = 1;
             dgvsoldproducts.RowTemplate.Height = 28;
             dgvsoldproducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvsoldproducts.Size = new Size(230, 520);
+            dgvsoldproducts.Size = new Size(230, 512);
             dgvsoldproducts.TabIndex = 1;
             dgvsoldproducts.CellClick += dgvsoldproducts_CellClick;
             dgvsoldproducts.CellMouseEnter += dgvsoldproducts_CellMouseEnter;

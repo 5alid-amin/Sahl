@@ -28,7 +28,10 @@
     <Compile Update="JUI\Car\InfoForms\CarsInfoCashFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="JUI\Car\InfoForms\CarsInfoPro_Enven_RecorFRM.cs">
+    <Compile Update="JUI\Car\InfoForms\CarInfoProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Car\SubForms\CarAddExpenseFRM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="JUI\Car\SubForms\CarsAddEditProductsEnventoryFRM.cs">
@@ -37,10 +40,34 @@
     <Compile Update="JUI\Car\SubForms\CarsAddEditCashFRM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="JUI\Car\SubForms\CarsReturnProductsEnventoryFRM.cs">
+    <Compile Update="JUI\Car\SubForms\CarReturnedProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerProduct\CustomerProductAddEditFRM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="JUI\PL\DialogFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Product\Category\CategoryAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Selling\SellingAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Selling\SellingFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Selling\SellingInfoProductFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Selling\SellingReturnFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Store\StoreAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\TreasuryFRM.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="KhControles\CustomComboBox.cs">

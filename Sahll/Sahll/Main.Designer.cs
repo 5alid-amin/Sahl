@@ -512,6 +512,7 @@
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             pnlTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picnavbig).EndInit();
             ((System.ComponentModel.ISupportInitialize)picnavsmall).EndInit();

@@ -82,6 +82,7 @@
             pnlinventory.Name = "pnlinventory";
             pnlinventory.Size = new Size(945, 750);
             pnlinventory.TabIndex = 0;
+            pnlinventory.Resize += pnlinventory_Resize;
             // 
             // DpToInventory
             // 
@@ -199,6 +200,7 @@
             btnAddInventory.Text = "إضافه";
             btnAddInventory.TextColor = Color.White;
             btnAddInventory.UseVisualStyleBackColor = false;
+            btnAddInventory.Click += btnAddInventory_Click;
             // 
             // khPanel1
             // 
@@ -210,10 +212,10 @@
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel1.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel1.Location = new Point(7, 121);
+            khPanel1.Location = new Point(2, 132);
             khPanel1.Name = "khPanel1";
             khPanel1.Padding = new Padding(5, 8, 5, 15);
-            khPanel1.Size = new Size(936, 543);
+            khPanel1.Size = new Size(940, 532);
             khPanel1.TabIndex = 47;
             // 
             // dgvinventory
@@ -256,7 +258,7 @@
             dgvinventory.RowTemplate.DividerHeight = 1;
             dgvinventory.RowTemplate.Height = 28;
             dgvinventory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvinventory.Size = new Size(926, 520);
+            dgvinventory.Size = new Size(930, 509);
             dgvinventory.TabIndex = 1;
             dgvinventory.CellClick += dgvinventory_CellClick;
             dgvinventory.CellMouseEnter += dgvinventory_CellMouseEnter;

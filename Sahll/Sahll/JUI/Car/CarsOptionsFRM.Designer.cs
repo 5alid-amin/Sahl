@@ -76,7 +76,7 @@
             pnlcarsoptions.Name = "pnlcarsoptions";
             pnlcarsoptions.Size = new Size(945, 750);
             pnlcarsoptions.TabIndex = 0;
-            pnlcarsoptions.Paint += pnlcarsoptions_Paint;
+            pnlcarsoptions.Resize += pnlcarsoptions_Resize;
             // 
             // btnrecords
             // 
@@ -163,6 +163,7 @@
             btnnewweek.Text = "يوم جديد";
             btnnewweek.TextColor = Color.White;
             btnnewweek.UseVisualStyleBackColor = false;
+            btnnewweek.Click += btnnewweek_Click;
             // 
             // btncar3
             // 
@@ -315,6 +316,7 @@
             khButton7.BorderColor = Color.FromArgb(203, 150, 233);
             khButton7.BorderRadius = 30;
             khButton7.BorderSize = 2;
+            khButton7.Enabled = false;
             khButton7.FlatAppearance.BorderSize = 0;
             khButton7.FlatStyle = FlatStyle.Flat;
             khButton7.ForeColor = Color.White;
@@ -377,6 +379,7 @@
             khButton4.BorderColor = Color.FromArgb(203, 150, 233);
             khButton4.BorderRadius = 30;
             khButton4.BorderSize = 2;
+            khButton4.Enabled = false;
             khButton4.FlatAppearance.BorderSize = 0;
             khButton4.FlatStyle = FlatStyle.Flat;
             khButton4.ForeColor = Color.White;
@@ -395,6 +398,7 @@
             khButton5.BorderColor = Color.FromArgb(203, 150, 233);
             khButton5.BorderRadius = 30;
             khButton5.BorderSize = 2;
+            khButton5.Enabled = false;
             khButton5.FlatAppearance.BorderSize = 0;
             khButton5.FlatStyle = FlatStyle.Flat;
             khButton5.ForeColor = Color.White;
@@ -436,6 +440,7 @@
             khButton2.BorderColor = Color.FromArgb(203, 150, 233);
             khButton2.BorderRadius = 30;
             khButton2.BorderSize = 2;
+            khButton2.Enabled = false;
             khButton2.FlatAppearance.BorderSize = 0;
             khButton2.FlatStyle = FlatStyle.Flat;
             khButton2.ForeColor = Color.White;

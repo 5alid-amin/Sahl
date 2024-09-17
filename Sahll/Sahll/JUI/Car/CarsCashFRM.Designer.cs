@@ -84,6 +84,7 @@
             pnlcarcash.Name = "pnlcarcash";
             pnlcarcash.Size = new Size(945, 750);
             pnlcarcash.TabIndex = 1;
+            pnlcarcash.Resize += pnlcarcash_Resize;
             // 
             // DpToCash
             // 
@@ -120,6 +121,7 @@
             btnAddCash.Text = "إضافه";
             btnAddCash.TextColor = Color.White;
             btnAddCash.UseVisualStyleBackColor = false;
+            btnAddCash.Click += btnAddCash_Click;
             // 
             // label2
             // 
@@ -187,10 +189,10 @@
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel1.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel1.Location = new Point(3, 118);
+            khPanel1.Location = new Point(3, 128);
             khPanel1.Name = "khPanel1";
             khPanel1.Padding = new Padding(5, 8, 5, 15);
-            khPanel1.Size = new Size(940, 542);
+            khPanel1.Size = new Size(940, 532);
             khPanel1.TabIndex = 61;
             // 
             // dgvcarcash
@@ -233,7 +235,7 @@
             dgvcarcash.RowTemplate.DividerHeight = 1;
             dgvcarcash.RowTemplate.Height = 28;
             dgvcarcash.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvcarcash.Size = new Size(930, 519);
+            dgvcarcash.Size = new Size(930, 509);
             dgvcarcash.TabIndex = 1;
             dgvcarcash.CellClick += dgvcarcash_CellClick;
             dgvcarcash.CellMouseEnter += dgvcarcash_CellMouseEnter;
