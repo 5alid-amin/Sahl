@@ -16,6 +16,7 @@ namespace Sahll.JUI.Car
         public CarsRecordsFRM()
         {
             InitializeComponent();
+            CarsButtonsSynchronization();
             dgvsoldproducts.Rows.Add(new object[] { "صابون سائل" });
             dgvinventory.Rows.Add(new object[] { "صابون سائل" });
             dgvcashtotal.Rows.Add(new object[] { "صابون سائل" });
@@ -23,31 +24,35 @@ namespace Sahll.JUI.Car
 
         }
 
-
         #region ButtonsMethods
         private void btncar1_Click(object sender, EventArgs e)
         {
-            SetButtonActive(sender as Button);
+            SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 1;
         }
 
         private void btncar2_Click(object sender, EventArgs e)
         {
-            SetButtonActive(sender as Button);
+            SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 2;
         }
 
         private void btncar3_Click(object sender, EventArgs e)
         {
-            SetButtonActive(sender as Button);
+            SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 3;
         }
 
         private void btncar4_Click(object sender, EventArgs e)
         {
-            SetButtonActive(sender as Button);
+            SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 4;
         }
 
         private void btncar5_Click(object sender, EventArgs e)
         {
-            SetButtonActive(sender as Button);
+            SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 5;
         }
 
         private void dgvsoldproducts_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -70,6 +75,7 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
         private void dgvDispatchedpro_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvDispatchedpro.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -86,6 +92,7 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
         private void dgvinventory_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvinventory.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -105,6 +112,7 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
         private void dgvcashtotal_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvcashtotal.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -123,9 +131,58 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         #region JUI
+        private void pnlcarrecords_Resize(object sender, EventArgs e)
+        {
+            int buttonWidth = (pnlcarrecords.Size.Width) / 5;
+            btncar5.Size = new Size(buttonWidth, 41);
+            btncar4.Size = new Size(buttonWidth, 40);
+            btncar3.Size = new Size(buttonWidth, 40);
+            btncar2.Size = new Size(buttonWidth, 40);
+            btncar1.Size = new Size(buttonWidth, 41);
+
+
+            btncar5.Location = new Point(15, 73);
+            btncar4.Location = new Point(btncar5.Width - 8, 74);
+            btncar3.Location = new Point(btncar5.Width * 2 - 9, 74);
+            btncar2.Location = new Point(btncar5.Width * 3 - 10, 74);
+            btncar1.Location = new Point(btncar5.Width * 4 - 18, 73);
+        }
+
+        public void CarsButtonsSynchronization()
+        {
+            var num = CarsButtonsTransitions.SelectedCar;
+
+            // تحقق من السيارة المختارة واستدعاء دالة الزر المناسب
+            switch (num)
+            {
+                case 1:
+                    btncar1_Click(btncar1, EventArgs.Empty);
+                    break;
+                case 2:
+                    btncar2_Click(btncar2, EventArgs.Empty);
+                    break;
+                case 3:
+                    btncar3_Click(btncar3, EventArgs.Empty);
+                    break;
+                case 4:
+                    btncar4_Click(btncar4, EventArgs.Empty);
+                    break;
+                case 5:
+                    btncar5_Click(btncar5, EventArgs.Empty);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         private void dgvsoldproducts_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvsoldproducts.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -140,6 +197,7 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
         private void dgvsoldproducts_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvsoldproducts.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -155,8 +213,6 @@ namespace Sahll.JUI.Car
             }
         }
 
-
-
         private void dgvDispatchedpro_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvDispatchedpro.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -171,6 +227,7 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
         private void dgvDispatchedpro_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvDispatchedpro.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -186,8 +243,6 @@ namespace Sahll.JUI.Car
             }
         }
 
-
-
         private void dgvinventory_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvinventory.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -202,6 +257,7 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
         private void dgvinventory_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvinventory.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -217,8 +273,6 @@ namespace Sahll.JUI.Car
             }
         }
 
-
-
         private void dgvcashtotal_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvcashtotal.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -233,6 +287,7 @@ namespace Sahll.JUI.Car
                 }
             }
         }
+
         private void dgvcashtotal_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex >= 0 && e.RowIndex >= 0 && dgvcashtotal.Columns[e.ColumnIndex] is DataGridViewImageColumn)
@@ -267,27 +322,5 @@ namespace Sahll.JUI.Car
 
         }
         #endregion
-
-        private void pnlcarrecords_Scroll(object sender, ScrollEventArgs e)
-        {
-           
-        }
-
-        private void pnlcarrecords_Resize(object sender, EventArgs e)
-        {
-            int buttonWidth = (pnlcarrecords.Size.Width) / 5;
-            btncar5.Size = new Size(buttonWidth, 41);
-            btncar4.Size = new Size(buttonWidth, 40);
-            btncar3.Size = new Size(buttonWidth, 40);
-            btncar2.Size = new Size(buttonWidth, 40);
-            btncar1.Size = new Size(buttonWidth, 41);
-
-
-            btncar5.Location = new Point(15, 73);
-            btncar4.Location = new Point(btncar5.Width - 8, 74);
-            btncar3.Location = new Point(btncar5.Width * 2 - 9, 74);
-            btncar2.Location = new Point(btncar5.Width * 3 - 10, 74);
-            btncar1.Location = new Point(btncar5.Width * 4 - 18, 73);
-        }
     }
 }

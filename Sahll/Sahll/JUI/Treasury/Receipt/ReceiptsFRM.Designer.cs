@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             pnlselling = new Panel();
             khPanel1 = new customs.KhPanel();
             dgvReceipts = new DataGridView();
@@ -52,6 +52,7 @@
             txtsearch = new TextBox();
             khButton3 = new customs.KhControles.KhButton();
             label3 = new Label();
+            btnreport = new customs.KhControles.KhButton();
             pnlselling.SuspendLayout();
             khPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvReceipts).BeginInit();
@@ -59,6 +60,7 @@
             // 
             // pnlselling
             // 
+            pnlselling.Controls.Add(btnreport);
             pnlselling.Controls.Add(khPanel1);
             pnlselling.Controls.Add(btnAddReceipts);
             pnlselling.Controls.Add(lbltotal);
@@ -103,24 +105,24 @@
             dgvReceipts.BorderStyle = BorderStyle.None;
             dgvReceipts.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvReceipts.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvReceipts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle4.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvReceipts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvReceipts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvReceipts.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, day, delete, edit, info });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle3.SelectionForeColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvReceipts.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle6.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvReceipts.DefaultCellStyle = dataGridViewCellStyle6;
             dgvReceipts.Dock = DockStyle.Fill;
             dgvReceipts.EnableHeadersVisualStyles = false;
             dgvReceipts.GridColor = Color.White;
@@ -150,8 +152,8 @@
             // Column2
             // 
             Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Column2.DefaultCellStyle = dataGridViewCellStyle5;
             Column2.FillWeight = 44.1578979F;
             Column2.HeaderText = "المبلغ";
             Column2.Name = "Column2";
@@ -387,6 +389,28 @@
             label3.TabIndex = 96;
             label3.Text = "الاجمالي";
             // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(885, 667);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 106;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
+            // 
             // ReceiptsFRM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -428,5 +452,6 @@
         private DataGridViewImageColumn delete;
         private DataGridViewImageColumn edit;
         private DataGridViewImageColumn info;
+        private customs.KhControles.KhButton btnreport;
     }
 }

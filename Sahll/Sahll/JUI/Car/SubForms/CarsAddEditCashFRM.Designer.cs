@@ -32,7 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
-            label2 = new Label();
+            lblCarsAddEditCashFRM = new Label();
             khPanel1 = new customs.KhPanel();
             txtcash = new TextBox();
             khPanel4 = new customs.KhPanel();
@@ -79,18 +79,18 @@
             label1.Text = "الكاش";
             label1.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lblCarsAddEditCashFRM
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(63, 36, 114);
-            label2.Location = new Point(385, -3);
-            label2.Name = "label2";
-            label2.Size = new Size(186, 42);
-            label2.TabIndex = 5;
-            label2.Tag = "";
-            label2.Text = "تحصيل نقديه";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            lblCarsAddEditCashFRM.AutoSize = true;
+            lblCarsAddEditCashFRM.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCarsAddEditCashFRM.ForeColor = Color.FromArgb(63, 36, 114);
+            lblCarsAddEditCashFRM.Location = new Point(385, -3);
+            lblCarsAddEditCashFRM.Name = "lblCarsAddEditCashFRM";
+            lblCarsAddEditCashFRM.Size = new Size(186, 42);
+            lblCarsAddEditCashFRM.TabIndex = 5;
+            lblCarsAddEditCashFRM.Tag = "";
+            lblCarsAddEditCashFRM.Text = "تحصيل نقديه";
+            lblCarsAddEditCashFRM.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // khPanel1
             // 
@@ -375,6 +375,7 @@
             btn_add_cash.Text = "حفظ";
             btn_add_cash.TextColor = Color.White;
             btn_add_cash.UseVisualStyleBackColor = false;
+            btn_add_cash.Click += btn_add_cash_Click;
             // 
             // lbltotal
             // 
@@ -554,7 +555,7 @@
             Controls.Add(txtreserve);
             Controls.Add(khPanel1);
             Controls.Add(txtcash);
-            Controls.Add(label2);
+            Controls.Add(lblCarsAddEditCashFRM);
             Controls.Add(label7);
             Controls.Add(khButton1);
             Controls.Add(label1);
@@ -578,7 +579,6 @@
 
         #endregion
         private Label label1;
-        private Label label2;
         private customs.KhPanel khPanel1;
         private TextBox txtcash;
         private customs.KhPanel khPanel4;
@@ -608,5 +608,6 @@
         private customs.KhControles.KhButton khButton2;
         private customs.KhControles.KhButton khButton3;
         private customs.KhControles.KhButton khButton4;
+        public Label lblCarsAddEditCashFRM;
     }
 }

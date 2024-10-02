@@ -37,6 +37,8 @@
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             pnlcarrecords = new Panel();
+            txtsearch = new TextBox();
+            khButton3 = new customs.KhControles.KhButton();
             DpToRecords = new customs.KhControles.KhDatePicker();
             lbltotal = new customs.KhControles.KhButton();
             label2 = new Label();
@@ -65,8 +67,6 @@
             btncar2 = new customs.KhControles.KhButton();
             btncar1 = new customs.KhControles.KhButton();
             btncar5 = new customs.KhControles.KhButton();
-            txtsearch = new TextBox();
-            khButton3 = new customs.KhControles.KhButton();
             label3 = new Label();
             pnlcarrecords.SuspendLayout();
             khPanel4.SuspendLayout();
@@ -81,6 +81,8 @@
             // 
             // pnlcarrecords
             // 
+            pnlcarrecords.Controls.Add(txtsearch);
+            pnlcarrecords.Controls.Add(khButton3);
             pnlcarrecords.Controls.Add(DpToRecords);
             pnlcarrecords.Controls.Add(lbltotal);
             pnlcarrecords.Controls.Add(label2);
@@ -97,16 +99,47 @@
             pnlcarrecords.Controls.Add(btncar2);
             pnlcarrecords.Controls.Add(btncar1);
             pnlcarrecords.Controls.Add(btncar5);
-            pnlcarrecords.Controls.Add(txtsearch);
-            pnlcarrecords.Controls.Add(khButton3);
             pnlcarrecords.Controls.Add(label3);
             pnlcarrecords.Dock = DockStyle.Fill;
             pnlcarrecords.Location = new Point(20, 0);
             pnlcarrecords.Name = "pnlcarrecords";
             pnlcarrecords.Size = new Size(945, 750);
             pnlcarrecords.TabIndex = 0;
-            pnlcarrecords.Scroll += pnlcarrecords_Scroll;
             pnlcarrecords.Resize += pnlcarrecords_Resize;
+            // 
+            // txtsearch
+            // 
+            txtsearch.BackColor = Color.White;
+            txtsearch.BorderStyle = BorderStyle.None;
+            txtsearch.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
+            txtsearch.Location = new Point(51, 20);
+            txtsearch.Multiline = true;
+            txtsearch.Name = "txtsearch";
+            txtsearch.Size = new Size(274, 45);
+            txtsearch.TabIndex = 85;
+            txtsearch.TextAlign = HorizontalAlignment.Center;
+            txtsearch.TextChanged += txtsearch_TextChanged;
+            // 
+            // khButton3
+            // 
+            khButton3.BackColor = Color.White;
+            khButton3.BackgroundColor = Color.White;
+            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
+            khButton3.BorderRadius = 40;
+            khButton3.BorderSize = 1;
+            khButton3.Enabled = false;
+            khButton3.FlatAppearance.BorderSize = 0;
+            khButton3.FlatStyle = FlatStyle.Flat;
+            khButton3.ForeColor = SystemColors.Window;
+            khButton3.Image = Properties.Resources.search;
+            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
+            khButton3.Location = new Point(20, 16);
+            khButton3.Name = "khButton3";
+            khButton3.Size = new Size(323, 52);
+            khButton3.TabIndex = 84;
+            khButton3.TextColor = SystemColors.Window;
+            khButton3.UseVisualStyleBackColor = false;
             // 
             // DpToRecords
             // 
@@ -665,38 +698,6 @@
             btncar5.UseVisualStyleBackColor = false;
             btncar5.Click += btncar5_Click;
             // 
-            // txtsearch
-            // 
-            txtsearch.BackColor = Color.White;
-            txtsearch.BorderStyle = BorderStyle.None;
-            txtsearch.Font = new Font("Hacen Egypt", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
-            txtsearch.Location = new Point(36, 14);
-            txtsearch.Multiline = true;
-            txtsearch.Name = "txtsearch";
-            txtsearch.Size = new Size(274, 46);
-            txtsearch.TabIndex = 48;
-            // 
-            // khButton3
-            // 
-            khButton3.BackColor = Color.White;
-            khButton3.BackgroundColor = Color.White;
-            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
-            khButton3.BorderRadius = 40;
-            khButton3.BorderSize = 1;
-            khButton3.Enabled = false;
-            khButton3.FlatAppearance.BorderSize = 0;
-            khButton3.FlatStyle = FlatStyle.Flat;
-            khButton3.ForeColor = SystemColors.Window;
-            khButton3.Image = Properties.Resources.search;
-            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton3.Location = new Point(5, 12);
-            khButton3.Name = "khButton3";
-            khButton3.Size = new Size(323, 52);
-            khButton3.TabIndex = 47;
-            khButton3.TextColor = SystemColors.Window;
-            khButton3.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Right;
@@ -740,8 +741,6 @@
         private customs.KhControles.KhButton btncar2;
         private customs.KhControles.KhButton btncar1;
         private customs.KhControles.KhButton btncar5;
-        private TextBox txtsearch;
-        private customs.KhControles.KhButton khButton3;
         private customs.KhPanel khPanel1;
         private DataGridView dgvsoldproducts;
         private customs.KhPanel khPanel2;
@@ -767,5 +766,7 @@
         private DataGridViewTextBoxColumn Dispatchedproducts;
         private DataGridViewImageColumn infor;
         public Panel pnlcarrecords;
+        private TextBox txtsearch;
+        private customs.KhControles.KhButton khButton3;
     }
 }

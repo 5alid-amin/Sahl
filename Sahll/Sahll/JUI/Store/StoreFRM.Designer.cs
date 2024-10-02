@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlstore = new Panel();
+            btnreport = new customs.KhControles.KhButton();
             khPanel1 = new customs.KhPanel();
             dgvStore = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -60,6 +61,7 @@
             // 
             // pnlstore
             // 
+            pnlstore.Controls.Add(btnreport);
             pnlstore.Controls.Add(khPanel1);
             pnlstore.Controls.Add(btnAddStore);
             pnlstore.Controls.Add(lbltotal);
@@ -78,6 +80,28 @@
             pnlstore.Size = new Size(945, 750);
             pnlstore.TabIndex = 0;
             // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(885, 662);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 104;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
+            // 
             // khPanel1
             // 
             khPanel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
@@ -88,7 +112,7 @@
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
             khPanel1.GradientTopColor = Color.FromArgb(195, 172, 208);
-            khPanel1.Location = new Point(9, 70);
+            khPanel1.Location = new Point(9, 73);
             khPanel1.Name = "khPanel1";
             khPanel1.Padding = new Padding(5, 8, 5, 15);
             khPanel1.Size = new Size(936, 587);
@@ -438,5 +462,6 @@
         private DataGridViewTextBoxColumn supplier;
         private DataGridViewImageColumn edit;
         private DataGridViewImageColumn info;
+        private customs.KhControles.KhButton btnreport;
     }
 }

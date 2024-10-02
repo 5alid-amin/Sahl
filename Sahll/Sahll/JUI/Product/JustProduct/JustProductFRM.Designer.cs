@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlstore = new Panel();
+            btnreport = new customs.KhControles.KhButton();
             khPanel1 = new customs.KhPanel();
             dgvJustProduct = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -40,10 +41,8 @@
             profit = new DataGridViewTextBoxColumn();
             edit = new DataGridViewImageColumn();
             btnAddJustProduct = new customs.KhControles.KhButton();
-            lbltotal = new customs.KhControles.KhButton();
             txtsearch = new TextBox();
             khButton3 = new customs.KhControles.KhButton();
-            label3 = new Label();
             pnlstore.SuspendLayout();
             khPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvJustProduct).BeginInit();
@@ -51,17 +50,38 @@
             // 
             // pnlstore
             // 
+            pnlstore.Controls.Add(btnreport);
             pnlstore.Controls.Add(khPanel1);
             pnlstore.Controls.Add(btnAddJustProduct);
-            pnlstore.Controls.Add(lbltotal);
             pnlstore.Controls.Add(txtsearch);
             pnlstore.Controls.Add(khButton3);
-            pnlstore.Controls.Add(label3);
             pnlstore.Dock = DockStyle.Fill;
             pnlstore.Location = new Point(20, 0);
             pnlstore.Name = "pnlstore";
             pnlstore.Size = new Size(945, 750);
             pnlstore.TabIndex = 0;
+            // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(887, 671);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 105;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
             // 
             // khPanel1
             // 
@@ -191,29 +211,6 @@
             btnAddJustProduct.UseVisualStyleBackColor = false;
             btnAddJustProduct.Click += btnAddSelling_Click;
             // 
-            // lbltotal
-            // 
-            lbltotal.Anchor = AnchorStyles.Left;
-            lbltotal.BackColor = Color.White;
-            lbltotal.BackgroundColor = Color.White;
-            lbltotal.BorderColor = Color.FromArgb(119, 67, 219);
-            lbltotal.BorderRadius = 40;
-            lbltotal.BorderSize = 1;
-            lbltotal.Cursor = Cursors.Hand;
-            lbltotal.FlatAppearance.BorderSize = 0;
-            lbltotal.FlatStyle = FlatStyle.Flat;
-            lbltotal.Font = new Font("Hacen Egypt", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbltotal.ForeColor = Color.FromArgb(119, 67, 219);
-            lbltotal.ImageAlign = ContentAlignment.BottomRight;
-            lbltotal.Location = new Point(5, 670);
-            lbltotal.Margin = new Padding(0);
-            lbltotal.Name = "lbltotal";
-            lbltotal.Size = new Size(204, 63);
-            lbltotal.TabIndex = 97;
-            lbltotal.TextAlign = ContentAlignment.TopCenter;
-            lbltotal.TextColor = Color.FromArgb(119, 67, 219);
-            lbltotal.UseVisualStyleBackColor = false;
-            // 
             // txtsearch
             // 
             txtsearch.BackColor = Color.White;
@@ -246,19 +243,6 @@
             khButton3.TextColor = SystemColors.Window;
             khButton3.UseVisualStyleBackColor = false;
             // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Left;
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Hacen Egypt", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(63, 36, 114);
-            label3.Location = new Point(204, 653);
-            label3.Name = "label3";
-            label3.Size = new Size(172, 99);
-            label3.TabIndex = 96;
-            label3.Text = "الاجمالي";
-            // 
             // JustProductFRM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -282,8 +266,6 @@
         private TextBox txtsearch;
         private customs.KhControles.KhButton khButton3;
         private customs.KhControles.KhButton btnAddJustProduct;
-        private customs.KhControles.KhButton lbltotal;
-        private Label label3;
         private customs.KhPanel khPanel1;
         private DataGridView dgvJustProduct;
         public Panel pnlstore;
@@ -292,5 +274,6 @@
         private DataGridViewTextBoxColumn SellingPrice;
         private DataGridViewTextBoxColumn profit;
         private DataGridViewImageColumn edit;
+        private customs.KhControles.KhButton btnreport;
     }
 }

@@ -7,6 +7,10 @@ namespace Sahll.JUI.Selling
         public SellingAddEditFRM()
         {
             InitializeComponent();
+            dgvAddSellingProces.Rows.Add(new object[] { "صابون سائل", 527, 2156, 2156 });
+            dgvAddSellingProces.Rows.Add(new object[] { "صابون سائل", 527, 2156, 2156 });
+            dgvAddSellingProces.Rows.Add(new object[] { "صابون سائل", 527, 2156, 2156 });
+
         }
 
 
@@ -72,5 +76,9 @@ namespace Sahll.JUI.Selling
 
 
 
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

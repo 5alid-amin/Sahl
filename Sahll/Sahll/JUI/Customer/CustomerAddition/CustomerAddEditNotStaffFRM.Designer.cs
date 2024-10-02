@@ -32,7 +32,7 @@
             btn_add = new customs.KhControles.KhButton();
             khPanel1 = new customs.KhPanel();
             txtCustomerName = new TextBox();
-            label2 = new Label();
+            lblCustomerAddEditNotStaffFRM = new Label();
             khButton1 = new customs.KhControles.KhButton();
             khPanel6 = new customs.KhPanel();
             khPanel4 = new customs.KhPanel();
@@ -109,20 +109,19 @@
             txtCustomerName.Size = new Size(403, 97);
             txtCustomerName.TabIndex = 74;
             txtCustomerName.TextAlign = HorizontalAlignment.Center;
-            txtCustomerName.TextChanged += txtCustomerName_TextChanged;
             // 
-            // label2
+            // lblCustomerAddEditNotStaffFRM
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(63, 36, 114);
-            label2.Location = new Point(202, 1);
-            label2.Name = "label2";
-            label2.Size = new Size(175, 42);
-            label2.TabIndex = 73;
-            label2.Tag = "";
-            label2.Text = "إضافه عميل";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            lblCustomerAddEditNotStaffFRM.AutoSize = true;
+            lblCustomerAddEditNotStaffFRM.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCustomerAddEditNotStaffFRM.ForeColor = Color.FromArgb(63, 36, 114);
+            lblCustomerAddEditNotStaffFRM.Location = new Point(202, 1);
+            lblCustomerAddEditNotStaffFRM.Name = "lblCustomerAddEditNotStaffFRM";
+            lblCustomerAddEditNotStaffFRM.Size = new Size(175, 42);
+            lblCustomerAddEditNotStaffFRM.TabIndex = 73;
+            lblCustomerAddEditNotStaffFRM.Tag = "";
+            lblCustomerAddEditNotStaffFRM.Text = "إضافه عميل";
+            lblCustomerAddEditNotStaffFRM.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // khButton1
             // 
@@ -285,7 +284,7 @@
             Controls.Add(txtCustomerName);
             Controls.Add(label1);
             Controls.Add(khButton2);
-            Controls.Add(label2);
+            Controls.Add(lblCustomerAddEditNotStaffFRM);
             Controls.Add(khButton1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CustomerAddEditNotStaffFRM";
@@ -303,7 +302,6 @@
         private customs.KhControles.KhButton btn_add;
         private customs.KhPanel khPanel1;
         private TextBox txtCustomerName;
-        private Label label2;
         private customs.KhControles.KhButton khButton1;
         private customs.KhPanel khPanel6;
         private customs.KhPanel khPanel4;
@@ -314,5 +312,6 @@
         private Label label3;
         private TextBox txtCustomerPhone;
         private customs.KhPanel khPanel5;
+        public Label lblCustomerAddEditNotStaffFRM;
     }
 }

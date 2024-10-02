@@ -6,6 +6,7 @@ using Sahll.JUI.PL;
 using Sahll.JUI.Selling;
 using Sahll.JUI.Store;
 using Sahll.JUI.Treasury;
+using Sahll.JUI.User;
 
 namespace Sahll
 {

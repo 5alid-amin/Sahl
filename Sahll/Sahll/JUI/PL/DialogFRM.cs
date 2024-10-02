@@ -12,20 +12,18 @@ namespace Sahll.JUI.PL
 {
     public partial class DialogFRM : Form
     {
+        Color move = Color.FromArgb(83, 4, 128);
+        Color red = Color.FromArgb(64, 0, 0);
         public DialogFRM(string txt, Color seccolor)
         {
             InitializeComponent();
             this.txtdialog.Text = txt;
             this.khPanel1.GradientTopColor = seccolor;
-            //this.khPanel1.GradientBottomColor = Color.FromArgb(83, 4, 128);
-            Color move = Color.FromArgb(83, 4, 128);
-            Color red = Color.FromArgb(64, 0, 0);
+           
 
-            //button_on_hover();
         }
 
-
-
+        #region ButtonsMethods
         private void btnconferm_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Yes;
@@ -38,6 +36,19 @@ namespace Sahll.JUI.PL
             this.Close();
         }
 
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
+
+        #region JUI
         private void btnconferm_MouseEnter(object sender, EventArgs e)
         {
             btnconferm.Image = Properties.Resources.confermd;
@@ -58,15 +69,7 @@ namespace Sahll.JUI.PL
             btncancel.Image = Properties.Resources.cancell1;
         }
 
+        #endregion
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnclose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

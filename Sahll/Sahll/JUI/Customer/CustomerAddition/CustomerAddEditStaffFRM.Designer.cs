@@ -30,7 +30,7 @@
         {
             btnclose = new customs.KhControles.KhButton();
             btn_addcustomer = new customs.KhControles.KhButton();
-            label2 = new Label();
+            lblCustomerAddEditStaffFRM = new Label();
             khPanel6 = new customs.KhPanel();
             khPanel4 = new customs.KhPanel();
             khPanel3 = new customs.KhPanel();
@@ -81,18 +81,18 @@
             btn_addcustomer.UseVisualStyleBackColor = false;
             btn_addcustomer.Click += btn_addcustomer_Click;
             // 
-            // label2
+            // lblCustomerAddEditStaffFRM
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(63, 36, 114);
-            label2.Location = new Point(209, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(175, 42);
-            label2.TabIndex = 73;
-            label2.Tag = "";
-            label2.Text = "إضافة عميل";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            lblCustomerAddEditStaffFRM.AutoSize = true;
+            lblCustomerAddEditStaffFRM.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCustomerAddEditStaffFRM.ForeColor = Color.FromArgb(63, 36, 114);
+            lblCustomerAddEditStaffFRM.Location = new Point(209, 4);
+            lblCustomerAddEditStaffFRM.Name = "lblCustomerAddEditStaffFRM";
+            lblCustomerAddEditStaffFRM.Size = new Size(175, 42);
+            lblCustomerAddEditStaffFRM.TabIndex = 73;
+            lblCustomerAddEditStaffFRM.Tag = "";
+            lblCustomerAddEditStaffFRM.Text = "إضافة عميل";
+            lblCustomerAddEditStaffFRM.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // khPanel6
             // 
@@ -213,7 +213,7 @@
             Controls.Add(khPanel6);
             Controls.Add(btnclose);
             Controls.Add(btn_addcustomer);
-            Controls.Add(label2);
+            Controls.Add(lblCustomerAddEditStaffFRM);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CustomerAddEditStaffFRM";
@@ -229,7 +229,6 @@
 
         private customs.KhControles.KhButton btnclose;
         private customs.KhControles.KhButton btn_addcustomer;
-        private Label label2;
         private customs.KhPanel khPanel6;
         private customs.KhPanel khPanel4;
         private customs.KhPanel khPanel3;
@@ -237,5 +236,6 @@
         private ComboBox cmbcustomerstaffname;
         private customs.KhControles.KhButton khButton3;
         private Label label1;
+        public Label lblCustomerAddEditStaffFRM;
     }
 }

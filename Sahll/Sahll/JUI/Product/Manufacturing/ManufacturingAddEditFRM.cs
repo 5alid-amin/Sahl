@@ -19,7 +19,7 @@ namespace Sahll.JUI.Car.SubForms
 
         private void btnadddriver_Click(object sender, EventArgs e)
         {
-            ManufacturingAddRowMaterialFRM frm = new();
+            ManufacturingAddRowMaterialFRM frm = new ManufacturingAddRowMaterialFRM();
             frm.Show();
         }
 

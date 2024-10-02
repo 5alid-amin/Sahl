@@ -42,7 +42,7 @@
             txtbarcode = new TextBox();
             label4 = new Label();
             label1 = new Label();
-            label2 = new Label();
+            lblCarsAddEditProductsEnventoryFRM = new Label();
             khButton2 = new customs.KhControles.KhButton();
             label3 = new Label();
             khButton3 = new customs.KhControles.KhButton();
@@ -257,18 +257,18 @@
             label1.Text = "الصنف";
             label1.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label2
+            // lblCarsAddEditProductsEnventoryFRM
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(63, 36, 114);
-            label2.Location = new Point(184, 12);
-            label2.Name = "label2";
-            label2.Size = new Size(274, 42);
-            label2.TabIndex = 125;
-            label2.Tag = "";
-            label2.Text = "إضافة صنف للسياره";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            lblCarsAddEditProductsEnventoryFRM.AutoSize = true;
+            lblCarsAddEditProductsEnventoryFRM.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCarsAddEditProductsEnventoryFRM.ForeColor = Color.FromArgb(63, 36, 114);
+            lblCarsAddEditProductsEnventoryFRM.Location = new Point(184, 3);
+            lblCarsAddEditProductsEnventoryFRM.Name = "lblCarsAddEditProductsEnventoryFRM";
+            lblCarsAddEditProductsEnventoryFRM.Size = new Size(274, 42);
+            lblCarsAddEditProductsEnventoryFRM.TabIndex = 125;
+            lblCarsAddEditProductsEnventoryFRM.Tag = "";
+            lblCarsAddEditProductsEnventoryFRM.Text = "إضافة صنف للسياره";
+            lblCarsAddEditProductsEnventoryFRM.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // khButton2
             // 
@@ -332,7 +332,7 @@
             Controls.Add(khPanel2);
             Controls.Add(txtquantity);
             Controls.Add(txtbarcode);
-            Controls.Add(label2);
+            Controls.Add(lblCarsAddEditProductsEnventoryFRM);
             Controls.Add(khButton2);
             Controls.Add(khButton3);
             Controls.Add(khPanel5);
@@ -349,6 +349,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "add_edit_products_inventoryFRM";
             TopMost = true;
+            Load += CarsAddEditProductsEnventoryFRM_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -368,9 +369,9 @@
         private TextBox txtbarcode;
         private Label label4;
         private Label label1;
-        private Label label2;
         private customs.KhControles.KhButton khButton2;
         private Label label3;
         private customs.KhControles.KhButton khButton3;
+        public Label lblCarsAddEditProductsEnventoryFRM;
     }
 }

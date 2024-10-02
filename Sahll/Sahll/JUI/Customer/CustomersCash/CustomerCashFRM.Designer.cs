@@ -32,8 +32,11 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlstore = new Panel();
+            txtsearch = new TextBox();
+            khButton3 = new customs.KhControles.KhButton();
+            btnreport = new customs.KhControles.KhButton();
             khPanel1 = new customs.KhPanel();
-            dgvStore = new DataGridView();
+            dgvCustomerCash = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             purchasePrice = new DataGridViewTextBoxColumn();
@@ -49,16 +52,17 @@
             DpFromStore = new customs.KhControles.KhDatePicker();
             label1 = new Label();
             khButton2 = new customs.KhControles.KhButton();
-            txtsearch = new TextBox();
-            khButton3 = new customs.KhControles.KhButton();
             label3 = new Label();
             pnlstore.SuspendLayout();
             khPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvStore).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCustomerCash).BeginInit();
             SuspendLayout();
             // 
             // pnlstore
             // 
+            pnlstore.Controls.Add(txtsearch);
+            pnlstore.Controls.Add(khButton3);
+            pnlstore.Controls.Add(btnreport);
             pnlstore.Controls.Add(khPanel1);
             pnlstore.Controls.Add(btnAddStore);
             pnlstore.Controls.Add(lbltotal);
@@ -68,8 +72,6 @@
             pnlstore.Controls.Add(DpFromStore);
             pnlstore.Controls.Add(label1);
             pnlstore.Controls.Add(khButton2);
-            pnlstore.Controls.Add(txtsearch);
-            pnlstore.Controls.Add(khButton3);
             pnlstore.Controls.Add(label3);
             pnlstore.Dock = DockStyle.Fill;
             pnlstore.Location = new Point(20, 0);
@@ -77,12 +79,67 @@
             pnlstore.Size = new Size(945, 750);
             pnlstore.TabIndex = 0;
             // 
+            // txtsearch
+            // 
+            txtsearch.BackColor = Color.White;
+            txtsearch.BorderStyle = BorderStyle.None;
+            txtsearch.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
+            txtsearch.Location = new Point(56, 14);
+            txtsearch.Multiline = true;
+            txtsearch.Name = "txtsearch";
+            txtsearch.Size = new Size(274, 45);
+            txtsearch.TabIndex = 106;
+            txtsearch.TextAlign = HorizontalAlignment.Center;
+            // 
+            // khButton3
+            // 
+            khButton3.BackColor = Color.White;
+            khButton3.BackgroundColor = Color.White;
+            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
+            khButton3.BorderRadius = 40;
+            khButton3.BorderSize = 1;
+            khButton3.Enabled = false;
+            khButton3.FlatAppearance.BorderSize = 0;
+            khButton3.FlatStyle = FlatStyle.Flat;
+            khButton3.ForeColor = SystemColors.Window;
+            khButton3.Image = Properties.Resources.search;
+            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
+            khButton3.Location = new Point(25, 10);
+            khButton3.Name = "khButton3";
+            khButton3.Size = new Size(323, 52);
+            khButton3.TabIndex = 105;
+            khButton3.TextColor = SystemColors.Window;
+            khButton3.UseVisualStyleBackColor = false;
+            // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(878, 663);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 104;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
+            // 
             // khPanel1
             // 
             khPanel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             khPanel1.BackColor = Color.White;
             khPanel1.BorderRadius = 30;
-            khPanel1.Controls.Add(dgvStore);
+            khPanel1.Controls.Add(dgvCustomerCash);
             khPanel1.ForeColor = Color.Black;
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
@@ -93,16 +150,16 @@
             khPanel1.Size = new Size(936, 587);
             khPanel1.TabIndex = 99;
             // 
-            // dgvStore
+            // dgvCustomerCash
             // 
-            dgvStore.AllowUserToAddRows = false;
-            dgvStore.AllowUserToDeleteRows = false;
-            dgvStore.AllowUserToResizeColumns = false;
-            dgvStore.AllowUserToResizeRows = false;
-            dgvStore.BackgroundColor = Color.White;
-            dgvStore.BorderStyle = BorderStyle.None;
-            dgvStore.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvStore.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvCustomerCash.AllowUserToAddRows = false;
+            dgvCustomerCash.AllowUserToDeleteRows = false;
+            dgvCustomerCash.AllowUserToResizeColumns = false;
+            dgvCustomerCash.AllowUserToResizeRows = false;
+            dgvCustomerCash.BackgroundColor = Color.White;
+            dgvCustomerCash.BorderStyle = BorderStyle.None;
+            dgvCustomerCash.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvCustomerCash.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(195, 172, 208);
             dataGridViewCellStyle1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -110,9 +167,9 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(195, 172, 208);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvStore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvStore.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStore.Columns.AddRange(new DataGridViewColumn[] { Column1, Column3, purchasePrice, SellingPrice, profit, delete, edit });
+            dgvCustomerCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvCustomerCash.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCustomerCash.Columns.AddRange(new DataGridViewColumn[] { Column1, Column3, purchasePrice, SellingPrice, profit, delete, edit });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -120,24 +177,24 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
             dataGridViewCellStyle3.SelectionForeColor = Color.MidnightBlue;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvStore.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvStore.Dock = DockStyle.Fill;
-            dgvStore.EnableHeadersVisualStyles = false;
-            dgvStore.GridColor = Color.White;
-            dgvStore.Location = new Point(5, 8);
-            dgvStore.Name = "dgvStore";
-            dgvStore.ReadOnly = true;
-            dgvStore.RightToLeft = RightToLeft.Yes;
-            dgvStore.RowHeadersVisible = false;
-            dgvStore.RowHeadersWidth = 25;
-            dgvStore.RowTemplate.DividerHeight = 1;
-            dgvStore.RowTemplate.Height = 28;
-            dgvStore.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStore.Size = new Size(926, 564);
-            dgvStore.TabIndex = 1;
-            dgvStore.CellClick += dgvSelling_CellClick;
-            dgvStore.CellMouseEnter += dgvSelling_CellMouseEnter;
-            dgvStore.CellMouseLeave += dgvSelling_CellMouseLeave;
+            dgvCustomerCash.DefaultCellStyle = dataGridViewCellStyle3;
+            dgvCustomerCash.Dock = DockStyle.Fill;
+            dgvCustomerCash.EnableHeadersVisualStyles = false;
+            dgvCustomerCash.GridColor = Color.White;
+            dgvCustomerCash.Location = new Point(5, 8);
+            dgvCustomerCash.Name = "dgvCustomerCash";
+            dgvCustomerCash.ReadOnly = true;
+            dgvCustomerCash.RightToLeft = RightToLeft.Yes;
+            dgvCustomerCash.RowHeadersVisible = false;
+            dgvCustomerCash.RowHeadersWidth = 25;
+            dgvCustomerCash.RowTemplate.DividerHeight = 1;
+            dgvCustomerCash.RowTemplate.Height = 28;
+            dgvCustomerCash.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCustomerCash.Size = new Size(926, 564);
+            dgvCustomerCash.TabIndex = 1;
+            dgvCustomerCash.CellClick += dgvSelling_CellClick;
+            dgvCustomerCash.CellMouseEnter += dgvSelling_CellMouseEnter;
+            dgvCustomerCash.CellMouseLeave += dgvSelling_CellMouseLeave;
             // 
             // Column1
             // 
@@ -341,38 +398,6 @@
             khButton2.TextColor = SystemColors.Window;
             khButton2.UseVisualStyleBackColor = false;
             // 
-            // txtsearch
-            // 
-            txtsearch.BackColor = Color.White;
-            txtsearch.BorderStyle = BorderStyle.None;
-            txtsearch.Font = new Font("Hacen Egypt", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
-            txtsearch.Location = new Point(34, 12);
-            txtsearch.Multiline = true;
-            txtsearch.Name = "txtsearch";
-            txtsearch.Size = new Size(274, 46);
-            txtsearch.TabIndex = 88;
-            // 
-            // khButton3
-            // 
-            khButton3.BackColor = Color.White;
-            khButton3.BackgroundColor = Color.White;
-            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
-            khButton3.BorderRadius = 40;
-            khButton3.BorderSize = 1;
-            khButton3.Enabled = false;
-            khButton3.FlatAppearance.BorderSize = 0;
-            khButton3.FlatStyle = FlatStyle.Flat;
-            khButton3.ForeColor = SystemColors.Window;
-            khButton3.Image = Properties.Resources.search;
-            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton3.Location = new Point(3, 10);
-            khButton3.Name = "khButton3";
-            khButton3.Size = new Size(323, 52);
-            khButton3.TabIndex = 87;
-            khButton3.TextColor = SystemColors.Window;
-            khButton3.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.Left;
@@ -401,7 +426,7 @@
             pnlstore.ResumeLayout(false);
             pnlstore.PerformLayout();
             khPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvStore).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCustomerCash).EndInit();
             ResumeLayout(false);
         }
 
@@ -412,13 +437,11 @@
         private customs.KhControles.KhDatePicker DpFromStore;
         private Label label1;
         private customs.KhControles.KhButton khButton2;
-        private TextBox txtsearch;
-        private customs.KhControles.KhButton khButton3;
         private customs.KhControles.KhButton btnAddStore;
         private customs.KhControles.KhButton lbltotal;
         private Label label3;
         private customs.KhPanel khPanel1;
-        private DataGridView dgvStore;
+        private DataGridView dgvCustomerCash;
         public Panel pnlstore;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column3;
@@ -427,5 +450,8 @@
         private DataGridViewTextBoxColumn profit;
         private DataGridViewImageColumn delete;
         private DataGridViewImageColumn edit;
+        private customs.KhControles.KhButton btnreport;
+        private TextBox txtsearch;
+        private customs.KhControles.KhButton khButton3;
     }
 }

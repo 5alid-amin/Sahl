@@ -1,4 +1,5 @@
 ﻿using Sahll.JUI.Product.Category;
+using Sahll.JUI.Selling;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,12 @@ namespace Sahll.JUI.Store
 
             //JUI
             FRM.Show();
+        }
+
+        private void btnaddsupplier_Click(object sender, EventArgs e)
+        {
+            SupplierAddEditFRM frm = new SupplierAddEditFRM();
+            frm.Show();
         }
     }
 }

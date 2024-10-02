@@ -225,6 +225,7 @@
             btnaddreserve.TabIndex = 25;
             btnaddreserve.TextColor = Color.White;
             btnaddreserve.UseVisualStyleBackColor = false;
+            btnaddreserve.Click += btnaddreserve_Click;
             // 
             // btnadddelegator
             // 
@@ -244,6 +245,7 @@
             btnadddelegator.TabIndex = 25;
             btnadddelegator.TextColor = Color.White;
             btnadddelegator.UseVisualStyleBackColor = false;
+            btnadddelegator.Click += btnadddelegator_Click;
             // 
             // btnadddriver
             // 
@@ -263,6 +265,7 @@
             btnadddriver.TabIndex = 25;
             btnadddriver.TextColor = Color.White;
             btnadddriver.UseVisualStyleBackColor = false;
+            btnadddriver.Click += btnadddriver_Click;
             // 
             // btncar3
             // 

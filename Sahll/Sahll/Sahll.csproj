@@ -14,6 +14,75 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="JUI\Car\CarDeficitorexcessFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Customer\CustomerProduct\CustomerProductEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Selling\SellingInvoiceFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierProduct\SupplierProductEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Statistics\NetCapital\NetCpitalFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Statistics\NetCapital\NetCapitalInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Statistics\NetCapital\NetCapitalInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Statistics\NetProfit\NetProfitInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Statistics\NetProfit\NetProfitFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Setting\SettingFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\LogIn\LogInForgittingPassFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Treasury\Statistics\StatisticsOptionsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\User\UserInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\User\UserConfermationFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\User\UserFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierProduct\SupplierProductInfoFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierProduct\SupplierProductAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierProduct\SupplierProductFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierCash\SupplierCashAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierCash\SupplierCashFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierOptionsFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierAddEditFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="JUI\Supplier\SupplierFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="JUI\Staff\StaffAccount\StaffAccountInfoFRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +207,10 @@
 
   <ItemGroup>
     <Folder Include="Code\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.3" />
   </ItemGroup>
 
 </Project>

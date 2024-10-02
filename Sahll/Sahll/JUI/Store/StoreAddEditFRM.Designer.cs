@@ -453,6 +453,7 @@
             btnaddsupplier.TabIndex = 135;
             btnaddsupplier.TextColor = Color.White;
             btnaddsupplier.UseVisualStyleBackColor = false;
+            btnaddsupplier.Click += btnaddsupplier_Click;
             // 
             // label6
             // 

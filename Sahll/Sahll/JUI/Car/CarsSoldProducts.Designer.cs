@@ -32,15 +32,14 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlcarsoldproduct = new Panel();
+            txtsearch = new TextBox();
+            khButton3 = new customs.KhControles.KhButton();
+            btnreport = new customs.KhControles.KhButton();
             DpToSoldProduct = new customs.KhControles.KhDatePicker();
             lbltotal = new customs.KhControles.KhButton();
             label2 = new Label();
             khPanel1 = new customs.KhPanel();
             dgvcarsoldproduct = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            info = new DataGridViewImageColumn();
             khButton1 = new customs.KhControles.KhButton();
             btncar3 = new customs.KhControles.KhButton();
             DpFromSoldProduct = new customs.KhControles.KhDatePicker();
@@ -50,9 +49,12 @@
             btncar2 = new customs.KhControles.KhButton();
             btncar1 = new customs.KhControles.KhButton();
             btncar5 = new customs.KhControles.KhButton();
-            txtsearch = new TextBox();
-            khButton3 = new customs.KhControles.KhButton();
             label3 = new Label();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            info = new DataGridViewImageColumn();
             pnlcarsoldproduct.SuspendLayout();
             khPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvcarsoldproduct).BeginInit();
@@ -60,6 +62,9 @@
             // 
             // pnlcarsoldproduct
             // 
+            pnlcarsoldproduct.Controls.Add(txtsearch);
+            pnlcarsoldproduct.Controls.Add(khButton3);
+            pnlcarsoldproduct.Controls.Add(btnreport);
             pnlcarsoldproduct.Controls.Add(DpToSoldProduct);
             pnlcarsoldproduct.Controls.Add(lbltotal);
             pnlcarsoldproduct.Controls.Add(label2);
@@ -73,8 +78,6 @@
             pnlcarsoldproduct.Controls.Add(btncar2);
             pnlcarsoldproduct.Controls.Add(btncar1);
             pnlcarsoldproduct.Controls.Add(btncar5);
-            pnlcarsoldproduct.Controls.Add(txtsearch);
-            pnlcarsoldproduct.Controls.Add(khButton3);
             pnlcarsoldproduct.Controls.Add(label3);
             pnlcarsoldproduct.Dock = DockStyle.Fill;
             pnlcarsoldproduct.Location = new Point(20, 0);
@@ -82,6 +85,62 @@
             pnlcarsoldproduct.Size = new Size(945, 750);
             pnlcarsoldproduct.TabIndex = 0;
             pnlcarsoldproduct.Resize += pnlcarsoldproduct_Resize;
+            // 
+            // txtsearch
+            // 
+            txtsearch.BackColor = Color.White;
+            txtsearch.BorderStyle = BorderStyle.None;
+            txtsearch.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
+            txtsearch.Location = new Point(51, 15);
+            txtsearch.Multiline = true;
+            txtsearch.Name = "txtsearch";
+            txtsearch.Size = new Size(274, 45);
+            txtsearch.TabIndex = 103;
+            txtsearch.TextAlign = HorizontalAlignment.Center;
+            txtsearch.TextChanged += txtsearch_TextChanged;
+            // 
+            // khButton3
+            // 
+            khButton3.BackColor = Color.White;
+            khButton3.BackgroundColor = Color.White;
+            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
+            khButton3.BorderRadius = 40;
+            khButton3.BorderSize = 1;
+            khButton3.Enabled = false;
+            khButton3.FlatAppearance.BorderSize = 0;
+            khButton3.FlatStyle = FlatStyle.Flat;
+            khButton3.ForeColor = SystemColors.Window;
+            khButton3.Image = Properties.Resources.search;
+            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
+            khButton3.Location = new Point(20, 11);
+            khButton3.Name = "khButton3";
+            khButton3.Size = new Size(323, 52);
+            khButton3.TabIndex = 102;
+            khButton3.TextColor = SystemColors.Window;
+            khButton3.UseVisualStyleBackColor = false;
+            // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(876, 653);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 101;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
             // 
             // DpToSoldProduct
             // 
@@ -121,6 +180,7 @@
             lbltotal.TextAlign = ContentAlignment.TopCenter;
             lbltotal.TextColor = Color.FromArgb(119, 67, 219);
             lbltotal.UseVisualStyleBackColor = false;
+            lbltotal.Click += lbltotal_Click;
             // 
             // label2
             // 
@@ -170,7 +230,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvcarsoldproduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvcarsoldproduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvcarsoldproduct.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, info });
+            dgvcarsoldproduct.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, info });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -196,41 +256,6 @@
             dgvcarsoldproduct.CellClick += dgvcarsoldproduct_CellClick;
             dgvcarsoldproduct.CellMouseEnter += dgvcarsoldproduct_CellMouseEnter;
             dgvcarsoldproduct.CellMouseLeave += dgvcarsoldproduct_CellMouseLeave;
-            // 
-            // Column1
-            // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column1.FillWeight = 145.1243F;
-            Column1.HeaderText = "الصنف";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Column2.DefaultCellStyle = dataGridViewCellStyle2;
-            Column2.FillWeight = 67.7246857F;
-            Column2.HeaderText = "السعر";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Column3.FillWeight = 72.56215F;
-            Column3.HeaderText = "الكميه";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // info
-            // 
-            info.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            info.FillWeight = 15.2626286F;
-            info.HeaderText = "";
-            info.Image = Properties.Resources.infol;
-            info.Name = "info";
-            info.ReadOnly = true;
             // 
             // khButton1
             // 
@@ -421,38 +446,6 @@
             btncar5.UseVisualStyleBackColor = false;
             btncar5.Click += btncar5_Click;
             // 
-            // txtsearch
-            // 
-            txtsearch.BackColor = Color.White;
-            txtsearch.BorderStyle = BorderStyle.None;
-            txtsearch.Font = new Font("Hacen Egypt", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
-            txtsearch.Location = new Point(37, 12);
-            txtsearch.Multiline = true;
-            txtsearch.Name = "txtsearch";
-            txtsearch.Size = new Size(274, 46);
-            txtsearch.TabIndex = 51;
-            // 
-            // khButton3
-            // 
-            khButton3.BackColor = Color.White;
-            khButton3.BackgroundColor = Color.White;
-            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
-            khButton3.BorderRadius = 40;
-            khButton3.BorderSize = 1;
-            khButton3.Enabled = false;
-            khButton3.FlatAppearance.BorderSize = 0;
-            khButton3.FlatStyle = FlatStyle.Flat;
-            khButton3.ForeColor = SystemColors.Window;
-            khButton3.Image = Properties.Resources.search;
-            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton3.Location = new Point(6, 10);
-            khButton3.Name = "khButton3";
-            khButton3.Size = new Size(323, 52);
-            khButton3.TabIndex = 50;
-            khButton3.TextColor = SystemColors.Window;
-            khButton3.UseVisualStyleBackColor = false;
-            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.None;
@@ -465,6 +458,48 @@
             label3.Size = new Size(172, 99);
             label3.TabIndex = 62;
             label3.Text = "الاجمالي";
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.FillWeight = 145.1243F;
+            Column1.HeaderText = "الصنف";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            Column2.FillWeight = 67.7246857F;
+            Column2.HeaderText = "السعر";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column3.FillWeight = 72.56215F;
+            Column3.HeaderText = "الكميه";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            Column4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column4.HeaderText = "القيمه";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            // 
+            // info
+            // 
+            info.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            info.FillWeight = 15.2626286F;
+            info.HeaderText = "";
+            info.Image = Properties.Resources.infol;
+            info.Name = "info";
+            info.ReadOnly = true;
             // 
             // CarsSoldProducts
             // 
@@ -492,8 +527,6 @@
         private customs.KhControles.KhButton btncar2;
         private customs.KhControles.KhButton btncar1;
         private customs.KhControles.KhButton btncar5;
-        private TextBox txtsearch;
-        private customs.KhControles.KhButton khButton3;
         private customs.KhControles.KhButton lbltotal;
         private Label label3;
         private customs.KhControles.KhDatePicker DpToSoldProduct;
@@ -502,10 +535,14 @@
         private customs.KhControles.KhDatePicker DpFromSoldProduct;
         private Label label1;
         private customs.KhControles.KhButton khButton2;
+        public Panel pnlcarsoldproduct;
+        private customs.KhControles.KhButton btnreport;
+        private TextBox txtsearch;
+        private customs.KhControles.KhButton khButton3;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
         private DataGridViewImageColumn info;
-        public Panel pnlcarsoldproduct;
     }
 }

@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             pnltreasury = new Panel();
             khPanel2 = new customs.KhPanel();
             dataGridView1 = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             textBox6 = new TextBox();
             textBox5 = new TextBox();
@@ -51,6 +52,7 @@
             dgvStore = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            btnaminhome = new customs.KhControles.KhButton();
             btnExpenses = new customs.KhControles.KhButton();
             btnReceipts = new customs.KhControles.KhButton();
             DpToStore = new customs.KhControles.KhDatePicker();
@@ -61,10 +63,10 @@
             khButton2 = new customs.KhControles.KhButton();
             txtsearch = new TextBox();
             khButton3 = new customs.KhControles.KhButton();
-            btnaminhome = new customs.KhControles.KhButton();
             pnltreasury.SuspendLayout();
             khPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             khPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStore).BeginInit();
@@ -73,6 +75,7 @@
             // pnltreasury
             // 
             pnltreasury.Controls.Add(khPanel2);
+            pnltreasury.Controls.Add(pictureBox2);
             pnltreasury.Controls.Add(pictureBox1);
             pnltreasury.Controls.Add(textBox6);
             pnltreasury.Controls.Add(textBox5);
@@ -130,24 +133,24 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle9.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle9.SelectionForeColor = Color.White;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2 });
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle10.ForeColor = Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle10.SelectionForeColor = Color.MidnightBlue;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle2.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.White;
@@ -178,6 +181,20 @@
             dataGridViewTextBoxColumn2.HeaderText = "المبلغ";
             dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Anchor = AnchorStyles.Right;
+            pictureBox2.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox2.Cursor = Cursors.Hand;
+            pictureBox2.Image = Properties.Resources.Statistics;
+            pictureBox2.Location = new Point(462, 10);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(57, 48);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 115;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += statisticsfun;
             // 
             // pictureBox1
             // 
@@ -363,24 +380,24 @@
             dgvStore.BorderStyle = BorderStyle.None;
             dgvStore.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvStore.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle11.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle11.ForeColor = Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle11.SelectionForeColor = Color.White;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dgvStore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvStore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvStore.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvStore.Columns.AddRange(new DataGridViewColumn[] { Column1, Column3 });
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle12.ForeColor = Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle12.SelectionForeColor = Color.MidnightBlue;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            dgvStore.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle4.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvStore.DefaultCellStyle = dataGridViewCellStyle4;
             dgvStore.Dock = DockStyle.Fill;
             dgvStore.EnableHeadersVisualStyles = false;
             dgvStore.GridColor = Color.White;
@@ -411,6 +428,28 @@
             Column3.HeaderText = "المبلغ";
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
+            // 
+            // btnaminhome
+            // 
+            btnaminhome.Anchor = AnchorStyles.Left;
+            btnaminhome.BackColor = Color.FromArgb(173, 109, 209);
+            btnaminhome.BackgroundColor = Color.FromArgb(173, 109, 209);
+            btnaminhome.BorderColor = Color.FromArgb(63, 36, 114);
+            btnaminhome.BorderRadius = 40;
+            btnaminhome.BorderSize = 0;
+            btnaminhome.Cursor = Cursors.Hand;
+            btnaminhome.FlatAppearance.BorderSize = 0;
+            btnaminhome.FlatStyle = FlatStyle.Flat;
+            btnaminhome.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnaminhome.ForeColor = Color.White;
+            btnaminhome.Location = new Point(6, 633);
+            btnaminhome.Name = "btnaminhome";
+            btnaminhome.Size = new Size(151, 88);
+            btnaminhome.TabIndex = 110;
+            btnaminhome.Text = "أمين منزل";
+            btnaminhome.TextColor = Color.White;
+            btnaminhome.UseVisualStyleBackColor = false;
+            btnaminhome.Click += btnaminhome_Clic;
             // 
             // btnExpenses
             // 
@@ -584,28 +623,6 @@
             khButton3.TextColor = SystemColors.Window;
             khButton3.UseVisualStyleBackColor = false;
             // 
-            // btnaminhome
-            // 
-            btnaminhome.Anchor = AnchorStyles.Left;
-            btnaminhome.BackColor = Color.FromArgb(173, 109, 209);
-            btnaminhome.BackgroundColor = Color.FromArgb(173, 109, 209);
-            btnaminhome.BorderColor = Color.FromArgb(63, 36, 114);
-            btnaminhome.BorderRadius = 40;
-            btnaminhome.BorderSize = 0;
-            btnaminhome.Cursor = Cursors.Hand;
-            btnaminhome.FlatAppearance.BorderSize = 0;
-            btnaminhome.FlatStyle = FlatStyle.Flat;
-            btnaminhome.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnaminhome.ForeColor = Color.White;
-            btnaminhome.Location = new Point(6, 633);
-            btnaminhome.Name = "btnaminhome";
-            btnaminhome.Size = new Size(151, 88);
-            btnaminhome.TabIndex = 110;
-            btnaminhome.Text = "أمين منزل";
-            btnaminhome.TextColor = Color.White;
-            btnaminhome.UseVisualStyleBackColor = false;
-            btnaminhome.Click += btnaminhome_Clic;
-            // 
             // TreasuryFRM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -623,6 +640,7 @@
             pnltreasury.PerformLayout();
             khPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             khPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvStore).EndInit();
@@ -660,5 +678,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private customs.KhControles.KhButton btnaminhome;
+        private PictureBox pictureBox2;
     }
 }

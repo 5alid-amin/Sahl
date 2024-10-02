@@ -21,6 +21,7 @@ namespace Sahll.JUI.Car
             main = mainForm;
         }
 
+        #region ButtonsMethods
         private void btnproducts_Click(object sender, EventArgs e)
         {
             main.ShowCustomerCash();
@@ -30,6 +31,7 @@ namespace Sahll.JUI.Car
         {
             main.ShowCustomerProduct();
         }
+        #endregion
 
     }
 }

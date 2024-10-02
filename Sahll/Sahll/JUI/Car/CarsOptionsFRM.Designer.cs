@@ -120,6 +120,7 @@
             btndeficitorexcess.Text = "عجز أو زياده";
             btndeficitorexcess.TextColor = Color.White;
             btndeficitorexcess.UseVisualStyleBackColor = false;
+            btndeficitorexcess.Click += btndeficitorexcess_Click;
             // 
             // btnstaff
             // 
@@ -160,7 +161,7 @@
             btnnewweek.Name = "btnnewweek";
             btnnewweek.Size = new Size(177, 63);
             btnnewweek.TabIndex = 68;
-            btnnewweek.Text = "يوم جديد";
+            btnnewweek.Text = "مده جديده";
             btnnewweek.TextColor = Color.White;
             btnnewweek.UseVisualStyleBackColor = false;
             btnnewweek.Click += btnnewweek_Click;
@@ -500,11 +501,11 @@
         private customs.KhControles.KhButton btncar3;
         private customs.KhControles.KhButton btncar4;
         private customs.KhControles.KhButton btncar5;
-        private customs.KhControles.KhButton btncar1;
         public PictureBox picsahlwhenmax;
         private customs.KhControles.KhButton btnstaff;
         private customs.KhControles.KhButton btnnewweek;
         private customs.KhControles.KhButton btnrecords;
         private customs.KhControles.KhButton btndeficitorexcess;
+        public customs.KhControles.KhButton btncar1;
     }
 }

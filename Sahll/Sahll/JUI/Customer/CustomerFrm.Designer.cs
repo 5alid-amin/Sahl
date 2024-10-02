@@ -28,23 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlselling = new Panel();
-            khPanel1 = new customs.KhPanel();
-            dgvSelling = new DataGridView();
-            btnAddSelling = new customs.KhControles.KhButton();
-            lbltotal = new customs.KhControles.KhButton();
             txtsearch = new TextBox();
             khButton3 = new customs.KhControles.KhButton();
-            label3 = new Label();
-            contextMenuStrip1 = new ContextMenuStrip(components);
+            khPanel1 = new customs.KhPanel();
+            dgvSelling = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             delete = new DataGridViewImageColumn();
             edit = new DataGridViewImageColumn();
             account = new DataGridViewImageColumn();
+            btnAddSelling = new customs.KhControles.KhButton();
+            lbltotal = new customs.KhControles.KhButton();
+            label3 = new Label();
             pnlselling.SuspendLayout();
             khPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSelling).BeginInit();
@@ -52,17 +50,50 @@
             // 
             // pnlselling
             // 
+            pnlselling.Controls.Add(txtsearch);
+            pnlselling.Controls.Add(khButton3);
             pnlselling.Controls.Add(khPanel1);
             pnlselling.Controls.Add(btnAddSelling);
             pnlselling.Controls.Add(lbltotal);
-            pnlselling.Controls.Add(txtsearch);
-            pnlselling.Controls.Add(khButton3);
             pnlselling.Controls.Add(label3);
             pnlselling.Dock = DockStyle.Fill;
             pnlselling.Location = new Point(20, 0);
             pnlselling.Name = "pnlselling";
             pnlselling.Size = new Size(945, 750);
             pnlselling.TabIndex = 0;
+            // 
+            // txtsearch
+            // 
+            txtsearch.BackColor = Color.White;
+            txtsearch.BorderStyle = BorderStyle.None;
+            txtsearch.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
+            txtsearch.Location = new Point(42, 13);
+            txtsearch.Multiline = true;
+            txtsearch.Name = "txtsearch";
+            txtsearch.Size = new Size(274, 45);
+            txtsearch.TabIndex = 53;
+            txtsearch.TextAlign = HorizontalAlignment.Center;
+            // 
+            // khButton3
+            // 
+            khButton3.BackColor = Color.White;
+            khButton3.BackgroundColor = Color.White;
+            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
+            khButton3.BorderRadius = 40;
+            khButton3.BorderSize = 1;
+            khButton3.Enabled = false;
+            khButton3.FlatAppearance.BorderSize = 0;
+            khButton3.FlatStyle = FlatStyle.Flat;
+            khButton3.ForeColor = SystemColors.Window;
+            khButton3.Image = Properties.Resources.search;
+            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
+            khButton3.Location = new Point(11, 9);
+            khButton3.Name = "khButton3";
+            khButton3.Size = new Size(323, 52);
+            khButton3.TabIndex = 52;
+            khButton3.TextColor = SystemColors.Window;
+            khButton3.UseVisualStyleBackColor = false;
             // 
             // khPanel1
             // 
@@ -126,102 +157,6 @@
             dgvSelling.CellMouseEnter += dgvSelling_CellMouseEnter;
             dgvSelling.CellMouseLeave += dgvSelling_CellMouseLeave;
             // 
-            // btnAddSelling
-            // 
-            btnAddSelling.Anchor = AnchorStyles.None;
-            btnAddSelling.BackColor = Color.FromArgb(173, 109, 209);
-            btnAddSelling.BackgroundColor = Color.FromArgb(173, 109, 209);
-            btnAddSelling.BorderColor = Color.FromArgb(63, 36, 114);
-            btnAddSelling.BorderRadius = 40;
-            btnAddSelling.BorderSize = 0;
-            btnAddSelling.Cursor = Cursors.Hand;
-            btnAddSelling.FlatAppearance.BorderSize = 0;
-            btnAddSelling.FlatStyle = FlatStyle.Flat;
-            btnAddSelling.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddSelling.ForeColor = Color.White;
-            btnAddSelling.Location = new Point(380, 673);
-            btnAddSelling.Name = "btnAddSelling";
-            btnAddSelling.Size = new Size(185, 63);
-            btnAddSelling.TabIndex = 98;
-            btnAddSelling.Text = "إضافه";
-            btnAddSelling.TextColor = Color.White;
-            btnAddSelling.UseVisualStyleBackColor = false;
-            btnAddSelling.Click += btnAddSelling_Click;
-            // 
-            // lbltotal
-            // 
-            lbltotal.Anchor = AnchorStyles.Left;
-            lbltotal.BackColor = Color.White;
-            lbltotal.BackgroundColor = Color.White;
-            lbltotal.BorderColor = Color.FromArgb(119, 67, 219);
-            lbltotal.BorderRadius = 40;
-            lbltotal.BorderSize = 1;
-            lbltotal.Cursor = Cursors.Hand;
-            lbltotal.FlatAppearance.BorderSize = 0;
-            lbltotal.FlatStyle = FlatStyle.Flat;
-            lbltotal.Font = new Font("Hacen Egypt", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbltotal.ForeColor = Color.FromArgb(119, 67, 219);
-            lbltotal.ImageAlign = ContentAlignment.BottomRight;
-            lbltotal.Location = new Point(5, 670);
-            lbltotal.Margin = new Padding(0);
-            lbltotal.Name = "lbltotal";
-            lbltotal.Size = new Size(204, 63);
-            lbltotal.TabIndex = 97;
-            lbltotal.TextAlign = ContentAlignment.TopCenter;
-            lbltotal.TextColor = Color.FromArgb(119, 67, 219);
-            lbltotal.UseVisualStyleBackColor = false;
-            // 
-            // txtsearch
-            // 
-            txtsearch.BackColor = Color.White;
-            txtsearch.BorderStyle = BorderStyle.None;
-            txtsearch.Font = new Font("Hacen Egypt", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
-            txtsearch.Location = new Point(34, 12);
-            txtsearch.Multiline = true;
-            txtsearch.Name = "txtsearch";
-            txtsearch.Size = new Size(274, 46);
-            txtsearch.TabIndex = 88;
-            // 
-            // khButton3
-            // 
-            khButton3.BackColor = Color.White;
-            khButton3.BackgroundColor = Color.White;
-            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
-            khButton3.BorderRadius = 40;
-            khButton3.BorderSize = 1;
-            khButton3.Enabled = false;
-            khButton3.FlatAppearance.BorderSize = 0;
-            khButton3.FlatStyle = FlatStyle.Flat;
-            khButton3.ForeColor = SystemColors.Window;
-            khButton3.Image = Properties.Resources.search;
-            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton3.Location = new Point(3, 10);
-            khButton3.Name = "khButton3";
-            khButton3.Size = new Size(323, 52);
-            khButton3.TabIndex = 87;
-            khButton3.TextColor = SystemColors.Window;
-            khButton3.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.Left;
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Hacen Egypt", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.FromArgb(63, 36, 114);
-            label3.Location = new Point(204, 653);
-            label3.Name = "label3";
-            label3.Size = new Size(172, 99);
-            label3.TabIndex = 96;
-            label3.Text = "الاجمالي";
-            // 
-            // contextMenuStrip1
-            // 
-            contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(61, 4);
-            contextMenuStrip1.Opening += contextMenuStrip1_Opening;
-            // 
             // Column1
             // 
             Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -267,6 +202,64 @@
             account.Name = "account";
             account.ReadOnly = true;
             // 
+            // btnAddSelling
+            // 
+            btnAddSelling.Anchor = AnchorStyles.None;
+            btnAddSelling.BackColor = Color.FromArgb(173, 109, 209);
+            btnAddSelling.BackgroundColor = Color.FromArgb(173, 109, 209);
+            btnAddSelling.BorderColor = Color.FromArgb(63, 36, 114);
+            btnAddSelling.BorderRadius = 40;
+            btnAddSelling.BorderSize = 0;
+            btnAddSelling.Cursor = Cursors.Hand;
+            btnAddSelling.FlatAppearance.BorderSize = 0;
+            btnAddSelling.FlatStyle = FlatStyle.Flat;
+            btnAddSelling.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddSelling.ForeColor = Color.White;
+            btnAddSelling.Location = new Point(380, 673);
+            btnAddSelling.Name = "btnAddSelling";
+            btnAddSelling.Size = new Size(185, 63);
+            btnAddSelling.TabIndex = 98;
+            btnAddSelling.Text = "إضافه";
+            btnAddSelling.TextColor = Color.White;
+            btnAddSelling.UseVisualStyleBackColor = false;
+            btnAddSelling.Click += btnAddSelling_Click;
+            // 
+            // lbltotal
+            // 
+            lbltotal.Anchor = AnchorStyles.Left;
+            lbltotal.BackColor = Color.White;
+            lbltotal.BackgroundColor = Color.White;
+            lbltotal.BorderColor = Color.FromArgb(119, 67, 219);
+            lbltotal.BorderRadius = 40;
+            lbltotal.BorderSize = 1;
+            lbltotal.Cursor = Cursors.Hand;
+            lbltotal.FlatAppearance.BorderSize = 0;
+            lbltotal.FlatStyle = FlatStyle.Flat;
+            lbltotal.Font = new Font("Hacen Egypt", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbltotal.ForeColor = Color.FromArgb(119, 67, 219);
+            lbltotal.ImageAlign = ContentAlignment.BottomRight;
+            lbltotal.Location = new Point(5, 670);
+            lbltotal.Margin = new Padding(0);
+            lbltotal.Name = "lbltotal";
+            lbltotal.Size = new Size(204, 63);
+            lbltotal.TabIndex = 97;
+            lbltotal.TextAlign = ContentAlignment.TopCenter;
+            lbltotal.TextColor = Color.FromArgb(119, 67, 219);
+            lbltotal.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Left;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Hacen Egypt", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.FromArgb(63, 36, 114);
+            label3.Location = new Point(204, 653);
+            label3.Name = "label3";
+            label3.Size = new Size(172, 99);
+            label3.TabIndex = 96;
+            label3.Text = "الاجمالي";
+            // 
             // CustomerFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -287,19 +280,18 @@
         }
 
         #endregion
-        private TextBox txtsearch;
-        private customs.KhControles.KhButton khButton3;
         private customs.KhControles.KhButton btnAddSelling;
         private customs.KhControles.KhButton lbltotal;
         private Label label3;
         private customs.KhPanel khPanel1;
         private DataGridView dgvSelling;
         public Panel pnlselling;
-        private ContextMenuStrip contextMenuStrip1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewImageColumn delete;
         private DataGridViewImageColumn edit;
         private DataGridViewImageColumn account;
+        private TextBox txtsearch;
+        private customs.KhControles.KhButton khButton3;
     }
 }

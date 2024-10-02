@@ -39,7 +39,7 @@
             txtprice = new TextBox();
             txtnote = new TextBox();
             khButton2 = new customs.KhControles.KhButton();
-            label2 = new Label();
+            lblCustomerCashAddEditFRM = new Label();
             khButton1 = new customs.KhControles.KhButton();
             label3 = new Label();
             label1 = new Label();
@@ -208,18 +208,18 @@
             khButton2.TextColor = Color.White;
             khButton2.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblCustomerCashAddEditFRM
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("LBC", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(63, 36, 114);
-            label2.Location = new Point(287, 2);
-            label2.Name = "label2";
-            label2.Size = new Size(149, 35);
-            label2.TabIndex = 89;
-            label2.Tag = "";
-            label2.Text = "إضافة نقديه";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            lblCustomerCashAddEditFRM.AutoSize = true;
+            lblCustomerCashAddEditFRM.Font = new Font("LBC", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCustomerCashAddEditFRM.ForeColor = Color.FromArgb(63, 36, 114);
+            lblCustomerCashAddEditFRM.Location = new Point(266, 2);
+            lblCustomerCashAddEditFRM.Name = "lblCustomerCashAddEditFRM";
+            lblCustomerCashAddEditFRM.Size = new Size(212, 35);
+            lblCustomerCashAddEditFRM.TabIndex = 89;
+            lblCustomerCashAddEditFRM.Tag = "";
+            lblCustomerCashAddEditFRM.Text = "إضافة نقدية عميل";
+            lblCustomerCashAddEditFRM.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // khButton1
             // 
@@ -277,7 +277,7 @@
             Controls.Add(txtprice);
             Controls.Add(txtnote);
             Controls.Add(khButton2);
-            Controls.Add(label2);
+            Controls.Add(lblCustomerCashAddEditFRM);
             Controls.Add(khButton1);
             Controls.Add(label3);
             Controls.Add(khPanel4);
@@ -309,9 +309,9 @@
         private TextBox txtprice;
         private TextBox txtnote;
         private customs.KhControles.KhButton khButton2;
-        private Label label2;
         private customs.KhControles.KhButton khButton1;
         private Label label3;
         private Label label1;
+        public Label lblCustomerCashAddEditFRM;
     }
 }

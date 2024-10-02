@@ -30,7 +30,7 @@ namespace Sahll.JUI.Selling
         #region ButtonsMethods
         private void btnAddSelling_Click(object sender, EventArgs e)
         {
-            CustomerAdditionOptionsFRM FRM = new CustomerAdditionOptionsFRM();
+            CustomerAdditionOptionsFRM FRM = new CustomerAdditionOptionsFRM(false);
 
 
             //JUI
@@ -53,8 +53,7 @@ namespace Sahll.JUI.Selling
 
                     case "edit":
 
-                        CustomerAdditionOptionsFRM FRM = new CustomerAdditionOptionsFRM();
-
+                        CustomerAdditionOptionsFRM FRM = new CustomerAdditionOptionsFRM(true);
 
                         //JUI
                         FRM.Show();
@@ -114,10 +113,5 @@ namespace Sahll.JUI.Selling
             }
         }
         #endregion
-
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
     }
 }

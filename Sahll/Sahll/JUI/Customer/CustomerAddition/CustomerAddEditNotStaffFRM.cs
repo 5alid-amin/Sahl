@@ -29,10 +29,5 @@ namespace Sahll.JUI.Selling
             //JUI
             this.Close();
         }
-
-        private void txtCustomerName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

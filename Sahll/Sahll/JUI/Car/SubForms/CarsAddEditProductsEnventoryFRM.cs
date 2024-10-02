@@ -29,5 +29,10 @@ namespace Sahll.JUI.Car.SubForms
             //JUI
             this.Close();
         }
+
+        private void CarsAddEditProductsEnventoryFRM_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

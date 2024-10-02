@@ -49,6 +49,11 @@ namespace Sahll.JUI.Customer.CustomerProduct
                 }
             }
         }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
 
         #region JUI

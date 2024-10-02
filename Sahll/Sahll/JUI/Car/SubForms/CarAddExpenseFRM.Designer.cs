@@ -35,7 +35,7 @@
             label1 = new Label();
             txtprice = new TextBox();
             btnclose = new customs.KhControles.KhButton();
-            label3 = new Label();
+            lblCarAddExpenseFRM = new Label();
             SuspendLayout();
             // 
             // txtstatement
@@ -149,18 +149,18 @@
             btnclose.UseVisualStyleBackColor = false;
             btnclose.Click += btnclose_Click;
             // 
-            // label3
+            // lblCarAddExpenseFRM
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(274, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(310, 42);
-            label3.TabIndex = 9;
-            label3.Tag = "";
-            label3.Text = "إضافة مصروف للسياره";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            lblCarAddExpenseFRM.AutoSize = true;
+            lblCarAddExpenseFRM.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblCarAddExpenseFRM.ForeColor = Color.White;
+            lblCarAddExpenseFRM.Location = new Point(274, 0);
+            lblCarAddExpenseFRM.Name = "lblCarAddExpenseFRM";
+            lblCarAddExpenseFRM.Size = new Size(310, 42);
+            lblCarAddExpenseFRM.TabIndex = 9;
+            lblCarAddExpenseFRM.Tag = "";
+            lblCarAddExpenseFRM.Text = "إضافة مصروف للسياره";
+            lblCarAddExpenseFRM.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CarAddExpenseFRM
             // 
@@ -173,7 +173,7 @@
             Controls.Add(txtprice);
             Controls.Add(label1);
             Controls.Add(khButton2);
-            Controls.Add(label3);
+            Controls.Add(lblCarAddExpenseFRM);
             Controls.Add(khButton1);
             Controls.Add(label2);
             FormBorderStyle = FormBorderStyle.None;
@@ -193,6 +193,6 @@
         private Label label1;
         private TextBox txtprice;
         private customs.KhControles.KhButton btnclose;
-        private Label label3;
+        public Label lblCarAddExpenseFRM;
     }
 }

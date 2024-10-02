@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlselling = new Panel();
+            btnreport = new customs.KhControles.KhButton();
             khPanel1 = new customs.KhPanel();
             dgvSelling = new DataGridView();
             lbltotal = new customs.KhControles.KhButton();
@@ -41,9 +42,9 @@
             contextMenuStrip1 = new ContextMenuStrip(components);
             Column1 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
-            PresonalID = new DataGridViewTextBoxColumn();
             sell = new DataGridViewTextBoxColumn();
             net = new DataGridViewTextBoxColumn();
+            PresonalID = new DataGridViewTextBoxColumn();
             product = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -58,6 +59,7 @@
             // 
             // pnlselling
             // 
+            pnlselling.Controls.Add(btnreport);
             pnlselling.Controls.Add(khPanel1);
             pnlselling.Controls.Add(lbltotal);
             pnlselling.Controls.Add(txtsearch);
@@ -68,7 +70,28 @@
             pnlselling.Name = "pnlselling";
             pnlselling.Size = new Size(945, 750);
             pnlselling.TabIndex = 0;
-            pnlselling.Paint += pnlselling_Paint;
+            // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(882, 663);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 105;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
             // 
             // khPanel1
             // 
@@ -105,7 +128,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvSelling.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvSelling.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvSelling.Columns.AddRange(new DataGridViewColumn[] { Column1, Column4, PresonalID, sell, net, product, Column2, Column3, total, bouns, rival, info });
+            dgvSelling.Columns.AddRange(new DataGridViewColumn[] { Column1, Column4, sell, net, PresonalID, product, Column2, Column3, total, bouns, rival, info });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -204,7 +227,6 @@
             // 
             contextMenuStrip1.Name = "contextMenuStrip1";
             contextMenuStrip1.Size = new Size(61, 4);
-            contextMenuStrip1.Opening += contextMenuStrip1_Opening;
             // 
             // Column1
             // 
@@ -222,14 +244,6 @@
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
             // 
-            // PresonalID
-            // 
-            PresonalID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            PresonalID.FillWeight = 97.3030243F;
-            PresonalID.HeaderText = "السلف";
-            PresonalID.Name = "PresonalID";
-            PresonalID.ReadOnly = true;
-            // 
             // sell
             // 
             sell.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -242,9 +256,17 @@
             // 
             net.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             net.FillWeight = 99.48627F;
-            net.HeaderText = "الصافي";
+            net.HeaderText = "النسبه";
             net.Name = "net";
             net.ReadOnly = true;
+            // 
+            // PresonalID
+            // 
+            PresonalID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            PresonalID.FillWeight = 97.3030243F;
+            PresonalID.HeaderText = "السلف";
+            PresonalID.Name = "PresonalID";
+            PresonalID.ReadOnly = true;
             // 
             // product
             // 
@@ -274,7 +296,7 @@
             // 
             total.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             total.FillWeight = 95.7205F;
-            total.HeaderText = "الإجمالي";
+            total.HeaderText = "الصافي";
             total.Name = "total";
             total.ReadOnly = true;
             // 
@@ -335,11 +357,12 @@
         private DataGridView dgvSelling;
         public Panel pnlselling;
         private ContextMenuStrip contextMenuStrip1;
+        private customs.KhControles.KhButton btnreport;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn PresonalID;
         private DataGridViewTextBoxColumn sell;
         private DataGridViewTextBoxColumn net;
+        private DataGridViewTextBoxColumn PresonalID;
         private DataGridViewTextBoxColumn product;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;

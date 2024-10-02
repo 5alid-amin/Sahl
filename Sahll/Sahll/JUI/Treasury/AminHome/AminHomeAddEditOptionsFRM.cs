@@ -45,5 +45,19 @@ namespace Sahll.JUI.Selling
         {
             this.Close();
         }
+
+        private void btn_return_Click_1(object sender, EventArgs e)
+        {
+            AminHAddEditWithdrawFRM frm = new AminHAddEditWithdrawFRM();
+            frm.Show();
+            this.Close();
+        }
+
+        private void khButton1_Click_1(object sender, EventArgs e)
+        {
+            AminHAddEditDespositFRM frm = new AminHAddEditDespositFRM();
+            frm.Show();
+            this.Close();
+        }
     }
 }

@@ -18,34 +18,44 @@ namespace Sahll.JUI.Car
         public CarsOptionsFRM(Main mainForm)
         {
             InitializeComponent();
+            CarsButtonsSynchronization();
             main = mainForm;
+
+
         }
+       
 
         #region ButtonsMethods
-        private void btncar1_Click_1(object sender, EventArgs e)
+        public void btncar1_Click_1(object sender, EventArgs e)
         {
             SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 1;
         }
 
         private void btncar2_Click_1(object sender, EventArgs e)
         {
             SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 2;
         }
 
         private void btncar3_Click_1(object sender, EventArgs e)
         {
             SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 3;
         }
 
         private void btncar4_Click_1(object sender, EventArgs e)
         {
             SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 4;
         }
 
         private void btncar5_Click_1(object sender, EventArgs e)
         {
             SetButtonActive(sender as System.Windows.Forms.Button);
+            CarsButtonsTransitions.SelectedCar = 5;
         }
+
         private void btnnewweek_Click(object sender, EventArgs e)
         {
             DialogFRM fRM = new DialogFRM("سوف تبدأ اسبوعا جديدا وسيتم نقل البيانات للسجلات لتصبح غير قابله للتعديل؟", Color.FromArgb(64, 0, 0));
@@ -62,6 +72,11 @@ namespace Sahll.JUI.Car
                 frm.timer1.Enabled = true;
                 frm.ShowDialog();
             }
+        }
+
+        private void btndeficitorexcess_Click(object sender, EventArgs e)
+        {
+            main.ShowDeficitorexcess();
         }
         #endregion
 
@@ -83,6 +98,33 @@ namespace Sahll.JUI.Car
             clickedButton.BackColor = Color.FromArgb(203, 150, 233);
             clickedButton.ForeColor = Color.White;
 
+        }
+
+        public void CarsButtonsSynchronization()
+        {
+            var num = CarsButtonsTransitions.SelectedCar;
+
+            // تحقق من السيارة المختارة واستدعاء دالة الزر المناسب
+            switch (num)
+            {
+                case 1:
+                    btncar1_Click_1(btncar1, EventArgs.Empty);
+                    break;
+                case 2:
+                    btncar2_Click_1(btncar2, EventArgs.Empty);
+                    break;
+                case 3:
+                    btncar3_Click_1(btncar3, EventArgs.Empty);
+                    break;
+                case 4:
+                    btncar4_Click_1(btncar4, EventArgs.Empty);
+                    break;
+                case 5:
+                    btncar5_Click_1(btncar5, EventArgs.Empty);
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void btnproducts_Click(object sender, EventArgs e)
@@ -115,6 +157,7 @@ namespace Sahll.JUI.Car
         {
             main.ShowCarsRecords();
         }
+
         private void pnlcarsoptions_Resize(object sender, EventArgs e)
         {
             int buttonWidth = (pnlcarsoptions.Size.Width) / 5;
@@ -134,6 +177,7 @@ namespace Sahll.JUI.Car
         #endregion
 
 
-     
+
+
     }
 }

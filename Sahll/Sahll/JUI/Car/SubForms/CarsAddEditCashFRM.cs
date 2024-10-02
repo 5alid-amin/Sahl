@@ -15,6 +15,8 @@ namespace Sahll.JUI.Car.SubForms
         public CarsAddEditCashFRM()
         {
             InitializeComponent();
+            dgvexpenses.Rows.Add(new object[] {"فاتورة اوكسي", 527});
+
         }
 
         private void btnadddriver_Click(object sender, EventArgs e)
@@ -31,6 +33,11 @@ namespace Sahll.JUI.Car.SubForms
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_add_cash_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

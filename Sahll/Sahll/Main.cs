@@ -1,4 +1,5 @@
 ﻿using Sahll.JUI.Car;
+using Sahll.JUI.Car.InfoForms;
 using Sahll.JUI.Selling;
 using Sahll.JUI.Treasury;
 using System.Windows.Forms;
@@ -6,16 +7,25 @@ namespace Sahll
 {
     public partial class Main : Form
     {
-        //feild
+        //feilds
+
         bool IsCollapsed = false;
         bool IsMaxmized = false;
 
+        //For Draging The Form
+        bool dragging = false;
+        Point dragCursorPoint;
+        Point dragFormPoint;
+
+        //For Transitions
         bool GoToCars = false;
         bool GoToProduct = false;
         bool GoToTreasury = false;
         bool GoToCustomer = false;
         bool GoToCusOptions = false;
         bool GoToStaff = false;
+        bool GoToSupplier = false;
+        bool GoToSupOptions = false;
 
         Button PreviousButton;
 
@@ -24,6 +34,8 @@ namespace Sahll
         TreasuryFRM TreasuryFRM;
         CustomerFrm customerFrm;
         StaffFRM staffFRM;
+        SupplierFRM supplierFRM;
+        StatisticsOptionsFRM statisticsOptionsFRM;
 
         public Main()
         {
@@ -31,7 +43,6 @@ namespace Sahll
             navbar_transparent_button_on_hover();
             navbar_transparent_button_on_click();
             btncar_Click_1(null, EventArgs.Empty);
-            IsMaxmized = true;
 
 
             carsOptionsFRM = new CarsOptionsFRM(this);
@@ -39,6 +50,8 @@ namespace Sahll
             TreasuryFRM = new TreasuryFRM(this);
             customerFrm = new CustomerFrm(this);
             staffFRM = new StaffFRM(this);
+            supplierFRM = new SupplierFRM(this);
+            statisticsOptionsFRM = new StatisticsOptionsFRM(this);
         }
 
         #region ButtonsMethods
@@ -52,6 +65,7 @@ namespace Sahll
             toptitle(btncar);
             pnlContainer.Controls.Clear();
             carsOptionsFRM = new CarsOptionsFRM(this);
+            carsOptionsFRM.btncar1_Click_1(carsOptionsFRM.btncar1, EventArgs.Empty);
             pnlContainer.Controls.Add(carsOptionsFRM.pnlcarsoptions);
             btngoback.Visible = false;
         }
@@ -127,12 +141,19 @@ namespace Sahll
 
         private void btnsuppliers_Click_1(object sender, EventArgs e)
         {
+            //Functions
+
+
             //JUI
             pointer(btnsuppliers);
             toptitle(btnsuppliers);
-            btngoback.Visible = false;
 
-            //Functions
+            pnlContainer.Controls.Clear();
+            supplierFRM = new SupplierFRM(this);
+            pnlContainer.Controls.Add(supplierFRM.pnlselling);
+            btngoback.Visible = false;
+            GoToSupplier = false;
+            lbltoptitle.Text = "الموردين";
         }
 
         private void btncustomers_Click_1(object sender, EventArgs e)
@@ -154,6 +175,10 @@ namespace Sahll
             //JUI
             pointer(btnusers);
             toptitle(btnusers);
+            pnlContainer.Controls.Clear();
+            UserFRM frm = new UserFRM();
+            pnlContainer.Controls.Add(frm.pnlstore);
+            lbltoptitle.Text = "المستخدمين";
             btngoback.Visible = false;
 
             //Functions
@@ -164,6 +189,10 @@ namespace Sahll
             //JUI
             pointer(btnsettings);
             toptitle(btnsettings);
+            pnlContainer.Controls.Clear();
+            SettingFRM frm = new SettingFRM();
+            pnlContainer.Controls.Add(frm.pnlcarsoptions);
+            lbltoptitle.Text = "الإعدادات";
             btngoback.Visible = false;
 
             //Functions
@@ -191,7 +220,7 @@ namespace Sahll
                 GoToProduct = false;
                 lbltoptitle.Text = "المنتجات";
             }
-            else if (GoToTreasury) 
+            else if (GoToTreasury)
             {
                 pnlContainer.Controls.Clear();
                 TreasuryFRM = new TreasuryFRM(this);
@@ -215,9 +244,9 @@ namespace Sahll
             {
                 SHowCustomerOptions();
 
-                btngoback.Visible = false;
+                GoToCustomer = true;
                 GoToCusOptions = false;
-                lbltoptitle.Text = "العملاء";
+                lbltoptitle.Text = "صافي حساب العميل";
             }
             else if (GoToStaff)
             {
@@ -228,6 +257,23 @@ namespace Sahll
                 btngoback.Visible = false;
                 GoToStaff = false;
                 lbltoptitle.Text = "العمال";
+            }
+            else if (GoToSupplier)
+            {
+                pnlContainer.Controls.Clear();
+                supplierFRM = new SupplierFRM(this);
+                pnlContainer.Controls.Add(supplierFRM.pnlselling);
+
+                btngoback.Visible = false;
+                GoToSupplier = false;
+                lbltoptitle.Text = "الموردين";
+            }
+            else if (GoToSupOptions)
+            {
+                ShowSupplierOptions();
+                GoToSupplier = true;
+                GoToSupOptions = false;
+                lbltoptitle.Text = "صافي حساب المورد";
             }
 
         }
@@ -594,6 +640,19 @@ namespace Sahll
             //title
             lbltoptitle.Text = "سجلات السيارات";
         }
+        public void ShowDeficitorexcess()
+        {
+            pnlContainer.Controls.Clear();
+            CarDeficitorexcessFRM FRM = new CarDeficitorexcessFRM();
+            pnlContainer.Controls.Add(FRM.pnlCarDeficitorexcess);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToCars = true;
+
+            //title
+            lbltoptitle.Text = "العجز أو الزياده للسياره";
+        }
         #endregion
 
         #region ProductsTransactions
@@ -651,7 +710,7 @@ namespace Sahll
 
             //tit
             lbltoptitle.Text = "المقبوضات";
-        } 
+        }
         public void ShowExpenses()
         {
             ExpensesFRM frm = new ExpensesFRM();
@@ -678,6 +737,37 @@ namespace Sahll
             //tit
             lbltoptitle.Text = "أمين منزل";
         }
+        public void ShowNetProfit()
+        {
+            NetProfitFRM frm = new NetProfitFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlstore);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToTreasury = true;
+
+            //tit
+            lbltoptitle.Text = "صافي الربح";
+        }
+        public void ShowNetCapital()
+        {
+            NetCpitalFRM frm = new NetCpitalFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlstore);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToTreasury = true;
+
+            //tit
+            lbltoptitle.Text = "صافي رأس المال";
+        }
+        public void showstatisticsoptions()
+        {
+            statisticsOptionsFRM = new StatisticsOptionsFRM(this);
+            statisticsOptionsFRM.Show();
+        }
         #endregion
 
         #region CustomerTransformation
@@ -692,7 +782,7 @@ namespace Sahll
             GoToCustomer = true;
 
             //tit
-            lbltoptitle.Text = "العملاء(صافي الحساب)";
+            lbltoptitle.Text = "صافي حساب العميل";
         }
         public void ShowCustomerProduct()
         {
@@ -740,5 +830,72 @@ namespace Sahll
             lbltoptitle.Text = "حسابات العمال";
         }
         #endregion
+
+        #region SupplierTransformation
+
+        public void ShowSupplierOptions()
+        {
+            SupplierOptionsFRM frm = new SupplierOptionsFRM(this);
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlcarsoptions);
+
+            //GoBackButton
+            btngoback.Visible = true;
+            GoToSupplier = true;
+
+            //tit
+            lbltoptitle.Text = "صافي حساب المورد";
+        }
+        public void ShowSupplierCash()
+        {
+            SupplierCashFRM frm = new SupplierCashFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlstore);
+
+            //GoBackButton
+            GoToSupplier = false;
+            btngoback.Visible = true;
+            GoToSupOptions = true;
+
+            //tit
+            lbltoptitle.Text = "النقدية المنصرفه للمورد";
+        }
+        public void ShowSupplierProduct()
+        {
+            SupplierProductFRM frm = new SupplierProductFRM();
+            pnlContainer.Controls.Clear();
+            pnlContainer.Controls.Add(frm.pnlselling);
+
+            //GoBackButton
+            GoToSupplier = false;
+            btngoback.Visible = true;
+            GoToSupOptions = true;
+
+            //tit
+            lbltoptitle.Text = "الأصناف المستورده";
+        }
+
+        #endregion
+
+        private void pnlTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            dragCursorPoint = Cursor.Position;
+            dragFormPoint = this.Location;
+        }
+
+        private void pnlTop_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point diff = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
+                this.Location = Point.Add(dragFormPoint, new Size(diff));
+            }
+        }
+
+        private void pnlTop_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
     }
 }

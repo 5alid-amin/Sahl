@@ -21,5 +21,6 @@ namespace Sahll.JUI.Selling
         {
             this.Close();
         }
+
     }
 }

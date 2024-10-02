@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             khPanel1 = new customs.KhPanel();
             dgvAddSellingProces = new DataGridView();
             product = new DataGridViewTextBoxColumn();
@@ -93,24 +93,24 @@
             dgvAddSellingProces.BorderStyle = BorderStyle.None;
             dgvAddSellingProces.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvAddSellingProces.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(203, 150, 233);
-            dataGridViewCellStyle4.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvAddSellingProces.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(203, 150, 233);
+            dataGridViewCellStyle1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAddSellingProces.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAddSellingProces.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAddSellingProces.Columns.AddRange(new DataGridViewColumn[] { product, price, quantity, total, delete });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle6.SelectionForeColor = Color.MidnightBlue;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgvAddSellingProces.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle3.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgvAddSellingProces.DefaultCellStyle = dataGridViewCellStyle3;
             dgvAddSellingProces.Dock = DockStyle.Top;
             dgvAddSellingProces.EnableHeadersVisualStyles = false;
             dgvAddSellingProces.GridColor = Color.White;
@@ -140,8 +140,8 @@
             // price
             // 
             price.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle5.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            price.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            price.DefaultCellStyle = dataGridViewCellStyle2;
             price.FillWeight = 51.1084938F;
             price.HeaderText = "السعر";
             price.Name = "price";
@@ -384,6 +384,7 @@
             btn_add.Text = "إضافه";
             btn_add.TextColor = Color.White;
             btn_add.UseVisualStyleBackColor = false;
+            btn_add.Click += btn_add_Click;
             // 
             // khButton1
             // 
@@ -532,7 +533,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 251, 245);
-            ClientSize = new Size(1115, 790);
+            ClientSize = new Size(1115, 788);
             Controls.Add(panel1);
             Controls.Add(khPanel1);
             Controls.Add(label7);

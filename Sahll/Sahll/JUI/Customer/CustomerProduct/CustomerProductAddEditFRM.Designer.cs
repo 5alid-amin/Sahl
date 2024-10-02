@@ -152,7 +152,7 @@
             dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             price.DefaultCellStyle = dataGridViewCellStyle2;
             price.FillWeight = 51.1084938F;
-            price.HeaderText = "السعر";
+            price.HeaderText = "سعر البيع";
             price.Name = "price";
             price.ReadOnly = true;
             // 
@@ -298,6 +298,7 @@
             btn_add.Text = "إضافه";
             btn_add.TextColor = Color.White;
             btn_add.UseVisualStyleBackColor = false;
+            btn_add.Click += btn_add_Click;
             // 
             // khPanel2
             // 
@@ -571,11 +572,6 @@
         private Panel panel1;
         private customs.KhPanel khPanel1;
         private DataGridView dgvAddCustomerProduct;
-        private DataGridViewTextBoxColumn product;
-        private DataGridViewTextBoxColumn price;
-        private DataGridViewTextBoxColumn quantity;
-        private DataGridViewTextBoxColumn total;
-        private DataGridViewImageColumn delete;
         private Label label2;
         private Label label1;
         private Label label7;
@@ -598,5 +594,10 @@
         private customs.KhControles.KhButton khButton1;
         private customs.KhControles.KhButton btnclose;
         private customs.KhControles.KhButton btnminimize;
+        private DataGridViewTextBoxColumn product;
+        private DataGridViewTextBoxColumn price;
+        private DataGridViewTextBoxColumn quantity;
+        private DataGridViewTextBoxColumn total;
+        private DataGridViewImageColumn delete;
     }
 }

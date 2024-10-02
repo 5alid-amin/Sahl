@@ -32,10 +32,10 @@
             khPanel4 = new customs.KhPanel();
             khPanel3 = new customs.KhPanel();
             khPanel2 = new customs.KhPanel();
-            btnclose = new customs.KhControles.KhButton();
+            label2 = new Label();
             khButton1 = new customs.KhControles.KhButton();
             btn_return = new customs.KhControles.KhButton();
-            label2 = new Label();
+            btnclose = new customs.KhControles.KhButton();
             SuspendLayout();
             // 
             // khPanel6
@@ -94,25 +94,18 @@
             khPanel2.Size = new Size(2, 357);
             khPanel2.TabIndex = 80;
             // 
-            // btnclose
+            // label2
             // 
-            btnclose.BackColor = Color.Transparent;
-            btnclose.BackgroundColor = Color.Transparent;
-            btnclose.BorderColor = Color.Crimson;
-            btnclose.BorderRadius = 10;
-            btnclose.BorderSize = 0;
-            btnclose.Cursor = Cursors.Hand;
-            btnclose.FlatAppearance.BorderSize = 0;
-            btnclose.FlatStyle = FlatStyle.Flat;
-            btnclose.ForeColor = Color.White;
-            btnclose.Image = Properties.Resources.close;
-            btnclose.Location = new Point(1, 1);
-            btnclose.Name = "btnclose";
-            btnclose.Size = new Size(33, 33);
-            btnclose.TabIndex = 86;
-            btnclose.TextColor = Color.White;
-            btnclose.UseVisualStyleBackColor = false;
-            btnclose.Click += btnclose_Click_1;
+            label2.AutoSize = true;
+            label2.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(63, 36, 114);
+            label2.Location = new Point(147, 10);
+            label2.Name = "label2";
+            label2.Size = new Size(168, 42);
+            label2.TabIndex = 91;
+            label2.Tag = "";
+            label2.Text = "نوع العمليه";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // khButton1
             // 
@@ -126,14 +119,14 @@
             khButton1.FlatStyle = FlatStyle.Flat;
             khButton1.Font = new Font("Hacen Egypt", 36F);
             khButton1.ForeColor = Color.White;
-            khButton1.Location = new Point(46, 216);
+            khButton1.Location = new Point(47, 217);
             khButton1.Name = "khButton1";
             khButton1.Size = new Size(368, 111);
-            khButton1.TabIndex = 84;
+            khButton1.TabIndex = 88;
             khButton1.Text = "إيـــــــــداع";
             khButton1.TextColor = Color.White;
             khButton1.UseVisualStyleBackColor = false;
-            khButton1.Click += khButton1_Click;
+            khButton1.Click += khButton1_Click_1;
             // 
             // btn_return
             // 
@@ -147,27 +140,33 @@
             btn_return.FlatStyle = FlatStyle.Flat;
             btn_return.Font = new Font("Hacen Egypt", 36F);
             btn_return.ForeColor = Color.White;
-            btn_return.Location = new Point(46, 89);
+            btn_return.Location = new Point(47, 90);
             btn_return.Name = "btn_return";
             btn_return.Size = new Size(368, 111);
-            btn_return.TabIndex = 85;
+            btn_return.TabIndex = 89;
             btn_return.Text = "سحـــــــــب";
             btn_return.TextColor = Color.White;
             btn_return.UseVisualStyleBackColor = false;
-            btn_return.Click += btn_return_Click;
+            btn_return.Click += btn_return_Click_1;
             // 
-            // label2
+            // btnclose
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("LBC", 24.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(63, 36, 114);
-            label2.Location = new Point(146, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(168, 42);
-            label2.TabIndex = 87;
-            label2.Tag = "";
-            label2.Text = "نوع العمليه";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            btnclose.BackColor = Color.Transparent;
+            btnclose.BackgroundColor = Color.Transparent;
+            btnclose.BorderColor = Color.Crimson;
+            btnclose.BorderRadius = 10;
+            btnclose.BorderSize = 0;
+            btnclose.Cursor = Cursors.Hand;
+            btnclose.FlatAppearance.BorderSize = 0;
+            btnclose.FlatStyle = FlatStyle.Flat;
+            btnclose.ForeColor = Color.White;
+            btnclose.Image = Properties.Resources.close;
+            btnclose.Location = new Point(2, 2);
+            btnclose.Name = "btnclose";
+            btnclose.Size = new Size(33, 33);
+            btnclose.TabIndex = 90;
+            btnclose.TextColor = Color.White;
+            btnclose.UseVisualStyleBackColor = false;
             // 
             // AminHomeAddEditOptionsFRM
             // 
@@ -178,11 +177,11 @@
             Controls.Add(label2);
             Controls.Add(khButton1);
             Controls.Add(btn_return);
+            Controls.Add(btnclose);
             Controls.Add(khPanel4);
             Controls.Add(khPanel3);
             Controls.Add(khPanel2);
             Controls.Add(khPanel6);
-            Controls.Add(btnclose);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AminHomeAddEditOptionsFRM";
             ShowInTaskbar = false;
@@ -199,9 +198,9 @@
         private customs.KhPanel khPanel4;
         private customs.KhPanel khPanel3;
         private customs.KhPanel khPanel2;
-        private customs.KhControles.KhButton btnclose;
+        private Label label2;
         private customs.KhControles.KhButton khButton1;
         private customs.KhControles.KhButton btn_return;
-        private Label label2;
+        private customs.KhControles.KhButton btnclose;
     }
 }

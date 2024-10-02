@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlcarcash = new Panel();
+            btnreport = new customs.KhControles.KhButton();
             DpToCash = new customs.KhControles.KhDatePicker();
             btnAddCash = new customs.KhControles.KhButton();
             label2 = new Label();
@@ -62,6 +63,7 @@
             // 
             // pnlcarcash
             // 
+            pnlcarcash.Controls.Add(btnreport);
             pnlcarcash.Controls.Add(DpToCash);
             pnlcarcash.Controls.Add(btnAddCash);
             pnlcarcash.Controls.Add(label2);
@@ -82,9 +84,31 @@
             pnlcarcash.Dock = DockStyle.Fill;
             pnlcarcash.Location = new Point(20, 0);
             pnlcarcash.Name = "pnlcarcash";
-            pnlcarcash.Size = new Size(945, 750);
+            pnlcarcash.Size = new Size(971, 750);
             pnlcarcash.TabIndex = 1;
             pnlcarcash.Resize += pnlcarcash_Resize;
+            // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(907, 661);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 102;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
             // 
             // DpToCash
             // 
@@ -93,7 +117,7 @@
             DpToCash.BorderSize = 0;
             DpToCash.Font = new Font("Hacen Egypt", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DpToCash.Format = DateTimePickerFormat.Short;
-            DpToCash.Location = new Point(542, 19);
+            DpToCash.Location = new Point(568, 19);
             DpToCash.MinimumSize = new Size(0, 35);
             DpToCash.Name = "DpToCash";
             DpToCash.Size = new Size(120, 46);
@@ -114,7 +138,7 @@
             btnAddCash.FlatStyle = FlatStyle.Flat;
             btnAddCash.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAddCash.ForeColor = Color.White;
-            btnAddCash.Location = new Point(384, 663);
+            btnAddCash.Location = new Point(397, 663);
             btnAddCash.Name = "btnAddCash";
             btnAddCash.Size = new Size(177, 63);
             btnAddCash.TabIndex = 66;
@@ -130,7 +154,7 @@
             label2.BackColor = Color.White;
             label2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(173, 109, 209);
-            label2.Location = new Point(660, 19);
+            label2.Location = new Point(686, 19);
             label2.Name = "label2";
             label2.Size = new Size(39, 44);
             label2.TabIndex = 76;
@@ -172,7 +196,7 @@
             khButton1.FlatStyle = FlatStyle.Flat;
             khButton1.ForeColor = SystemColors.Window;
             khButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton1.Location = new Point(536, 15);
+            khButton1.Location = new Point(562, 15);
             khButton1.Name = "khButton1";
             khButton1.Size = new Size(167, 52);
             khButton1.TabIndex = 77;
@@ -192,7 +216,7 @@
             khPanel1.Location = new Point(3, 128);
             khPanel1.Name = "khPanel1";
             khPanel1.Padding = new Padding(5, 8, 5, 15);
-            khPanel1.Size = new Size(940, 532);
+            khPanel1.Size = new Size(966, 532);
             khPanel1.TabIndex = 61;
             // 
             // dgvcarcash
@@ -235,7 +259,7 @@
             dgvcarcash.RowTemplate.DividerHeight = 1;
             dgvcarcash.RowTemplate.Height = 28;
             dgvcarcash.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvcarcash.Size = new Size(930, 509);
+            dgvcarcash.Size = new Size(956, 509);
             dgvcarcash.TabIndex = 1;
             dgvcarcash.CellClick += dgvcarcash_CellClick;
             dgvcarcash.CellMouseEnter += dgvcarcash_CellMouseEnter;
@@ -294,7 +318,7 @@
             DpFromCash.BorderSize = 0;
             DpFromCash.Font = new Font("Hacen Egypt", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DpFromCash.Format = DateTimePickerFormat.Short;
-            DpFromCash.Location = new Point(784, 19);
+            DpFromCash.Location = new Point(810, 19);
             DpFromCash.MinimumSize = new Size(0, 35);
             DpFromCash.Name = "DpFromCash";
             DpFromCash.Size = new Size(120, 46);
@@ -309,7 +333,7 @@
             label1.BackColor = Color.White;
             label1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(173, 109, 209);
-            label1.Location = new Point(901, 17);
+            label1.Location = new Point(927, 17);
             label1.Name = "label1";
             label1.Size = new Size(37, 44);
             label1.TabIndex = 73;
@@ -329,7 +353,7 @@
             btncar3.Font = new Font("Hacen Egypt", 12F);
             btncar3.ForeColor = Color.FromArgb(119, 67, 219);
             btncar3.ImageAlign = ContentAlignment.BottomRight;
-            btncar3.Location = new Point(380, 77);
+            btncar3.Location = new Point(393, 77);
             btncar3.Margin = new Padding(0);
             btncar3.Name = "btncar3";
             btncar3.Size = new Size(190, 39);
@@ -352,7 +376,7 @@
             khButton2.FlatStyle = FlatStyle.Flat;
             khButton2.ForeColor = SystemColors.Window;
             khButton2.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton2.Location = new Point(778, 15);
+            khButton2.Location = new Point(804, 15);
             khButton2.Name = "khButton2";
             khButton2.Size = new Size(167, 52);
             khButton2.TabIndex = 74;
@@ -373,7 +397,7 @@
             btncar4.Font = new Font("Hacen Egypt", 12F);
             btncar4.ForeColor = Color.FromArgb(119, 67, 219);
             btncar4.ImageAlign = ContentAlignment.BottomRight;
-            btncar4.Location = new Point(191, 77);
+            btncar4.Location = new Point(204, 77);
             btncar4.Margin = new Padding(0);
             btncar4.Name = "btncar4";
             btncar4.Size = new Size(190, 39);
@@ -397,7 +421,7 @@
             btncar2.Font = new Font("Hacen Egypt", 12F);
             btncar2.ForeColor = Color.FromArgb(119, 67, 219);
             btncar2.ImageAlign = ContentAlignment.BottomRight;
-            btncar2.Location = new Point(565, 77);
+            btncar2.Location = new Point(578, 77);
             btncar2.Margin = new Padding(0);
             btncar2.Name = "btncar2";
             btncar2.Size = new Size(190, 39);
@@ -421,7 +445,7 @@
             btncar1.Font = new Font("Hacen Egypt", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btncar1.ForeColor = Color.FromArgb(119, 67, 219);
             btncar1.ImageAlign = ContentAlignment.BottomRight;
-            btncar1.Location = new Point(744, 76);
+            btncar1.Location = new Point(757, 76);
             btncar1.Margin = new Padding(0);
             btncar1.Name = "btncar1";
             btncar1.Size = new Size(201, 40);
@@ -446,7 +470,7 @@
             btncar5.Font = new Font("Hacen Egypt", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btncar5.ForeColor = Color.FromArgb(119, 67, 219);
             btncar5.ImageAlign = ContentAlignment.BottomRight;
-            btncar5.Location = new Point(0, 76);
+            btncar5.Location = new Point(13, 76);
             btncar5.Margin = new Padding(0);
             btncar5.Name = "btncar5";
             btncar5.Size = new Size(199, 40);
@@ -460,13 +484,15 @@
             // 
             txtsearch.BackColor = Color.White;
             txtsearch.BorderStyle = BorderStyle.None;
-            txtsearch.Font = new Font("Hacen Egypt", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtsearch.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
-            txtsearch.Location = new Point(37, 12);
+            txtsearch.Location = new Point(37, 19);
             txtsearch.Multiline = true;
             txtsearch.Name = "txtsearch";
-            txtsearch.Size = new Size(274, 46);
+            txtsearch.Size = new Size(274, 45);
             txtsearch.TabIndex = 51;
+            txtsearch.TextAlign = HorizontalAlignment.Center;
+            txtsearch.TextChanged += txtsearch_TextChanged;
             // 
             // khButton3
             // 
@@ -481,7 +507,7 @@
             khButton3.ForeColor = SystemColors.Window;
             khButton3.Image = Properties.Resources.search;
             khButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton3.Location = new Point(6, 10);
+            khButton3.Location = new Point(6, 15);
             khButton3.Name = "khButton3";
             khButton3.Size = new Size(323, 52);
             khButton3.TabIndex = 50;
@@ -506,7 +532,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 251, 245);
-            ClientSize = new Size(985, 750);
+            ClientSize = new Size(1011, 750);
             Controls.Add(pnlcarcash);
             ForeColor = Color.White;
             FormBorderStyle = FormBorderStyle.None;
@@ -548,5 +574,6 @@
         private Label label1;
         private customs.KhControles.KhButton khButton2;
         public Panel pnlcarcash;
+        private customs.KhControles.KhButton btnreport;
     }
 }

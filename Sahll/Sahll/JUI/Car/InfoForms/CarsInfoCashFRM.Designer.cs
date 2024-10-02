@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             khPanel1 = new customs.KhPanel();
             btnclose = new customs.KhControles.KhButton();
             khPanel2 = new customs.KhPanel();
@@ -98,7 +98,7 @@
             khPanel1.GradientTopColor = Color.FromArgb(83, 4, 128);
             khPanel1.Location = new Point(0, 0);
             khPanel1.Name = "khPanel1";
-            khPanel1.Size = new Size(1115, 790);
+            khPanel1.Size = new Size(1115, 788);
             khPanel1.TabIndex = 0;
             khPanel1.Paint += khPanel1_Paint;
             // 
@@ -132,7 +132,7 @@
             khPanel2.GradientAngle = 90F;
             khPanel2.GradientBottomColor = Color.FromArgb(247, 239, 229);
             khPanel2.GradientTopColor = Color.FromArgb(219, 181, 181);
-            khPanel2.Location = new Point(127, 252);
+            khPanel2.Location = new Point(127, 251);
             khPanel2.Name = "khPanel2";
             khPanel2.Padding = new Padding(5, 8, 5, 15);
             khPanel2.Size = new Size(824, 296);
@@ -148,24 +148,24 @@
             dgvexpencesinfo.BorderStyle = BorderStyle.None;
             dgvexpencesinfo.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvexpencesinfo.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(219, 181, 181);
-            dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvexpencesinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(219, 181, 181);
+            dataGridViewCellStyle1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvexpencesinfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvexpencesinfo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvexpencesinfo.Columns.AddRange(new DataGridViewColumn[] { Column1, amount });
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle4.SelectionForeColor = Color.MidnightBlue;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvexpencesinfo.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle2.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvexpencesinfo.DefaultCellStyle = dataGridViewCellStyle2;
             dgvexpencesinfo.Dock = DockStyle.Fill;
             dgvexpencesinfo.EnableHeadersVisualStyles = false;
             dgvexpencesinfo.GridColor = Color.White;
@@ -202,7 +202,7 @@
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("LBC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = Color.FromArgb(219, 181, 181);
-            label9.Location = new Point(466, 143);
+            label9.Location = new Point(466, 142);
             label9.Name = "label9";
             label9.Size = new Size(172, 37);
             label9.TabIndex = 82;
@@ -214,7 +214,7 @@
             txtdelegator.BackColor = Color.Transparent;
             txtdelegator.Font = new Font("Hacen Egypt", 42F);
             txtdelegator.ForeColor = Color.White;
-            txtdelegator.Location = new Point(461, 159);
+            txtdelegator.Location = new Point(461, 158);
             txtdelegator.Name = "txtdelegator";
             txtdelegator.Size = new Size(191, 100);
             txtdelegator.TabIndex = 83;
@@ -228,7 +228,7 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("LBC", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.FromArgb(219, 181, 181);
-            label8.Location = new Point(943, 143);
+            label8.Location = new Point(943, 142);
             label8.Name = "label8";
             label8.Size = new Size(143, 35);
             label8.TabIndex = 79;
@@ -241,7 +241,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("LBC", 20.2499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.FromArgb(219, 181, 181);
-            label6.Location = new Point(11, 143);
+            label6.Location = new Point(11, 142);
             label6.Name = "label6";
             label6.Size = new Size(174, 35);
             label6.TabIndex = 78;
@@ -253,7 +253,7 @@
             txtdriver.BackColor = Color.Transparent;
             txtdriver.Font = new Font("Hacen Egypt", 38.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtdriver.ForeColor = Color.White;
-            txtdriver.Location = new Point(923, 159);
+            txtdriver.Location = new Point(923, 158);
             txtdriver.Name = "txtdriver";
             txtdriver.Size = new Size(191, 100);
             txtdriver.TabIndex = 81;
@@ -266,7 +266,7 @@
             txtreserve.BackColor = Color.Transparent;
             txtreserve.Font = new Font("Hacen Egypt", 38.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtreserve.ForeColor = Color.White;
-            txtreserve.Location = new Point(8, 159);
+            txtreserve.Location = new Point(8, 158);
             txtreserve.Name = "txtreserve";
             txtreserve.Size = new Size(191, 100);
             txtreserve.TabIndex = 80;
@@ -280,7 +280,7 @@
             label22.BackColor = Color.Transparent;
             label22.Font = new Font("LBC", 18F);
             label22.ForeColor = Color.FromArgb(219, 181, 181);
-            label22.Location = new Point(105, 700);
+            label22.Location = new Point(105, 699);
             label22.Name = "label22";
             label22.Size = new Size(62, 31);
             label22.TabIndex = 72;
@@ -293,7 +293,7 @@
             label23.BackColor = Color.Transparent;
             label23.Font = new Font("LBC", 18F);
             label23.ForeColor = Color.FromArgb(219, 181, 181);
-            label23.Location = new Point(515, 700);
+            label23.Location = new Point(515, 699);
             label23.Name = "label23";
             label23.Size = new Size(70, 31);
             label23.TabIndex = 73;
@@ -306,7 +306,7 @@
             label24.BackColor = Color.Transparent;
             label24.Font = new Font("LBC", 18F);
             label24.ForeColor = Color.FromArgb(219, 181, 181);
-            label24.Location = new Point(917, 700);
+            label24.Location = new Point(917, 699);
             label24.Name = "label24";
             label24.Size = new Size(91, 31);
             label24.TabIndex = 74;
@@ -318,7 +318,7 @@
             txtday.BackColor = Color.Transparent;
             txtday.Font = new Font("Hacen Egypt", 21.75F);
             txtday.ForeColor = Color.White;
-            txtday.Location = new Point(0, 731);
+            txtday.Location = new Point(0, 730);
             txtday.Name = "txtday";
             txtday.Size = new Size(283, 64);
             txtday.TabIndex = 75;
@@ -331,7 +331,7 @@
             txtdate.BackColor = Color.Transparent;
             txtdate.Font = new Font("Hacen Egypt", 21.75F);
             txtdate.ForeColor = Color.White;
-            txtdate.Location = new Point(403, 731);
+            txtdate.Location = new Point(403, 730);
             txtdate.Name = "txtdate";
             txtdate.Size = new Size(303, 64);
             txtdate.TabIndex = 76;
@@ -344,7 +344,7 @@
             txtby.BackColor = Color.Transparent;
             txtby.Font = new Font("Hacen Egypt", 21.75F);
             txtby.ForeColor = Color.White;
-            txtby.Location = new Point(825, 731);
+            txtby.Location = new Point(825, 730);
             txtby.Name = "txtby";
             txtby.Size = new Size(287, 64);
             txtby.TabIndex = 77;
@@ -358,7 +358,7 @@
             label15.BackColor = Color.Transparent;
             label15.Font = new Font("LBC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.FromArgb(219, 181, 181);
-            label15.Location = new Point(68, 573);
+            label15.Location = new Point(68, 572);
             label15.Name = "label15";
             label15.Size = new Size(131, 37);
             label15.TabIndex = 66;
@@ -371,7 +371,7 @@
             label16.BackColor = Color.Transparent;
             label16.Font = new Font("LBC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.FromArgb(219, 181, 181);
-            label16.Location = new Point(494, 573);
+            label16.Location = new Point(494, 572);
             label16.Name = "label16";
             label16.Size = new Size(114, 37);
             label16.TabIndex = 67;
@@ -384,7 +384,7 @@
             label17.BackColor = Color.Transparent;
             label17.Font = new Font("LBC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label17.ForeColor = Color.FromArgb(219, 181, 181);
-            label17.Location = new Point(916, 573);
+            label17.Location = new Point(916, 572);
             label17.Name = "label17";
             label17.Size = new Size(92, 37);
             label17.TabIndex = 68;
@@ -396,7 +396,7 @@
             txtreservename.BackColor = Color.Transparent;
             txtreservename.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtreservename.ForeColor = Color.White;
-            txtreservename.Location = new Point(0, 610);
+            txtreservename.Location = new Point(0, 609);
             txtreservename.Name = "txtreservename";
             txtreservename.Size = new Size(283, 64);
             txtreservename.TabIndex = 69;
@@ -409,7 +409,7 @@
             txtdelegatorname.BackColor = Color.Transparent;
             txtdelegatorname.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtdelegatorname.ForeColor = Color.White;
-            txtdelegatorname.Location = new Point(413, 610);
+            txtdelegatorname.Location = new Point(413, 609);
             txtdelegatorname.Name = "txtdelegatorname";
             txtdelegatorname.Size = new Size(303, 64);
             txtdelegatorname.TabIndex = 70;
@@ -422,7 +422,7 @@
             txtdrivername.BackColor = Color.Transparent;
             txtdrivername.Font = new Font("Hacen Egypt", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtdrivername.ForeColor = Color.White;
-            txtdrivername.Location = new Point(809, 610);
+            txtdrivername.Location = new Point(809, 609);
             txtdrivername.Name = "txtdrivername";
             txtdrivername.Size = new Size(303, 64);
             txtdrivername.TabIndex = 71;
@@ -438,9 +438,9 @@
             label3.ForeColor = Color.FromArgb(219, 181, 181);
             label3.Location = new Point(127, -4);
             label3.Name = "label3";
-            label3.Size = new Size(168, 61);
+            label3.Size = new Size(151, 61);
             label3.TabIndex = 64;
-            label3.Text = "الصافي";
+            label3.Text = "الواصل";
             // 
             // txttotal
             // 
@@ -448,7 +448,7 @@
             txttotal.BackColor = Color.Transparent;
             txttotal.Font = new Font("Hacen Egypt", 48F);
             txttotal.ForeColor = Color.White;
-            txttotal.Location = new Point(92, 32);
+            txttotal.Location = new Point(92, 31);
             txttotal.Name = "txttotal";
             txttotal.Size = new Size(244, 100);
             txttotal.TabIndex = 65;
@@ -474,7 +474,7 @@
             txtcash.BackColor = Color.Transparent;
             txtcash.Font = new Font("Hacen Egypt", 48F);
             txtcash.ForeColor = Color.White;
-            txtcash.Location = new Point(759, 32);
+            txtcash.Location = new Point(759, 31);
             txtcash.Name = "txtcash";
             txtcash.Size = new Size(244, 100);
             txtcash.TabIndex = 63;
@@ -485,7 +485,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1115, 790);
+            ClientSize = new Size(1115, 788);
             Controls.Add(khPanel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CarsInfoCashFRM";

@@ -453,6 +453,16 @@ namespace Sahll.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap heart_1 {
+            get {
+                object obj = ResourceManager.GetObject("heart 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap infod {
             get {
                 object obj = ResourceManager.GetObject("infod", resourceCulture);
@@ -486,6 +496,16 @@ namespace Sahll.Properties {
         internal static System.Drawing.Bitmap inventoryl {
             get {
                 object obj = ResourceManager.GetObject("inventoryl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LogInBackColor {
+            get {
+                object obj = ResourceManager.GetObject("LogInBackColor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -713,6 +733,16 @@ namespace Sahll.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Rectangle_52 {
+            get {
+                object obj = ResourceManager.GetObject("Rectangle 52", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reportd {
             get {
                 object obj = ResourceManager.GetObject("reportd", resourceCulture);
@@ -723,9 +753,29 @@ namespace Sahll.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap reportd1 {
+            get {
+                object obj = ResourceManager.GetObject("reportd1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reportl {
             get {
                 object obj = ResourceManager.GetObject("reportl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reportl1 {
+            get {
+                object obj = ResourceManager.GetObject("reportl1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -776,6 +826,16 @@ namespace Sahll.Properties {
         internal static System.Drawing.Bitmap rivald {
             get {
                 object obj = ResourceManager.GetObject("rivald", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sahl_logo_1 {
+            get {
+                object obj = ResourceManager.GetObject("sahl logo 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1003,6 +1063,16 @@ namespace Sahll.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Statistics {
+            get {
+                object obj = ResourceManager.GetObject("Statistics", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stored {
             get {
                 object obj = ResourceManager.GetObject("stored", resourceCulture);
@@ -1116,6 +1186,16 @@ namespace Sahll.Properties {
         internal static System.Drawing.Bitmap treasuryL {
             get {
                 object obj = ResourceManager.GetObject("treasuryL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_07b {
+            get {
+                object obj = ResourceManager.GetObject("User 07b", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

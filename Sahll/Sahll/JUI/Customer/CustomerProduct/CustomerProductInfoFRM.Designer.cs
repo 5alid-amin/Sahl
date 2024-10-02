@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             khPanel1 = new customs.KhPanel();
+            btnclose = new customs.KhControles.KhButton();
             label4 = new Label();
             label5 = new Label();
             label7 = new Label();
@@ -49,7 +50,6 @@
             label2 = new Label();
             label10 = new Label();
             label9 = new Label();
-            btnclose = new customs.KhControles.KhButton();
             khPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -87,6 +87,26 @@
             khPanel1.Name = "khPanel1";
             khPanel1.Size = new Size(1115, 790);
             khPanel1.TabIndex = 0;
+            // 
+            // btnclose
+            // 
+            btnclose.BackColor = Color.Transparent;
+            btnclose.BackgroundColor = Color.Transparent;
+            btnclose.BorderColor = Color.Crimson;
+            btnclose.BorderRadius = 0;
+            btnclose.BorderSize = 0;
+            btnclose.Cursor = Cursors.Hand;
+            btnclose.FlatAppearance.BorderSize = 0;
+            btnclose.FlatStyle = FlatStyle.Flat;
+            btnclose.ForeColor = Color.White;
+            btnclose.Image = Properties.Resources.closed;
+            btnclose.Location = new Point(-1, -1);
+            btnclose.Name = "btnclose";
+            btnclose.Size = new Size(33, 33);
+            btnclose.TabIndex = 63;
+            btnclose.TextColor = Color.White;
+            btnclose.UseVisualStyleBackColor = false;
+            btnclose.Click += btnclose_Click;
             // 
             // label4
             // 
@@ -264,11 +284,11 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("LBC", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.FromArgb(219, 181, 181);
-            label12.Location = new Point(848, 461);
+            label12.Location = new Point(871, 461);
             label12.Name = "label12";
-            label12.Size = new Size(217, 37);
+            label12.Size = new Size(180, 37);
             label12.TabIndex = 44;
-            label12.Text = "الكميه المستورده";
+            label12.Text = "الكميه المباعه";
             // 
             // label3
             // 
@@ -348,34 +368,14 @@
             label9.Text = "51315";
             label9.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnclose
-            // 
-            btnclose.BackColor = Color.Transparent;
-            btnclose.BackgroundColor = Color.Transparent;
-            btnclose.BorderColor = Color.Crimson;
-            btnclose.BorderRadius = 0;
-            btnclose.BorderSize = 0;
-            btnclose.Cursor = Cursors.Hand;
-            btnclose.FlatAppearance.BorderSize = 0;
-            btnclose.FlatStyle = FlatStyle.Flat;
-            btnclose.ForeColor = Color.White;
-            btnclose.Image = Properties.Resources.closed;
-            btnclose.Location = new Point(-1, -1);
-            btnclose.Name = "btnclose";
-            btnclose.Size = new Size(33, 33);
-            btnclose.TabIndex = 63;
-            btnclose.TextColor = Color.White;
-            btnclose.UseVisualStyleBackColor = false;
-            btnclose.Click += btnclose_Click;
-            // 
-            // SellingInfoProductFRM
+            // CustomerProductInfoFRM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1115, 790);
             Controls.Add(khPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "SellingInfoProductFRM";
+            Name = "CustomerProductInfoFRM";
             Opacity = 0.95D;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;

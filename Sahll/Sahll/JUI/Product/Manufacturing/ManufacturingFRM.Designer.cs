@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             pnlstore = new Panel();
+            btnreport = new customs.KhControles.KhButton();
             khPanel1 = new customs.KhPanel();
-            dgvStore = new DataGridView();
+            dgvManufacturing = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             purchasePrice = new DataGridViewTextBoxColumn();
@@ -54,11 +55,12 @@
             label3 = new Label();
             pnlstore.SuspendLayout();
             khPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvStore).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvManufacturing).BeginInit();
             SuspendLayout();
             // 
             // pnlstore
             // 
+            pnlstore.Controls.Add(btnreport);
             pnlstore.Controls.Add(khPanel1);
             pnlstore.Controls.Add(btnAddStore);
             pnlstore.Controls.Add(lbltotal);
@@ -77,12 +79,34 @@
             pnlstore.Size = new Size(945, 750);
             pnlstore.TabIndex = 0;
             // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(885, 666);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 101;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
+            // 
             // khPanel1
             // 
             khPanel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             khPanel1.BackColor = Color.White;
             khPanel1.BorderRadius = 30;
-            khPanel1.Controls.Add(dgvStore);
+            khPanel1.Controls.Add(dgvManufacturing);
             khPanel1.ForeColor = Color.Black;
             khPanel1.GradientAngle = 90F;
             khPanel1.GradientBottomColor = Color.FromArgb(173, 109, 209);
@@ -93,51 +117,51 @@
             khPanel1.Size = new Size(936, 587);
             khPanel1.TabIndex = 99;
             // 
-            // dgvStore
+            // dgvManufacturing
             // 
-            dgvStore.AllowUserToAddRows = false;
-            dgvStore.AllowUserToDeleteRows = false;
-            dgvStore.AllowUserToResizeColumns = false;
-            dgvStore.AllowUserToResizeRows = false;
-            dgvStore.BackgroundColor = Color.White;
-            dgvStore.BorderStyle = BorderStyle.None;
-            dgvStore.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvStore.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvStore.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvStore.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvStore.Columns.AddRange(new DataGridViewColumn[] { Column1, Column3, purchasePrice, SellingPrice, profit, edit, info });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle3.SelectionForeColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvStore.DefaultCellStyle = dataGridViewCellStyle3;
-            dgvStore.Dock = DockStyle.Fill;
-            dgvStore.EnableHeadersVisualStyles = false;
-            dgvStore.GridColor = Color.White;
-            dgvStore.Location = new Point(5, 8);
-            dgvStore.Name = "dgvStore";
-            dgvStore.ReadOnly = true;
-            dgvStore.RightToLeft = RightToLeft.Yes;
-            dgvStore.RowHeadersVisible = false;
-            dgvStore.RowHeadersWidth = 25;
-            dgvStore.RowTemplate.DividerHeight = 1;
-            dgvStore.RowTemplate.Height = 28;
-            dgvStore.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStore.Size = new Size(926, 564);
-            dgvStore.TabIndex = 1;
-            dgvStore.CellClick += dgvSelling_CellClick;
-            dgvStore.CellMouseEnter += dgvSelling_CellMouseEnter;
-            dgvStore.CellMouseLeave += dgvSelling_CellMouseLeave;
+            dgvManufacturing.AllowUserToAddRows = false;
+            dgvManufacturing.AllowUserToDeleteRows = false;
+            dgvManufacturing.AllowUserToResizeColumns = false;
+            dgvManufacturing.AllowUserToResizeRows = false;
+            dgvManufacturing.BackgroundColor = Color.White;
+            dgvManufacturing.BorderStyle = BorderStyle.None;
+            dgvManufacturing.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvManufacturing.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle4.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvManufacturing.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dgvManufacturing.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvManufacturing.Columns.AddRange(new DataGridViewColumn[] { Column1, Column3, purchasePrice, SellingPrice, profit, edit, info });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle6.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvManufacturing.DefaultCellStyle = dataGridViewCellStyle6;
+            dgvManufacturing.Dock = DockStyle.Fill;
+            dgvManufacturing.EnableHeadersVisualStyles = false;
+            dgvManufacturing.GridColor = Color.White;
+            dgvManufacturing.Location = new Point(5, 8);
+            dgvManufacturing.Name = "dgvManufacturing";
+            dgvManufacturing.ReadOnly = true;
+            dgvManufacturing.RightToLeft = RightToLeft.Yes;
+            dgvManufacturing.RowHeadersVisible = false;
+            dgvManufacturing.RowHeadersWidth = 25;
+            dgvManufacturing.RowTemplate.DividerHeight = 1;
+            dgvManufacturing.RowTemplate.Height = 28;
+            dgvManufacturing.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvManufacturing.Size = new Size(926, 564);
+            dgvManufacturing.TabIndex = 1;
+            dgvManufacturing.CellClick += dgvSelling_CellClick;
+            dgvManufacturing.CellMouseEnter += dgvSelling_CellMouseEnter;
+            dgvManufacturing.CellMouseLeave += dgvSelling_CellMouseLeave;
             // 
             // Column1
             // 
@@ -166,8 +190,8 @@
             // SellingPrice
             // 
             SellingPrice.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            SellingPrice.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SellingPrice.DefaultCellStyle = dataGridViewCellStyle5;
             SellingPrice.FillWeight = 47.66477F;
             SellingPrice.HeaderText = "س.البيع";
             SellingPrice.Name = "SellingPrice";
@@ -401,7 +425,7 @@
             pnlstore.ResumeLayout(false);
             pnlstore.PerformLayout();
             khPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvStore).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvManufacturing).EndInit();
             ResumeLayout(false);
         }
 
@@ -418,7 +442,7 @@
         private customs.KhControles.KhButton lbltotal;
         private Label label3;
         private customs.KhPanel khPanel1;
-        private DataGridView dgvStore;
+        private DataGridView dgvManufacturing;
         public Panel pnlstore;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column3;
@@ -427,5 +451,6 @@
         private DataGridViewTextBoxColumn profit;
         private DataGridViewImageColumn edit;
         private DataGridViewImageColumn info;
+        private customs.KhControles.KhButton btnreport;
     }
 }

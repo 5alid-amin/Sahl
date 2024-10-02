@@ -114,6 +114,7 @@
             btnclose.TabIndex = 81;
             btnclose.TextColor = Color.White;
             btnclose.UseVisualStyleBackColor = false;
+            btnclose.Click += btnclose_Click_1;
             // 
             // btn_return
             // 

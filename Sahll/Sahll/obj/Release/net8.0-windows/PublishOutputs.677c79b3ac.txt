@@ -3,3 +3,9 @@ D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\Sahll.dll
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\Sahll.deps.json
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\Sahll.runtimeconfig.json
 D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\Sahll.pdb
+D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\ClosedXML.dll
+D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\DocumentFormat.OpenXml.dll
+D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\ExcelNumberFormat.dll
+D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\Irony.dll
+D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\SixLabors.Fonts.dll
+D:\Sahl\Sahll\Sahll\bin\Release\net8.0-windows\app.publish\XLParser.dll

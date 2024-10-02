@@ -73,6 +73,9 @@
             pnlTop.Name = "pnlTop";
             pnlTop.Size = new Size(1115, 40);
             pnlTop.TabIndex = 0;
+            pnlTop.MouseDown += pnlTop_MouseDown;
+            pnlTop.MouseMove += pnlTop_MouseMove;
+            pnlTop.MouseUp += pnlTop_MouseUp;
             // 
             // btngoback
             // 
@@ -101,11 +104,12 @@
             // lbltoptitle
             // 
             lbltoptitle.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lbltoptitle.AutoSize = true;
             lbltoptitle.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbltoptitle.ForeColor = Color.FromArgb(63, 36, 114);
-            lbltoptitle.Location = new Point(212, -5);
+            lbltoptitle.Location = new Point(557, -5);
             lbltoptitle.Name = "lbltoptitle";
-            lbltoptitle.Size = new Size(690, 50);
+            lbltoptitle.Size = new Size(0, 50);
             lbltoptitle.TabIndex = 8;
             lbltoptitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -512,8 +516,8 @@
             Name = "Main";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            WindowState = FormWindowState.Maximized;
             pnlTop.ResumeLayout(false);
+            pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picnavbig).EndInit();
             ((System.ComponentModel.ISupportInitialize)picnavsmall).EndInit();
             pnlnavbar.ResumeLayout(false);

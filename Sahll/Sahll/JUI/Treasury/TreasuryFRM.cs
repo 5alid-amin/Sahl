@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sahll.JUI.Selling;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,7 +57,7 @@ namespace Sahll.JUI.Treasury
                (containerWidth - (containerWidth / 2) + 6) / 3, 88);
             btnaminhome.Location = new Point(0, btnaminhome.Location.Y);
             btnExpenses.Location = new Point(btnaminhome.Width + 1, btnExpenses.Location.Y);
-            btnReceipts.Location = new Point(btnaminhome.Width*2 + 2, btnReceipts.Location.Y);
+            btnReceipts.Location = new Point(btnaminhome.Width * 2 + 2, btnReceipts.Location.Y);
         }
         #endregion
 
@@ -68,6 +69,11 @@ namespace Sahll.JUI.Treasury
         private void btnaminhome_Clic(object sender, EventArgs e)
         {
             main.ShowAminHome();
+        }
+
+        private void statisticsfun(object sender, EventArgs e)
+        {
+            main.showstatisticsoptions();
         }
     }
 }

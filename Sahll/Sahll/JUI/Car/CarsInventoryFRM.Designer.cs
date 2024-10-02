@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             pnlinventory = new Panel();
+            txtsearch = new TextBox();
+            khButton4 = new customs.KhControles.KhButton();
+            btnreport = new customs.KhControles.KhButton();
             DpToInventory = new customs.KhControles.KhDatePicker();
             label2 = new Label();
             khButton1 = new customs.KhControles.KhButton();
@@ -53,8 +56,6 @@
             btncar2 = new customs.KhControles.KhButton();
             btncar1 = new customs.KhControles.KhButton();
             btncar5 = new customs.KhControles.KhButton();
-            txtsearch = new TextBox();
-            khButton3 = new customs.KhControles.KhButton();
             pnlinventory.SuspendLayout();
             khPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvinventory).BeginInit();
@@ -62,6 +63,9 @@
             // 
             // pnlinventory
             // 
+            pnlinventory.Controls.Add(txtsearch);
+            pnlinventory.Controls.Add(khButton4);
+            pnlinventory.Controls.Add(btnreport);
             pnlinventory.Controls.Add(DpToInventory);
             pnlinventory.Controls.Add(label2);
             pnlinventory.Controls.Add(khButton1);
@@ -75,14 +79,68 @@
             pnlinventory.Controls.Add(btncar2);
             pnlinventory.Controls.Add(btncar1);
             pnlinventory.Controls.Add(btncar5);
-            pnlinventory.Controls.Add(txtsearch);
-            pnlinventory.Controls.Add(khButton3);
             pnlinventory.Dock = DockStyle.Fill;
             pnlinventory.Location = new Point(20, 0);
             pnlinventory.Name = "pnlinventory";
             pnlinventory.Size = new Size(945, 750);
             pnlinventory.TabIndex = 0;
             pnlinventory.Resize += pnlinventory_Resize;
+            // 
+            // txtsearch
+            // 
+            txtsearch.BackColor = Color.White;
+            txtsearch.BorderStyle = BorderStyle.None;
+            txtsearch.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
+            txtsearch.Location = new Point(47, 17);
+            txtsearch.Multiline = true;
+            txtsearch.Name = "txtsearch";
+            txtsearch.Size = new Size(274, 45);
+            txtsearch.TabIndex = 102;
+            txtsearch.TextAlign = HorizontalAlignment.Center;
+            txtsearch.TextChanged += textBox1_TextChanged;
+            // 
+            // khButton4
+            // 
+            khButton4.BackColor = Color.White;
+            khButton4.BackgroundColor = Color.White;
+            khButton4.BorderColor = Color.FromArgb(203, 150, 233);
+            khButton4.BorderRadius = 40;
+            khButton4.BorderSize = 1;
+            khButton4.Enabled = false;
+            khButton4.FlatAppearance.BorderSize = 0;
+            khButton4.FlatStyle = FlatStyle.Flat;
+            khButton4.ForeColor = SystemColors.Window;
+            khButton4.Image = Properties.Resources.search;
+            khButton4.ImageAlign = ContentAlignment.MiddleLeft;
+            khButton4.Location = new Point(16, 13);
+            khButton4.Name = "khButton4";
+            khButton4.Size = new Size(323, 52);
+            khButton4.TabIndex = 101;
+            khButton4.TextColor = SystemColors.Window;
+            khButton4.UseVisualStyleBackColor = false;
+            // 
+            // btnreport
+            // 
+            btnreport.Anchor = AnchorStyles.Right;
+            btnreport.BackColor = Color.Transparent;
+            btnreport.BackgroundColor = Color.Transparent;
+            btnreport.BorderColor = Color.FromArgb(63, 36, 114);
+            btnreport.BorderRadius = 10;
+            btnreport.BorderSize = 0;
+            btnreport.Cursor = Cursors.Hand;
+            btnreport.FlatAppearance.BorderSize = 0;
+            btnreport.FlatStyle = FlatStyle.Flat;
+            btnreport.Font = new Font("Hacen Egypt", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnreport.ForeColor = Color.Transparent;
+            btnreport.Image = Properties.Resources.reportl1;
+            btnreport.Location = new Point(883, 665);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(51, 65);
+            btnreport.TabIndex = 100;
+            btnreport.TextColor = Color.Transparent;
+            btnreport.UseVisualStyleBackColor = false;
+            btnreport.Click += btnreport_Click;
             // 
             // DpToInventory
             // 
@@ -228,24 +286,24 @@
             dgvinventory.BorderStyle = BorderStyle.None;
             dgvinventory.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvinventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle1.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(195, 172, 208);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvinventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle4.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(195, 172, 208);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvinventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvinventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvinventory.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, delete, edit, returnd, info });
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.White;
-            dataGridViewCellStyle3.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = Color.Linen;
-            dataGridViewCellStyle3.SelectionForeColor = Color.MidnightBlue;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgvinventory.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Hacen Egypt", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Linen;
+            dataGridViewCellStyle6.SelectionForeColor = Color.MidnightBlue;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dgvinventory.DefaultCellStyle = dataGridViewCellStyle6;
             dgvinventory.Dock = DockStyle.Fill;
             dgvinventory.EnableHeadersVisualStyles = false;
             dgvinventory.GridColor = Color.White;
@@ -275,8 +333,8 @@
             // Column2
             // 
             Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Column2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Font = new Font("Hacen Egypt", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Column2.DefaultCellStyle = dataGridViewCellStyle5;
             Column2.FillWeight = 65.834816F;
             Column2.HeaderText = "السعر";
             Column2.Name = "Column2";
@@ -450,38 +508,6 @@
             btncar5.UseVisualStyleBackColor = false;
             btncar5.Click += btncar5_Click;
             // 
-            // txtsearch
-            // 
-            txtsearch.BackColor = Color.White;
-            txtsearch.BorderStyle = BorderStyle.None;
-            txtsearch.Font = new Font("Hacen Egypt", 21F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtsearch.ForeColor = Color.FromArgb(63, 36, 114);
-            txtsearch.Location = new Point(37, 12);
-            txtsearch.Multiline = true;
-            txtsearch.Name = "txtsearch";
-            txtsearch.Size = new Size(274, 46);
-            txtsearch.TabIndex = 37;
-            // 
-            // khButton3
-            // 
-            khButton3.BackColor = Color.White;
-            khButton3.BackgroundColor = Color.White;
-            khButton3.BorderColor = Color.FromArgb(203, 150, 233);
-            khButton3.BorderRadius = 40;
-            khButton3.BorderSize = 1;
-            khButton3.Enabled = false;
-            khButton3.FlatAppearance.BorderSize = 0;
-            khButton3.FlatStyle = FlatStyle.Flat;
-            khButton3.ForeColor = SystemColors.Window;
-            khButton3.Image = Properties.Resources.search;
-            khButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            khButton3.Location = new Point(6, 10);
-            khButton3.Name = "khButton3";
-            khButton3.Size = new Size(323, 52);
-            khButton3.TabIndex = 36;
-            khButton3.TextColor = SystemColors.Window;
-            khButton3.UseVisualStyleBackColor = false;
-            // 
             // CarsInventoryFRM
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -509,8 +535,6 @@
         private customs.KhControles.KhButton btncar2;
         private customs.KhControles.KhButton btncar1;
         private customs.KhControles.KhButton btncar5;
-        private TextBox txtsearch;
-        private customs.KhControles.KhButton khButton3;
         private customs.KhControles.KhButton btnAddInventory;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
@@ -526,5 +550,8 @@
         private Label label2;
         private customs.KhControles.KhButton khButton1;
         public Panel pnlinventory;
+        private customs.KhControles.KhButton btnreport;
+        private TextBox txtsearch;
+        private customs.KhControles.KhButton khButton4;
     }
 }
