@@ -4762,11 +4762,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sahl\\Sahll\\Sahll\\Sahll.csproj",
+      "projectUniqueName": "E:\\sahl from git hub\\Sahll\\Sahll\\Sahll.csproj",
       "projectName": "Sahll",
-      "projectPath": "D:\\Sahl\\Sahll\\Sahll\\Sahll.csproj",
+      "projectPath": "E:\\sahl from git hub\\Sahll\\Sahll\\Sahll.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "D:\\Sahl\\Sahll\\Sahll\\obj\\",
+      "outputPath": "E:\\sahl from git hub\\Sahll\\Sahll\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

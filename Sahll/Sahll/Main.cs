@@ -43,6 +43,7 @@ namespace Sahll
             navbar_transparent_button_on_hover();
             navbar_transparent_button_on_click();
             btncar_Click_1(null, EventArgs.Empty);
+            btncollapes_Click(null, EventArgs.Empty);
 
 
             carsOptionsFRM = new CarsOptionsFRM(this);
